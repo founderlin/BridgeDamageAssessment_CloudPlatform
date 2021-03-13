@@ -1,0 +1,1919 @@
+ SOFiSTiK AG - Educational-Version -
+ AQUA   - GENERAL CROSS SECTIONS V 2018-8.0          10/09/19           Page:      
+ 
+ 
+    1 +PROG AQUA $ Material- und Querschnittsdefinition
+    2 $ Dat : C:\...\wisib\SOFI\esslingen - Kopie.dat  (#001)             09.10.2019
+    3 $ Job : BCI101:000869                                                    09:55
+    4 KOPF VOGELSANGBRÜCKE ESSLINGEN
+    5 NORM DIN 1045
+    6 BETO 35 C 35
+    7 STAH 420 BST 420
+    8
+    9
+   10 $  Querschnittspunkte:
+   11 $
+   12 $  1______________________________________9________8
+   13 $  |                                               |
+   14 $  2____3                                   6______7
+   15 $       |                                   |
+   16 $       |                                   |
+   17 $       |                                   |
+   18 $       4___________________________________5
+   19 $
+   20
+   21 QNR 100 MNR 35 MBW 420
+   22   $ Querschnittseingabe über Umfangspolygon
+   23   QPOL U
+   24   QP NR   Y=[MM]      Z=[MM]
+   25      0001 -4455      0
+   26      0002 -4455    167
+   27      0003 -3825    218
+   28      0004 -3825    600
+   29      0005  3825    600
+   30      0006  3825    233
+   31      0007  5075     67
+   32      0008  5075   -133
+   33      0009  3175      0
+   34   $ Bewehrungseingabe unten als Linienbewehrung
+   35    LBEW NR UNTE YA -3775[MM] ZA 550[MM] YE 3775[MM] ZE 550[MM] AS 24.7*20 D 25[MM] RANG M0
+   36   $ Bewehrungeingabe oben als Linienbewehrung
+   37    LBEW NR OBEN YA -4405[MM] ZA  50[MM] YE 3175[MM] ZE  50[MM] AS 24.7 D 25[MM] RANG M1
+   38    LBEW NR OBEN YA  3175[MM] ZA  50[MM] YE 5025[MM] ZE -83[MM] AS 24.7 D 25[MM] RANG M1
+   39 ENDE
+ 
+      SOFiSTiK AG - Educational-Version -
+      AQUA   - ALLGEMEINE QUERSCHNITTE V 2018-8.0          9.10.19          Seite:     1
+ 
+      Vogelsangbrücke Esslingen
+ 
+ 
+      Standardnorm ist DIN 1045 (1988) (Germany) V 2018
+ 
+      Materialien 
+       Mat Materialbezeichnung             
+        35 C 35/45 (DIN 1045-1)            
+       420 BSt 420 (DIN 1045)              
+ 
+      Querschnitt Nr.   100 
+ 
+      Querschnittswerte 
+        QNr   Mat       A[m2]      Ay[m2]      Iy[m4]   yc[m]  ysc[m]    E[MPa]  g[kg/m]     I-1[m4]
+              MBw      It[m4]      Az[m2]      Iz[m4]   zc[m]  zsc[m]    G[MPa]              I-2[m4]
+                                  Ayz[m2]     Iyz[m4]                                           α[°]
+        100    35  5.0251E+00   4.287E+00   1.653E-01   0.174   0.268     29878  12562.8   3.037E+01
+              420   5.375E-01   1.021E+00   3.036E+01   0.278   0.345     12449  (BIEGE)   1.632E-01
+                                2.438E+01  -2.515E-01                                          89.52
+ 
+      Bewehrungsabstufung 
+      Rang     Mref  Mat       As   As-min   As-max     D      yr      zr   L-tors      N-p     My-p     Mz-p
+                            [cm2]    [cm2]    [cm2]  [mm]     [m]     [m]      [m]     [kN]    [kNm]    [kNm]
+      M0         35  420  3729.70  3729.70             25   0.000   0.550                                    
+      M1         35  420   233.04   233.04             25   0.312   0.037                                    
+ 
+ SOFiSTiK AG - Educational-Version -
+ SOFiMSHA - FEM EXPORT & IMPORT & GENERATION V 2018-8.0     9.10.19    Seite:      
+ 
+ 
+    1 +PROG SOFIMSHA
+    2 $ Dat : C:\...\wisib\SOFI\esslingen - Kopie.dat  (#002)             09.10.2019
+    3 $ Job : BCI101:000869                                                    09:55
+    4 SYST 3D GDIV 1000 GDIR POSZ
+    5
+    6 GRUP 1 BEZ 'Ueberbau'
+    7 KNOT 100 X -0.120 Y  0.000 Z  0.000
+    8 KNOT (110 119 1)  X ( 0.000 1.380) Y  0.000 Z  0.000
+    9 KNOT (120 129 1)  X (13.800 1.320) Y  0.000 Z  0.000
+   10 KNOT 130 X 27.000 Y  0.000 Z  0.000
+   11 KNOT 140 X 27.120 Y  0.000 Z  0.000
+   12
+   13 STAB  1001    KA 100            KE 110          QNR 100.100 TEIL 1 NP -1
+   14 STAB (1002 1) KA (110 119 1)    KE (111 1)      QNR 100.100 TEIL 1 NP -1
+   15 STAB (1012 1) KA (120 129 1)    KE (121 1)      QNR 100.100 TEIL 1 NP -1
+   16 STAB  1032    KA 130            KE 140          QNR 100.100 TEIL 1  NP -1
+   17
+   18 GRUP 2 BEZ 'Lager'
+   19 $ Nord Ost
+   20 KNOT 210 X 0.000 Y -3.050 Z 0.600 FIX F
+   21  FEDE 2101 KA 210 KE 110 DX 1 0 0 CP 1E7 0 0
+   22  FEDE 2102 KA 210 KE 110 DX 0 1 0 CP 1E7 0 0
+   23  FEDE 2103 KA 210 KE 110 DX 0 0 1 CP 1E7 0 0
+   24 $ Nord mitte
+   25 KNOT 211 X 0.000 Y  0.000 Z 0.600 FIX F
+   26  FEDE 2111 KA 211 KE 110 DX 1 0 0 CP 1   0 0
+   27  FEDE 2112 KA 211 KE 110 DX 0 1 0 CP 1   0 0
+   28  FEDE 2113 KA 211 KE 110 DX 0 0 1 CP 1E8 0 0
+   29 $ Nord West
+   30 KNOT 212 X 0.000 Y  3.050 Z 0.600 FIX F
+   31  FEDE 2121 KA 212 KE 110 DX 1 0 0 CP 1E7 0 0
+   32  FEDE 2122 KA 212 KE 110 DX 0 1 0 CP 1   0 0
+   33  FEDE 2123 KA 212 KE 110 DX 0 0 1 CP 1E7 0 0
+   34
+   35 $ Mitte Ost
+   36 KNOT 220 X 13.80 Y -3.050 Z 0.600 FIX F
+   37  FEDE 2201 KA 220 KE 120 DX 1 0 0 CP 1   0 0
+   38  FEDE 2202 KA 220 KE 120 DX 0 1 0 CP 1E7 0 0
+   39  FEDE 2203 KA 220 KE 120 DX 0 0 1 CP 1E7 0 0
+   40 $ Mitte mitte
+   41 KNOT 221 X 13.80 Y  0.000 Z 0.600 FIX F
+   42  FEDE 2211 KA 221 KE 120 DX 1 0 0 CP 1   0 0
+   43  FEDE 2212 KA 221 KE 120 DX 0 1 0 CP 1   0 0
+   44  FEDE 2213 KA 221 KE 120 DX 0 0 1 CP 1E8 0 0
+   45 $ Mitte West
+   46 KNOT 222 X 13.80 Y  3.050 Z 0.600 FIX F
+   47  FEDE 2221 KA 222 KE 120 DX 1 0 0 CP 1   0 0
+   48  FEDE 2222 KA 222 KE 120 DX 0 1 0 CP 1   0 0
+   49  FEDE 2223 KA 222 KE 120 DX 0 0 1 CP 1E7 0 0
+   50
+   51 $ Sued Ost
+   52 KNOT 230 X 27.00 Y -3.050 Z 0.600 FIX F
+   53  FEDE 2301 KA 230 KE 130 DX 1 0 0 CP 1   0 0
+   54  FEDE 2302 KA 230 KE 130 DX 0 1 0 CP 1E7 0 0
+   55  FEDE 2303 KA 230 KE 130 DX 0 0 1 CP 1E7 0 0
+   56 $ Sued mitte
+   57 KNOT 231 X 27.00 Y  0.000 Z 0.600 FIX F
+   58  FEDE 2311 KA 231 KE 130 DX 1 0 0 CP 1   0 0
+   59  FEDE 2312 KA 231 KE 130 DX 0 1 0 CP 1   0 0
+   60  FEDE 2313 KA 231 KE 130 DX 0 0 1 CP 1E8 0 0
+   61 $ Sued West
+   62 KNOT 232 X 27.00 Y  3.050 Z 0.600 FIX F
+   63  FEDE 2321 KA 232 KE 130 DX 1 0 0 CP 1   0 0
+ 
+ SOFiSTiK AG - Educational-Version -
+ SOFiMSHA - FEM EXPORT & IMPORT & GENERATION V 2018-8.0     9.10.19    Seite:      
+ 
+ 
+   64  FEDE 2322 KA 232 KE 130 DX 0 1 0 CP 1   0 0
+   65  FEDE 2323 KA 232 KE 130 DX 0 0 1 CP 1E7 0 0
+   66
+   67
+   68 ENDE
+ 
+      SOFiSTiK AG - Educational-Version -
+      SOFiMSHA - FEM EXPORT & IMPORT & GENERATION V 2018-8.0     9.10.19    Seite:     2
+ 
+ 
+ 
+      Gruppen 
+       Grp  Anzahl  Typ    Min-Nr    Max-Nr  Bezeichnung                      
+         1      22 STAB      1001      1032   Ueberbau                         
+         2      27 FEDE      2101      2323   Lager                            
+ 
+      Knoten 
+       Nummer      X[m]      Y[m]      Z[m]                     Auflager                    
+          100    -0.120     0.000     0.000                                                 
+          110     0.000     0.000     0.000                                                 
+          111     1.380     0.000     0.000                                                 
+          112     2.760     0.000     0.000                                                 
+          113     4.140     0.000     0.000                                                 
+          114     5.520     0.000     0.000                                                 
+          115     6.900     0.000     0.000                                                 
+          116     8.280     0.000     0.000                                                 
+          117     9.660     0.000     0.000                                                 
+          118    11.040     0.000     0.000                                                 
+          119    12.420     0.000     0.000                                                 
+          120    13.800     0.000     0.000                                                 
+          121    15.120     0.000     0.000                                                 
+          122    16.440     0.000     0.000                                                 
+          123    17.760     0.000     0.000                                                 
+          124    19.080     0.000     0.000                                                 
+          125    20.400     0.000     0.000                                                 
+          126    21.720     0.000     0.000                                                 
+          127    23.040     0.000     0.000                                                 
+          128    24.360     0.000     0.000                                                 
+          129    25.680     0.000     0.000                                                 
+          130    27.000     0.000     0.000                                                 
+          140    27.120     0.000     0.000                                                 
+          210     0.000    -3.050     0.600   PX     PY     PZ     MX     MY     MZ     MB  
+          211     0.000     0.000     0.600   PX     PY     PZ     MX     MY     MZ     MB  
+          212     0.000     3.050     0.600   PX     PY     PZ     MX     MY     MZ     MB  
+          220    13.800    -3.050     0.600   PX     PY     PZ     MX     MY     MZ     MB  
+          221    13.800     0.000     0.600   PX     PY     PZ     MX     MY     MZ     MB  
+          222    13.800     3.050     0.600   PX     PY     PZ     MX     MY     MZ     MB  
+          230    27.000    -3.050     0.600   PX     PY     PZ     MX     MY     MZ     MB  
+          231    27.000     0.000     0.600   PX     PY     PZ     MX     MY     MZ     MB  
+          232    27.000     3.050     0.600   PX     PY     PZ     MX     MY     MZ     MB  
+      --------------------------------------------------------------------------------------
+      MIN        -0.120    -3.050     0.000
+      MAX        27.120     3.050     0.600
+ 
+      Stabelemente 
+      Grp Nummer  Knoten    x[m]    QNr   NrP  E        Referenz  Eigenschaften                             
+        1   1001     100   0.000   100         0           0.000                                            
+                     110   0.120   100         0           0.120                                            
+        1   1002     110   0.000   100         0           0.120                                            
+                     111   1.380   100         0           1.500                                            
+        1   1003     111   0.000   100         0           1.500                                            
+                     112   1.380   100         0           2.880                                            
+        1   1004     112   0.000   100         0           2.880                                            
+                     113   1.380   100         0           4.260                                            
+        1   1005     113   0.000   100         0           4.260                                            
+                     114   1.380   100         0           5.640                                            
+        1   1006     114   0.000   100         0           5.640                                            
+                     115   1.380   100         0           7.020                                            
+        1   1007     115   0.000   100         0           7.020                                            
+                     116   1.380   100         0           8.400                                            
+        1   1008     116   0.000   100         0           8.400                                            
+                     117   1.380   100         0           9.780                                            
+        1   1009     117   0.000   100         0           9.780                                            
+ 
+      SOFiSTiK AG - Educational-Version -
+      SOFiMSHA - FEM EXPORT & IMPORT & GENERATION V 2018-8.0     9.10.19    Seite:     3
+ 
+ 
+ 
+      Stabelemente 
+      Grp Nummer  Knoten    x[m]    QNr   NrP  E        Referenz  Eigenschaften                             
+        1   1009     118   1.380   100         0          11.160                                            
+        1   1010     118   0.000   100         0          11.160                                            
+                     119   1.380   100         0          12.540                                            
+        1   1011     119   0.000   100         0          12.540                                            
+                     120   1.380   100         0          13.920                                            
+        1   1012     120   0.000   100         0          13.920                                            
+                     121   1.320   100         0          15.240                                            
+        1   1013     121   0.000   100         0          15.240                                            
+                     122   1.320   100         0          16.560                                            
+        1   1014     122   0.000   100         0          16.560                                            
+                     123   1.320   100         0          17.880                                            
+        1   1015     123   0.000   100         0          17.880                                            
+                     124   1.320   100         0          19.200                                            
+        1   1016     124   0.000   100         0          19.200                                            
+                     125   1.320   100         0          20.520                                            
+        1   1017     125   0.000   100         0          20.520                                            
+                     126   1.320   100         0          21.840                                            
+        1   1018     126   0.000   100         0          21.840                                            
+                     127   1.320   100         0          23.160                                            
+        1   1019     127   0.000   100         0          23.160                                            
+                     128   1.320   100         0          24.480                                            
+        1   1020     128   0.000   100         0          24.480                                            
+                     129   1.320   100         0          25.800                                            
+        1   1021     129   0.000   100         0          25.800                                            
+                     130   1.320   100         0          27.120                                            
+        1   1032     130   0.000   100         0          27.120                                            
+                     140   0.120   100         0          27.240                                            
+ 
+      Stabelemente - Erweiterte Eigenschaften 
+      Grp Nummer   Länge    lokale y-Achse    Exzentrizität Anfang  Exzentrizität Ende     β-y    β-z
+                     [m]                               [m]                  [m]        
+        1   1001   0.120  0.000  1.000  0.000                                                        
+        1   1002   1.380  0.000  1.000  0.000                                                        
+        1   1003   1.380  0.000  1.000  0.000                                                        
+        1   1004   1.380  0.000  1.000  0.000                                                        
+        1   1005   1.380  0.000  1.000  0.000                                                        
+        1   1006   1.380  0.000  1.000  0.000                                                        
+        1   1007   1.380  0.000  1.000  0.000                                                        
+        1   1008   1.380  0.000  1.000  0.000                                                        
+        1   1009   1.380  0.000  1.000  0.000                                                        
+        1   1010   1.380  0.000  1.000  0.000                                                        
+        1   1011   1.380  0.000  1.000  0.000                                                        
+        1   1012   1.320  0.000  1.000  0.000                                                        
+        1   1013   1.320  0.000  1.000  0.000                                                        
+        1   1014   1.320  0.000  1.000  0.000                                                        
+        1   1015   1.320  0.000  1.000  0.000                                                        
+        1   1016   1.320  0.000  1.000  0.000                                                        
+        1   1017   1.320  0.000  1.000  0.000                                                        
+        1   1018   1.320  0.000  1.000  0.000                                                        
+        1   1019   1.320  0.000  1.000  0.000                                                        
+        1   1020   1.320  0.000  1.000  0.000                                                        
+        1   1021   1.320  0.000  1.000  0.000                                                        
+        1   1032   0.120  0.000  1.000  0.000                                                        
+ 
+      Federelemente 
+      Grp Nummer Knoten Knoten    dX[-]    dY[-]    dZ[-]    Cp[kN/m]    Ct[kN/m]     Cm[kNm]
+                                 e-P[-]   e-T[-]   e-M[-] DP[kNsec/m] DT[kNsec/m]  DM[kNmsec]
+        2   2101    210    110    1.000    0.000    0.000   1.000E+07                        
+        2   2102    210    110    0.000    1.000    0.000   1.000E+07                        
+        2   2103    210    110    0.000    0.000    1.000   1.000E+07                        
+ 
+      SOFiSTiK AG - Educational-Version -
+      SOFiMSHA - FEM EXPORT & IMPORT & GENERATION V 2018-8.0     9.10.19    Seite:     4
+ 
+ 
+ 
+      Federelemente 
+      Grp Nummer Knoten Knoten    dX[-]    dY[-]    dZ[-]    Cp[kN/m]    Ct[kN/m]     Cm[kNm]
+                                 e-P[-]   e-T[-]   e-M[-] DP[kNsec/m] DT[kNsec/m]  DM[kNmsec]
+        2   2111    211    110    1.000    0.000    0.000   1.000E+00                        
+        2   2112    211    110    0.000    1.000    0.000   1.000E+00                        
+        2   2113    211    110    0.000    0.000    1.000   1.000E+08                        
+        2   2121    212    110    1.000    0.000    0.000   1.000E+07                        
+        2   2122    212    110    0.000    1.000    0.000   1.000E+00                        
+        2   2123    212    110    0.000    0.000    1.000   1.000E+07                        
+        2   2201    220    120    1.000    0.000    0.000   1.000E+00                        
+        2   2202    220    120    0.000    1.000    0.000   1.000E+07                        
+        2   2203    220    120    0.000    0.000    1.000   1.000E+07                        
+        2   2211    221    120    1.000    0.000    0.000   1.000E+00                        
+        2   2212    221    120    0.000    1.000    0.000   1.000E+00                        
+        2   2213    221    120    0.000    0.000    1.000   1.000E+08                        
+        2   2221    222    120    1.000    0.000    0.000   1.000E+00                        
+        2   2222    222    120    0.000    1.000    0.000   1.000E+00                        
+        2   2223    222    120    0.000    0.000    1.000   1.000E+07                        
+        2   2301    230    130    1.000    0.000    0.000   1.000E+00                        
+        2   2302    230    130    0.000    1.000    0.000   1.000E+07                        
+        2   2303    230    130    0.000    0.000    1.000   1.000E+07                        
+        2   2311    231    130    1.000    0.000    0.000   1.000E+00                        
+        2   2312    231    130    0.000    1.000    0.000   1.000E+00                        
+        2   2313    231    130    0.000    0.000    1.000   1.000E+08                        
+        2   2321    232    130    1.000    0.000    0.000   1.000E+00                        
+        2   2322    232    130    0.000    1.000    0.000   1.000E+00                        
+        2   2323    232    130    0.000    0.000    1.000   1.000E+07                        
+      Alle Federn haben lineare Eigenschaften                                                
+ 
+      Zusammenstellung der Stabelemente 
+ 
+      Gruppen
+        Grp     GesLänge    Max.Länge   GesVolumen   GesGewicht   Oberfläche
+                     [m]          [m]         [m3]          [t]         [m2]
+          1       27.240        1.380      136.884      342.211      550.076
+      ----------------------------------------------------------------------
+      Summe       27.240                   136.884      342.211      550.076
+ 
+ SOFiSTiK AG - Educational-Version -
+ TENDON - GEOMETRIE DER SPANNGLIEDFUEHRUNG V 2018-8.0      9.10.19     Seite:      
+ 
+ 
+ 
+    1 +PROG TENDON
+    2 $ Dat : C:\...\wisib\SOFI\esslingen - Kopie.dat  (#003)             09.10.2019
+    3 $ Job : BCI101:000869                                                    09:55
+    4 ENDE
+ 
+      SOFiSTiK AG - Educational-Version -
+      TENDON - GEOMETRIE DER SPANNGLIEDFUEHRUNG V 2018-8.0      9.10.19     Seite:     5
+ 
+      
+ 
+ 
+      ÜBERSICHT ZUR AKTUELLEN VORSPANNUNG     Keine Daten vorhanden
+ 
+ SOFiSTiK AG - Educational-Version -
+ SOFiLOAD - LAST DEFINITIONEN V 2018-8.0            9.10.19            Seite:      
+ 
+ 
+ 
+    1 +PROG SOFILOAD
+    2 $ Dat : C:\...\wisib\SOFI\esslingen - Kopie.dat  (#004)             09.10.2019
+    3 $ Job : BCI101:000869                                                    09:55
+    4 KOPF TEILSICHERHEITS- U. KOMBINATIONSBEIWERTE
+    5 ACT G   GAMU 1.35 GAMF 1.00  PSI0 1.00 PSI1 1.00 PSI2 1.00 PS1S 1.00                    BEZ 'Staendige Lasten'
+    6 ACT G_1 GAMU 1.35 GAMF 1.00  PSI0 1.00 PSI1 1.00 PSI2 1.00 PS1S 1.00                    BEZ 'Staendige Lasten'
+    7 ACT G_2 GAMU 1.35 GAMF 1.00  PSI0 1.00 PSI1 1.00 PSI2 1.00 PS1S 1.00                    BEZ 'Staendige Lasten'
+    8 ACT P   GAMU 1.00 GAMF 1.00  PSI0 1.00 PSI1 1.00 PSI2 1.00 PS1S 1.00                    BEZ 'Vorspannung'
+    9 ACT ZS  GAMU 1.00 GAMF 1.00  PSI0 1.00 PSI1 1.00 PSI2 1.00 PS1S 1.00 PART P SUP PERM    BEZ 'Stat.unbest.Vorspannung'   $ derzeit noch ZS, da ZP noch nicht möglich (AQB)
+   10 ACT K   GAMU 1.00 GAMF 1.00  PSI0 1.00 PSI1 1.00 PSI2 1.00 PS1S 1.00 SUP PERM           BEZ 'Kriechen+Schwinden'
+   11 ACT L_T GAMU 1.50 GAMF 0.00  PSI0 0.75 PSI1 0.75 PSI2 0.20 PS1S 0.80 SUP EXCL           BEZ 'TS'
+   12 ACT L_U GAMU 1.50 GAMF 0.00  PSI0 0.40 PSI1 0.40 PSI2 0.20 PS1S 0.80 SUP EXCL           BEZ 'UDL-0'
+   13 ACT ZF  GAMU 1.00 GAMF 0.00  PSI0 1.00 PSI1 1.00 PSI2 1.00 PS1S 1.00 SUP EXCL           BEZ 'wahr.Setzung'
+   14 ACT SF  GAMU 1.35*0.6 GAMF 0.00  PSI0 1.00 PSI1 1.00 PSI2 1.00 PS1S 1.00 SUP EXCL       BEZ 'mögl.Setzung' $ 0.6-fach gem. ARS 11/2003
+   15 ACT W   GAMU 1.50 GAMF 0.00  PSI0 0.50 PSI1 0.50 PSI2 0.00 PS1S 0.60 SUP EXCL           BEZ 'Wind quer'
+   16 ACT T   GAMU 1.35 GAMF 0.00  PSI0 0.80 PSI1 0.60 PSI2 0.50 PS1S 0.80 SUP EXCL           BEZ 'Temperatur'
+   17 ACT T_1 GAMU 1.35 GAMF 0.00  PSI0 0.80 PSI1 0.60 PSI2 0.50 PS1S 0.80 SUP EXCL           BEZ 'Temp konster Anteil'
+   18 ACT T_2 GAMU 1.35 GAMF 0.00  PSI0 0.80 PSI1 0.60 PSI2 0.50 PS1S 0.80 SUP EXCL           BEZ 'Temp veraenderl Anteil'
+   19 ACT H_B GAMU 1.50 GAMF 0.00  PSI0 0.00 PSI1 0.00 PSI2 0.00 PS1S 0.00 SUP EXEX           BEZ 'Horizontale Kraefte'
+   20 ACT H_L GAMU 1.35 GAMF 0.00  PSI0 1.00 PSI1 1.00 PSI2 1.00 PS1S 1.00 SUP EXEX           BEZ 'Lagerreibung'
+   21 ACT H_Q GAMU 1.35 GAMF 0.00  PSI0 1.00 PSI1 1.00 PSI2 1.00 PS1S 1.00 SUP EXCL           BEZ 'Zentrifugal'
+   22 ACT B   GAMU 1.50 GAMF 1.00  PSI0 1.00 PSI1 1.00 PSI2 1.00 PS1S 1.00 PART G SUP PERM    BEZ 'Schalung'
+   23 ACT X   GAMU 1.50 GAMF 0.00  PSI0 1.00 PSI1 1.00 PSI2 1.00 PS1S 1.00                    BEZ 'Einzellastfaelle'
+   24 ACT Z   GAMU 1.00 GAMF 1.00  PSI0 1.00 PSI1 1.00 PSI2 1.00                              BEZ 'Einzellastfaelle'
+   25 ACT Z_1 GAMU 1.00 GAMF 1.00  PSI0 1.00 PSI1 1.00 PSI2 1.00                              BEZ 'Einzellastfaelle'
+   26 ACT Z_2 GAMU 1.00 GAMF 1.00  PSI0 1.00 PSI1 1.00 PSI2 1.00                              BEZ 'Einzellastfaelle'
+   27 ACT Z_3 GAMU 1.00 GAMF 1.00  PSI0 1.00 PSI1 1.00 PSI2 1.00                              BEZ 'Einzellastfaelle'
+   28 ACT Z_4 GAMU 1.00 GAMF 1.00  PSI0 1.00 PSI1 1.00 PSI2 1.00                              BEZ 'Einzellastfaelle'
+   29 ACT A   GAMU 1.00 GAMF 1.00  PSI0 1.00 PSI1 1.00 PSI2 1.00                              BEZ 'Außergewöhnliche Lasten'
+   30 ENDE
+ 
+      +++++ Warnung Nr. 12287 in Programm SL_IA ; Eingabezeile:    5
+      Gewählte Norm kennt keine Teilsicherheitsbeiwerte, Eingabe Einwirkung    G wird ignoriert
+      +++++ Warnung Nr. 12287 in Programm SL_IA ; Eingabezeile:    6
+      Gewählte Norm kennt keine Teilsicherheitsbeiwerte, Eingabe Einwirkung  G_1 wird ignoriert
+      +++++ Warnung Nr. 12287 in Programm SL_IA ; Eingabezeile:    7
+      Gewählte Norm kennt keine Teilsicherheitsbeiwerte, Eingabe Einwirkung  G_2 wird ignoriert
+      +++++ Warnung Nr. 12287 in Programm SL_IA ; Eingabezeile:    8
+      Gewählte Norm kennt keine Teilsicherheitsbeiwerte, Eingabe Einwirkung    P wird ignoriert
+      +++++ Warnung Nr. 12287 in Programm SL_IA ; Eingabezeile:    9
+      Gewählte Norm kennt keine Teilsicherheitsbeiwerte, Eingabe Einwirkung   ZS wird ignoriert
+      +++++ Warnung Nr. 12287 in Programm SL_IA ; Eingabezeile:   10
+      Gewählte Norm kennt keine Teilsicherheitsbeiwerte, Eingabe Einwirkung    K wird ignoriert
+      +++++ Warnung Nr. 12287 in Programm SL_IA ; Eingabezeile:   11
+      Gewählte Norm kennt keine Teilsicherheitsbeiwerte, Eingabe Einwirkung  L_T wird ignoriert
+      +++++ Warnung Nr. 12287 in Programm SL_IA ; Eingabezeile:   12
+      Gewählte Norm kennt keine Teilsicherheitsbeiwerte, Eingabe Einwirkung  L_U wird ignoriert
+      +++++ Warnung Nr. 12287 in Programm SL_IA ; Eingabezeile:   13
+      Gewählte Norm kennt keine Teilsicherheitsbeiwerte, Eingabe Einwirkung   ZF wird ignoriert
+      +++++ Warnung Nr. 12287 in Programm SL_IA ; Eingabezeile:   14
+      Gewählte Norm kennt keine Teilsicherheitsbeiwerte, Eingabe Einwirkung   SF wird ignoriert
+      +++++ Warnung Nr. 12287 in Programm SL_IA ; Eingabezeile:   15
+      Gewählte Norm kennt keine Teilsicherheitsbeiwerte, Eingabe Einwirkung    W wird ignoriert
+      +++++ Warnung Nr. 12287 in Programm SL_IA ; Eingabezeile:   16
+      Gewählte Norm kennt keine Teilsicherheitsbeiwerte, Eingabe Einwirkung    T wird ignoriert
+      +++++ Warnung Nr. 12287 in Programm SL_IA ; Eingabezeile:   17
+      Gewählte Norm kennt keine Teilsicherheitsbeiwerte, Eingabe Einwirkung  T_1 wird ignoriert
+      +++++ Warnung Nr. 12287 in Programm SL_IA ; Eingabezeile:   18
+      Gewählte Norm kennt keine Teilsicherheitsbeiwerte, Eingabe Einwirkung  T_2 wird ignoriert
+      +++++ Warnung Nr. 12287 in Programm SL_IA ; Eingabezeile:   19
+      Gewählte Norm kennt keine Teilsicherheitsbeiwerte, Eingabe Einwirkung  H_B wird ignoriert
+ 
+      SOFiSTiK AG - Educational-Version -
+      SOFiLOAD - LAST DEFINITIONEN V 2018-8.0            9.10.19            Seite:     6
+ 
+      
+      Teilsicherheits- u. Kombinationsbeiwerte
+ 
+ 
+      +++++ Warnung Nr. 12287 in Programm SL_IA ; Eingabezeile:   20
+      Gewählte Norm kennt keine Teilsicherheitsbeiwerte, Eingabe Einwirkung  H_L wird ignoriert
+      +++++ Warnung Nr. 12287 in Programm SL_IA ; Eingabezeile:   21
+      Gewählte Norm kennt keine Teilsicherheitsbeiwerte, Eingabe Einwirkung  H_Q wird ignoriert
+      +++++ Warnung Nr. 12287 in Programm SL_IA ; Eingabezeile:   22
+      Gewählte Norm kennt keine Teilsicherheitsbeiwerte, Eingabe Einwirkung    B wird ignoriert
+      +++++ Warnung Nr. 12287 in Programm SL_IA ; Eingabezeile:   23
+      Gewählte Norm kennt keine Teilsicherheitsbeiwerte, Eingabe Einwirkung    X wird ignoriert
+      +++++ Warnung Nr. 12287 in Programm SL_IA ; Eingabezeile:   24
+      Gewählte Norm kennt keine Teilsicherheitsbeiwerte, Eingabe Einwirkung    Z wird ignoriert
+      +++++ Warnung Nr. 12287 in Programm SL_IA ; Eingabezeile:   25
+      Gewählte Norm kennt keine Teilsicherheitsbeiwerte, Eingabe Einwirkung  Z_1 wird ignoriert
+      +++++ Warnung Nr. 12287 in Programm SL_IA ; Eingabezeile:   26
+      Gewählte Norm kennt keine Teilsicherheitsbeiwerte, Eingabe Einwirkung  Z_2 wird ignoriert
+      +++++ Warnung Nr. 12287 in Programm SL_IA ; Eingabezeile:   27
+      Gewählte Norm kennt keine Teilsicherheitsbeiwerte, Eingabe Einwirkung  Z_3 wird ignoriert
+      +++++ Warnung Nr. 12287 in Programm SL_IA ; Eingabezeile:   28
+      Gewählte Norm kennt keine Teilsicherheitsbeiwerte, Eingabe Einwirkung  Z_4 wird ignoriert
+      +++++ Warnung Nr. 12287 in Programm SL_IA ; Eingabezeile:   29
+      Gewählte Norm kennt keine Teilsicherheitsbeiwerte, Eingabe Einwirkung    A wird ignoriert
+ 
+      SOFiSTiK AG - Educational-Version -
+      SOFiLOAD - LAST DEFINITIONEN V 2018-8.0            9.10.19            Seite:     7
+ 
+      
+      Teilsicherheits- u. Kombinationsbeiwerte
+ 
+ 
+       +++++    0 FEHLER UND   25 WARNUNGEN +++++
+ 
+ SOFiSTiK AG - Educational-Version -
+ ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0          9.10.19         Seite:      
+ 
+ 
+ 
+    1 +PROG ASE
+    2 $ Dat : C:\...\wisib\SOFI\esslingen - Kopie.dat  (#005)             09.10.2019
+    3 $ Job : BCI101:000869                                                    09:55
+    4 KOPF EIGENGEWICHT ZUM TEST
+    5 ECHO VOLL EXTR
+    6 LF 1 FAKT 1.0 EGX 1 0 0  BEZ 'Eigengewicht G0 -x' TYP G
+    7 LF 2 FAKT 1.0 EGX 0 1 0  BEZ 'Eigengewicht G0 -y' TYP G
+    8 LF 3 FAKT 1.0 EGX 0 0 1  BEZ 'Eigengewicht G0 -z' TYP G
+    9 ENDE
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0          9.10.19         Seite:     8
+ 
+      
+      Eigengewicht zum Test
+ 
+ 
+      Elementgruppen 
+       Nr.       Fak-S       Fak-B       Fak-L  LF-P
+         1       1.000       1.000       1.000     -
+         2       1.000       1.000       1.000     -
+ 
+      Knoten 
+       Nummer      X[m]      Y[m]      Z[m]  eq.PX  eq.PY  eq.PZ  eq.MX  eq.MY  eq.MZ
+          100    -0.120     0.000     0.000      1      2      3      4      5      6
+          110     0.000     0.000     0.000      7      8      9     10     11     12
+          111     1.380     0.000     0.000     13     14     15     16     17     18
+          112     2.760     0.000     0.000     19     20     21     22     23     24
+          113     4.140     0.000     0.000     25     26     27     28     29     30
+          114     5.520     0.000     0.000     31     32     33     34     35     36
+          115     6.900     0.000     0.000     37     38     39     40     41     42
+          116     8.280     0.000     0.000     43     44     45     46     47     48
+          117     9.660     0.000     0.000     49     50     51     52     53     54
+          118    11.040     0.000     0.000     55     56     57     58     59     60
+          119    12.420     0.000     0.000     61     62     63     64     65     66
+          120    13.800     0.000     0.000     67     68     69     70     71     72
+          121    15.120     0.000     0.000     73     74     75     76     77     78
+          122    16.440     0.000     0.000     79     80     81     82     83     84
+          123    17.760     0.000     0.000     85     86     87     88     89     90
+          124    19.080     0.000     0.000     91     92     93     94     95     96
+          125    20.400     0.000     0.000     97     98     99    100    101    102
+          126    21.720     0.000     0.000    103    104    105    106    107    108
+          127    23.040     0.000     0.000    109    110    111    112    113    114
+          128    24.360     0.000     0.000    115    116    117    118    119    120
+          129    25.680     0.000     0.000    121    122    123    124    125    126
+          130    27.000     0.000     0.000    127    128    129    130    131    132
+          140    27.120     0.000     0.000    133    134    135    136    137    138
+          210     0.000    -3.050     0.600     PX     PY     PZ     MX     MY     MZ
+          211     0.000     0.000     0.600     PX     PY     PZ     MX     MY     MZ
+          212     0.000     3.050     0.600     PX     PY     PZ     MX     MY     MZ
+          220    13.800    -3.050     0.600     PX     PY     PZ     MX     MY     MZ
+          221    13.800     0.000     0.600     PX     PY     PZ     MX     MY     MZ
+          222    13.800     3.050     0.600     PX     PY     PZ     MX     MY     MZ
+          230    27.000    -3.050     0.600     PX     PY     PZ     MX     MY     MZ
+          231    27.000     0.000     0.600     PX     PY     PZ     MX     MY     MZ
+          232    27.000     3.050     0.600     PX     PY     PZ     MX     MY     MZ
+      --------------------------------------------------------------------------------------
+      MIN        -0.120    -3.050     0.000
+      MAX        27.120     3.050     0.600    138
+ 
+      Lastfall      1 (G   ) Eigengewicht G0 -x
+      Faktor P und M Lasten                1.000
+      Faktor Eigengewicht        EG-XX     1.000
+ 
+      Lastfall      2 (G   ) Eigengewicht G0 -y
+      Faktor P und M Lasten                1.000
+      Faktor Eigengewicht        EG-YY     1.000
+ 
+      Lastfall      3 (G   ) Eigengewicht G0 -z
+      Faktor P und M Lasten                1.000
+      Faktor Eigengewicht        EG-ZZ     1.000
+ 
+      Aufgebrachter Lastvektor Lastfall      1
+      Knoten    PXX[kN]    PYY[kN]    PZZ[kN]   MXX[kNm]   MYY[kNm]   MZZ[kNm]
+         100        7.5        0.0        0.0       0.00       2.10      -1.31
+         110       94.2        0.0        0.0       0.00      26.22     -16.38
+         111      173.4        0.0        0.0       0.00      48.25     -30.14
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0          9.10.19         Seite:     9
+ 
+      
+      Eigengewicht zum Test
+ 
+ 
+      Aufgebrachter Lastvektor Lastfall      1
+      Knoten    PXX[kN]    PYY[kN]    PZZ[kN]   MXX[kNm]   MYY[kNm]   MZZ[kNm]
+         112      173.4        0.0        0.0       0.00      48.25     -30.14
+         113      173.4        0.0        0.0       0.00      48.25     -30.14
+         114      173.4        0.0        0.0       0.00      48.25     -30.14
+         115      173.4        0.0        0.0       0.00      48.25     -30.14
+         116      173.4        0.0        0.0       0.00      48.25     -30.14
+         117      173.4        0.0        0.0       0.00      48.25     -30.14
+         118      173.4        0.0        0.0       0.00      48.25     -30.14
+         119      173.4        0.0        0.0       0.00      48.25     -30.14
+         120      169.6        0.0        0.0       0.00      47.20     -29.48
+         121      165.8        0.0        0.0       0.00      46.16     -28.83
+         122      165.8        0.0        0.0       0.00      46.16     -28.83
+         123      165.8        0.0        0.0       0.00      46.16     -28.83
+         124      165.8        0.0        0.0       0.00      46.16     -28.83
+         125      165.8        0.0        0.0       0.00      46.16     -28.83
+         126      165.8        0.0        0.0       0.00      46.16     -28.83
+         127      165.8        0.0        0.0       0.00      46.16     -28.83
+         128      165.8        0.0        0.0       0.00      46.16     -28.83
+         129      165.8        0.0        0.0       0.00      46.16     -28.83
+         130       90.5        0.0        0.0       0.00      25.18     -15.72
+         140        7.5        0.0        0.0       0.00       2.10      -1.31
+ 
+      Aufgebrachter Lastvektor Lastfall      2
+      Knoten    PXX[kN]    PYY[kN]    PZZ[kN]   MXX[kNm]   MYY[kNm]   MZZ[kNm]
+         100        0.0        7.5        0.0      -2.10       0.00       0.15
+         110        0.0       94.2        0.0     -26.22       0.00      19.79
+         111        0.0      173.4        0.0     -48.25       0.00       0.00
+         112        0.0      173.4        0.0     -48.25       0.00       0.00
+         113        0.0      173.4        0.0     -48.25       0.00       0.00
+         114        0.0      173.4        0.0     -48.25       0.00       0.00
+         115        0.0      173.4        0.0     -48.25       0.00       0.00
+         116        0.0      173.4        0.0     -48.25       0.00       0.00
+         117        0.0      173.4        0.0     -48.25       0.00       0.00
+         118        0.0      173.4        0.0     -48.25       0.00       0.00
+         119        0.0      173.4        0.0     -48.25       0.00       0.00
+         120        0.0      169.6        0.0     -47.20       0.00      -1.70
+         121        0.0      165.8        0.0     -46.16       0.00       0.00
+         122        0.0      165.8        0.0     -46.16       0.00       0.00
+         123        0.0      165.8        0.0     -46.16       0.00       0.00
+         124        0.0      165.8        0.0     -46.16       0.00       0.00
+         125        0.0      165.8        0.0     -46.16       0.00       0.00
+         126        0.0      165.8        0.0     -46.16       0.00       0.00
+         127        0.0      165.8        0.0     -46.16       0.00       0.00
+         128        0.0      165.8        0.0     -46.16       0.00       0.00
+         129        0.0      165.8        0.0     -46.16       0.00       0.00
+         130        0.0       90.5        0.0     -25.18       0.00     -18.09
+         140        0.0        7.5        0.0      -2.10       0.00      -0.15
+ 
+      Aufgebrachter Lastvektor Lastfall      3
+      Knoten    PXX[kN]    PYY[kN]    PZZ[kN]   MXX[kNm]   MYY[kNm]   MZZ[kNm]
+         100        0.0        0.0        7.5       1.31      -0.15       0.00
+         110        0.0        0.0       94.2      16.38     -19.79       0.00
+         111        0.0        0.0      173.4      30.14       0.00       0.00
+         112        0.0        0.0      173.4      30.14       0.00       0.00
+         113        0.0        0.0      173.4      30.14       0.00       0.00
+         114        0.0        0.0      173.4      30.14       0.00       0.00
+         115        0.0        0.0      173.4      30.14       0.00       0.00
+         116        0.0        0.0      173.4      30.14       0.00       0.00
+         117        0.0        0.0      173.4      30.14       0.00       0.00
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0          9.10.19         Seite:    10
+ 
+      
+      Eigengewicht zum Test
+ 
+ 
+      Aufgebrachter Lastvektor Lastfall      3
+      Knoten    PXX[kN]    PYY[kN]    PZZ[kN]   MXX[kNm]   MYY[kNm]   MZZ[kNm]
+         118        0.0        0.0      173.4      30.14       0.00       0.00
+         119        0.0        0.0      173.4      30.14       0.00       0.00
+         120        0.0        0.0      169.6      29.48       1.70       0.00
+         121        0.0        0.0      165.8      28.83       0.00       0.00
+         122        0.0        0.0      165.8      28.83       0.00       0.00
+         123        0.0        0.0      165.8      28.83       0.00       0.00
+         124        0.0        0.0      165.8      28.83       0.00       0.00
+         125        0.0        0.0      165.8      28.83       0.00       0.00
+         126        0.0        0.0      165.8      28.83       0.00       0.00
+         127        0.0        0.0      165.8      28.83       0.00       0.00
+         128        0.0        0.0      165.8      28.83       0.00       0.00
+         129        0.0        0.0      165.8      28.83       0.00       0.00
+         130        0.0        0.0       90.5      15.72      18.09       0.00
+         140        0.0        0.0        7.5       1.31       0.15       0.00
+ 
+      Summe der Lasten                                                                           
+      Lastfall             Σ(Lasten)               Bezeichnung                            
+                     X[kN]       Y[kN]       Z[kN]                                        
+             1      3422.1         0.0         0.0 Eigengewicht G0 -x                     
+             2         0.0      3422.1         0.0 Eigengewicht G0 -y                     
+             3         0.0         0.0      3422.1 Eigengewicht G0 -z                     
+ 
+      Stabschnittgrößen Lastfall      1   Eigengewicht G0 -x 
+       Grp  Nummer       x        N       Vy       Vz        Mt        My        Mz
+                       [m]     [kN]     [kN]     [kN]     [kNm]     [kNm]     [kNm]
+         1    1001   0.000      0.0     0.00     0.00      0.00      0.00      0.00
+                     0.120    -15.1     0.00     0.00      0.00      0.00      0.00
+         1    1002   0.000   3407.0    32.47    -6.65      0.07     74.16    458.86
+                     1.380   3233.7    32.47    -6.65      0.07     64.99    414.05
+         1    1003   0.000   3233.7    32.47    -6.65      0.07     64.99    414.05
+                     1.380   3060.3    32.47    -6.65      0.07     55.81    369.25
+         1    1004   0.000   3060.3    32.47    -6.65      0.07     55.81    369.25
+                     1.380   2886.9    32.47    -6.65      0.07     46.63    324.44
+         1    1005   0.000   2886.9    32.47    -6.65      0.07     46.63    324.44
+                     1.380   2713.6    32.47    -6.65      0.07     37.46    279.63
+         1    1006   0.000   2713.6    32.47    -6.65      0.07     37.46    279.63
+                     1.380   2540.2    32.47    -6.65      0.07     28.28    234.82
+         1    1007   0.000   2540.2    32.47    -6.65      0.07     28.28    234.82
+                     1.380   2366.8    32.47    -6.65      0.07     19.11    190.02
+         1    1008   0.000   2366.8    32.47    -6.65      0.07     19.11    190.02
+                     1.380   2193.5    32.47    -6.65      0.07      9.93    145.21
+         1    1009   0.000   2193.5    32.47    -6.65      0.07      9.93    145.21
+                     1.380   2020.1    32.47    -6.65      0.07      0.75    100.40
+         1    1010   0.000   2020.1    32.47    -6.65      0.07      0.75    100.40
+                     1.380   1846.7    32.47    -6.65      0.07     -8.42     55.59
+         1    1011   0.000   1846.7    32.47    -6.65      0.07     -8.42     55.59
+                     1.380   1673.4    32.47    -6.65      0.07    -17.60     10.79
+         1    1012   0.000   1673.4     0.82     1.33     -0.04    -17.60     10.79
+                     1.320   1507.5     0.82     1.33     -0.04    -15.84      9.71
+         1    1013   0.000   1507.5     0.82     1.33     -0.04    -15.84      9.71
+                     1.320   1341.7     0.82     1.33     -0.04    -14.08      8.63
+         1    1014   0.000   1341.7     0.82     1.33     -0.04    -14.08      8.63
+                     1.320   1175.9     0.82     1.33     -0.04    -12.32      7.55
+         1    1015   0.000   1175.9     0.82     1.33     -0.04    -12.32      7.55
+                     1.320   1010.0     0.82     1.33     -0.04    -10.56      6.47
+         1    1016   0.000   1010.0     0.82     1.33     -0.04    -10.56      6.47
+                     1.320    844.2     0.82     1.33     -0.04     -8.80      5.39
+         1    1017   0.000    844.2     0.82     1.33     -0.04     -8.80      5.39
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0          9.10.19         Seite:    11
+ 
+      
+      Eigengewicht zum Test
+ 
+ 
+      Stabschnittgrößen Lastfall      1   Eigengewicht G0 -x 
+       Grp  Nummer       x        N       Vy       Vz        Mt        My        Mz
+                       [m]     [kN]     [kN]     [kN]     [kNm]     [kNm]     [kNm]
+         1    1017   1.320    678.4     0.82     1.33     -0.04     -7.04      4.31
+         1    1018   0.000    678.4     0.82     1.33     -0.04     -7.04      4.31
+                     1.320    512.6     0.82     1.33     -0.04     -5.28      3.24
+         1    1019   0.000    512.6     0.82     1.33     -0.04     -5.28      3.24
+                     1.320    346.7     0.82     1.33     -0.04     -3.52      2.16
+         1    1020   0.000    346.7     0.82     1.33     -0.04     -3.52      2.16
+                     1.320    180.9     0.82     1.33     -0.04     -1.76      1.08
+         1    1021   0.000    180.9     0.82     1.33     -0.04     -1.76      1.08
+                     1.320     15.1     0.82     1.33     -0.04      0.00      0.00
+         1    1032   0.000     15.1     0.00     0.00      0.00      0.00      0.00
+                     0.120      0.0     0.00     0.00      0.00      0.00      0.00
+ 
+      Federkräfte und -verschiebungen Lastfall      1   Eigengewicht G0 -x 
+       Grp  Nummer         P       P-t         M         u       u-t       phi
+                        [kN]      [kN]     [kNm]      [mm]      [mm]    [mrad]
+         2    2101    1666.5       0.0      0.00     0.167     0.003     0.000
+         2    2102      32.5       0.0      0.00     0.003     0.167    -0.058
+         2    2103       0.5       0.0      0.00     0.000     0.167    -0.003
+         2    2111       0.0       0.0      0.00     0.171     0.003     0.000
+         2    2112       0.0       0.0      0.00     0.003     0.171    -0.058
+         2    2113      -5.5       0.0      0.00     0.000     0.189    -0.003
+         2    2121    1755.7       0.0      0.00     0.176     0.003     0.000
+         2    2122       0.0       0.0      0.00     0.003     0.176    -0.058
+         2    2123      -1.6       0.0      0.00    -0.000     0.176    -0.003
+         2    2201       0.0       0.0      0.00     0.407     0.003     0.000
+         2    2202     -31.7       0.0      0.00    -0.003     0.407     0.016
+         2    2203      -0.5       0.0      0.00     0.000     0.407     0.000
+         2    2211       0.0       0.0      0.00     0.407     0.003     0.000
+         2    2212       0.0       0.0      0.00    -0.003     0.407     0.016
+         2    2213       6.7       0.0      0.00     0.000     0.402     0.000
+         2    2221       0.0       0.0      0.00     0.407     0.003     0.000
+         2    2222       0.0       0.0      0.00    -0.003     0.407     0.016
+         2    2223       1.8       0.0      0.00     0.000     0.407     0.000
+         2    2301       0.0       0.0      0.00     0.481     0.000     0.000
+         2    2302      -0.8       0.0      0.00     0.000     0.481    -0.008
+         2    2303      -0.0       0.0      0.00     0.000     0.481     0.000
+         2    2311       0.0       0.0      0.00     0.480     0.000     0.000
+         2    2312       0.0       0.0      0.00     0.000     0.480    -0.008
+         2    2313      -1.1       0.0      0.00     0.000     0.483     0.000
+         2    2321       0.0       0.0      0.00     0.480     0.000     0.000
+         2    2322       0.0       0.0      0.00     0.000     0.480    -0.008
+         2    2323      -0.2       0.0      0.00     0.000     0.480     0.000
+ 
+      Knotenverschiebungen  Lastfall      1   Eigengewicht G0 -x 
+       Knoten       u-X       u-Y       u-Z     phi-X     phi-Y     phi-Z
+           Nr      [mm]      [mm]      [mm]    [mrad]    [mrad]    [mrad]
+          100     0.189     0.004    -0.007     0.000    -0.058    -0.003 
+          110     0.189     0.003     0.000     0.000    -0.058    -0.003 
+          111     0.214     0.000     0.067     0.000    -0.040    -0.002 
+          112     0.239    -0.002     0.110     0.000    -0.024    -0.002 
+          113     0.262    -0.003     0.132     0.000    -0.010    -0.002 
+          114     0.285    -0.004     0.137     0.000     0.001    -0.001 
+          115     0.307    -0.005     0.129     0.000     0.010    -0.001 
+          116     0.327    -0.005     0.110     0.000     0.016    -0.001 
+          117     0.347    -0.005     0.084     0.000     0.020    -0.000 
+          118     0.367    -0.005     0.055     0.000     0.021    -0.000 
+          119     0.385    -0.004     0.026     0.000     0.020     0.000 
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0          9.10.19         Seite:    12
+ 
+      
+      Eigengewicht zum Test
+ 
+ 
+      Knotenverschiebungen  Lastfall      1   Eigengewicht G0 -x 
+       Knoten       u-X       u-Y       u-Z     phi-X     phi-Y     phi-Z
+           Nr      [mm]      [mm]      [mm]    [mrad]    [mrad]    [mrad]
+          120     0.402    -0.003     0.000     0.000     0.016     0.000 
+          121     0.417    -0.003    -0.018     0.000     0.012     0.000 
+          122     0.431    -0.003    -0.030     0.000     0.007     0.000 
+          123     0.443    -0.003    -0.038     0.000     0.004     0.000 
+          124     0.453    -0.002    -0.040     0.000     0.001     0.000 
+          125     0.462    -0.002    -0.039     0.000    -0.002     0.000 
+          126     0.470    -0.002    -0.035     0.000    -0.004     0.000 
+          127     0.475    -0.001    -0.029     0.000    -0.006     0.000 
+          128     0.479    -0.001    -0.020     0.000    -0.007     0.000 
+          129     0.482    -0.001    -0.010     0.000    -0.008     0.000 
+          130     0.483     0.000     0.000     0.000    -0.008     0.000 
+          140     0.483     0.000     0.001     0.000    -0.008     0.000 
+          210     0.000     0.000     0.000     0.000     0.000     0.000 
+          211     0.000     0.000     0.000     0.000     0.000     0.000 
+          212     0.000     0.000     0.000     0.000     0.000     0.000 
+          220     0.000     0.000     0.000     0.000     0.000     0.000 
+          221     0.000     0.000     0.000     0.000     0.000     0.000 
+          222     0.000     0.000     0.000     0.000     0.000     0.000 
+          230     0.000     0.000     0.000     0.000     0.000     0.000 
+          231     0.000     0.000     0.000     0.000     0.000     0.000 
+          232     0.000     0.000     0.000     0.000     0.000     0.000 
+ 
+      Auflagerkräfte  Lastfall      1   Eigengewicht G0 -x 
+       Knoten       P-X       P-Y       P-Z       M-X       M-Y       M-Z
+           Nr      [kN]      [kN]      [kN]     [kNm]     [kNm]     [kNm]
+          210   -1666.5     -32.5      -0.5    -10.48    499.94   2541.34 
+          211       0.0       0.0       5.5      0.00      0.00           
+          212   -1755.7       0.0       1.6     -2.43    526.70  -2677.38 
+          220       0.0      31.7       0.5     10.21      0.00      0.00 
+          221       0.0       0.0      -6.7      0.00      0.00           
+          222       0.0       0.0      -1.8      2.74      0.00      0.00 
+          230       0.0       0.8       0.0      0.27      0.00      0.00 
+          231       0.0       0.0       1.1      0.00      0.00           
+          232       0.0       0.0       0.2     -0.31      0.00      0.00 
+ 
+      Dehnungsenergie der Gruppen
+      Lastfall      1
+      Gruppe  Energie [kNm]    =% der Summe
+         1         0.352396    54.595261
+         2         0.293074    45.404739
+      ---------------------------------
+      Summe         0.645469   100.000000
+ 
+      Stabschnittgrößen Lastfall      2   Eigengewicht G0 -y 
+       Grp  Nummer       x        N       Vy       Vz        Mt        My        Mz
+                       [m]     [kN]     [kN]     [kN]     [kNm]     [kNm]     [kNm]
+         1    1001   0.000      0.0     0.00     0.00      0.00      0.00      0.00
+                     0.120      0.0   -15.08     0.00     -1.00      0.00      0.90
+         1    1002   0.000      0.0   846.50    -0.97     57.83      0.00    744.56
+                     1.380      0.0   673.14    -0.97     46.29     -1.34   -304.00
+         1    1003   0.000      0.0   673.14    -0.97     46.29     -1.34   -304.00
+                     1.380      0.0   499.77    -0.97     34.75     -2.68  -1113.30
+         1    1004   0.000      0.0   499.77    -0.97     34.75     -2.68  -1113.30
+                     1.380      0.0   326.40    -0.97     23.21     -4.02  -1683.36
+         1    1005   0.000      0.0   326.40    -0.97     23.21     -4.02  -1683.36
+                     1.380      0.0   153.04    -0.97     11.67     -5.36  -2014.18
+         1    1006   0.000      0.0   153.04    -0.97     11.67     -5.36  -2014.18
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0          9.10.19         Seite:    13
+ 
+      
+      Eigengewicht zum Test
+ 
+ 
+      Stabschnittgrößen Lastfall      2   Eigengewicht G0 -y 
+       Grp  Nummer       x        N       Vy       Vz        Mt        My        Mz
+                       [m]     [kN]     [kN]     [kN]     [kNm]     [kNm]     [kNm]
+         1    1006   1.380      0.0   -20.33    -0.97      0.13     -6.70  -2105.74
+         1    1007   0.000      0.0   -20.33    -0.97      0.13     -6.70  -2105.74
+                     1.380      0.0  -193.70    -0.97    -11.41     -8.04  -1958.06
+         1    1008   0.000      0.0  -193.70    -0.97    -11.41     -8.04  -1958.06
+                     1.380      0.0  -367.06    -0.97    -22.95     -9.38  -1571.14
+         1    1009   0.000      0.0  -367.06    -0.97    -22.95     -9.38  -1571.14
+                     1.380      0.0  -540.43    -0.97    -34.49    -10.72   -944.97
+         1    1010   0.000      0.0  -540.43    -0.97    -34.49    -10.72   -944.97
+                     1.380      0.0  -713.80    -0.97    -46.02    -12.06    -79.55
+         1    1011   0.000      0.0  -713.80    -0.97    -46.02    -12.06    -79.55
+                     1.380      0.0  -887.16    -0.97    -57.56    -13.40   1025.12
+         1    1012   0.000      0.0   906.74     1.02     55.07    -13.40   1025.12
+                     1.320      0.0   740.91     1.02     44.03    -12.06    -62.33
+         1    1013   0.000      0.0   740.91     1.02     44.03    -12.06    -62.33
+                     1.320      0.0   575.08     1.02     32.99    -10.72   -930.88
+         1    1014   0.000      0.0   575.08     1.02     32.99    -10.72   -930.88
+                     1.320      0.0   409.25     1.02     21.96     -9.38  -1580.54
+         1    1015   0.000      0.0   409.25     1.02     21.96     -9.38  -1580.54
+                     1.320      0.0   243.42     1.02     10.92     -8.04  -2011.30
+         1    1016   0.000      0.0   243.42     1.02     10.92     -8.04  -2011.30
+                     1.320      0.0    77.59     1.02     -0.12     -6.70  -2223.17
+         1    1017   0.000      0.0    77.59     1.02     -0.12     -6.70  -2223.17
+                     1.320      0.0   -88.24     1.02    -11.16     -5.36  -2216.14
+         1    1018   0.000      0.0   -88.24     1.02    -11.16     -5.36  -2216.14
+                     1.320      0.0  -254.07     1.02    -22.20     -4.02  -1990.22
+         1    1019   0.000      0.0  -254.07     1.02    -22.20     -4.02  -1990.22
+                     1.320      0.0  -419.90     1.02    -33.23     -2.68  -1545.41
+         1    1020   0.000      0.0  -419.90     1.02    -33.23     -2.68  -1545.41
+                     1.320      0.0  -585.72     1.02    -44.27     -1.34   -881.70
+         1    1021   0.000      0.0  -585.72     1.02    -44.27     -1.34   -881.70
+                     1.320      0.0  -751.55     1.02    -55.31      0.00      0.90
+         1    1032   0.000      0.0    15.08     0.00      1.00      0.00      0.90
+                     0.120      0.0     0.00     0.00      0.00      0.00      0.00
+ 
+      Federkräfte und -verschiebungen Lastfall      2   Eigengewicht G0 -y 
+       Grp  Nummer         P       P-t         M         u       u-t       phi
+                        [kN]      [kN]     [kNm]      [mm]      [mm]    [mrad]
+         2    2101     243.8       0.0      0.00     0.024     0.086     0.000
+         2    2102     861.6       0.0      0.00     0.086     0.024    -0.007
+         2    2103      -6.6       0.0      0.00    -0.001     0.090     0.016
+         2    2111       0.0       0.0      0.00     0.000     0.086     0.000
+         2    2112       0.0       0.0      0.00     0.086     0.000    -0.007
+         2    2113      -0.8       0.0      0.00     0.000     0.086     0.016
+         2    2121    -243.8       0.0      0.00    -0.024     0.086     0.000
+         2    2122       0.0       0.0      0.00     0.086     0.024    -0.007
+         2    2123       6.4       0.0      0.00     0.001     0.090     0.016
+         2    2201       0.0       0.0      0.00    -0.004     0.179     0.001
+         2    2202    1793.9       0.0      0.00     0.179     0.004    -0.000
+         2    2203     -10.5       0.0      0.00    -0.001     0.179    -0.001
+         2    2211       0.0       0.0      0.00    -0.003     0.179     0.001
+         2    2212       0.0       0.0      0.00     0.179     0.003    -0.000
+         2    2213       1.7       0.0      0.00     0.000     0.180    -0.001
+         2    2221       0.0       0.0      0.00    -0.001     0.179     0.001
+         2    2222       0.0       0.0      0.00     0.179     0.002    -0.000
+         2    2223      10.9       0.0      0.00     0.001     0.179    -0.001
+         2    2301       0.0       0.0      0.00    -0.037     0.077     0.000
+         2    2302     766.6       0.0      0.00     0.077     0.037     0.011
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0          9.10.19         Seite:    14
+ 
+      
+      Eigengewicht zum Test
+ 
+ 
+      Federkräfte und -verschiebungen Lastfall      2   Eigengewicht G0 -y 
+       Grp  Nummer         P       P-t         M         u       u-t       phi
+                        [kN]      [kN]     [kNm]      [mm]      [mm]    [mrad]
+         2    2303      -7.2       0.0      0.00    -0.001     0.085    -0.020
+         2    2311       0.0       0.0      0.00    -0.006     0.077     0.000
+         2    2312       0.0       0.0      0.00     0.077     0.006     0.011
+         2    2313      -0.8       0.0      0.00     0.000     0.077    -0.020
+         2    2321       0.0       0.0      0.00     0.025     0.077     0.000
+         2    2322       0.0       0.0      0.00     0.077     0.025     0.011
+         2    2323       7.0       0.0      0.00     0.001     0.081    -0.020
+ 
+      Knotenverschiebungen  Lastfall      2   Eigengewicht G0 -y 
+       Knoten       u-X       u-Y       u-Z     phi-X     phi-Y     phi-Z
+           Nr      [mm]      [mm]      [mm]    [mrad]    [mrad]    [mrad]
+          100     0.002     0.084    -0.001     0.000    -0.007     0.016 
+          110     0.002     0.086     0.000     0.000    -0.007     0.016 
+          111     0.002     0.132     0.011     0.011    -0.008     0.016 
+          112     0.002     0.172     0.022     0.020    -0.007     0.015 
+          113     0.001     0.204     0.030     0.025    -0.005     0.013 
+          114    -0.000     0.228     0.034     0.029    -0.001     0.010 
+          115    -0.002     0.242     0.034     0.030     0.002     0.007 
+          116    -0.003     0.246     0.030     0.029     0.004     0.004 
+          117    -0.004     0.241     0.022     0.026     0.006     0.001 
+          118    -0.005     0.227     0.012     0.020     0.006    -0.001 
+          119    -0.004     0.206     0.004     0.011     0.004    -0.002 
+          120    -0.003     0.180     0.000     0.001    -0.000    -0.001 
+          121    -0.001     0.203     0.005     0.010    -0.005    -0.000 
+          122    -0.001     0.221     0.014     0.018    -0.007    -0.001 
+          123    -0.001     0.233     0.023     0.023    -0.007    -0.003 
+          124    -0.002     0.236     0.032     0.027    -0.005    -0.005 
+          125    -0.004     0.232     0.037     0.028    -0.002    -0.009 
+          126    -0.005     0.218     0.038     0.027     0.001    -0.012 
+          127    -0.007     0.194     0.034     0.023     0.005    -0.015 
+          128    -0.008     0.163     0.026     0.018     0.008    -0.018 
+          129    -0.009     0.123     0.014     0.010     0.010    -0.019 
+          130    -0.009     0.077     0.000     0.000     0.011    -0.020 
+          140    -0.009     0.074    -0.001     0.000     0.011    -0.020 
+          210     0.000     0.000     0.000     0.000     0.000     0.000 
+          211     0.000     0.000     0.000     0.000     0.000     0.000 
+          212     0.000     0.000     0.000     0.000     0.000     0.000 
+          220     0.000     0.000     0.000     0.000     0.000     0.000 
+          221     0.000     0.000     0.000     0.000     0.000     0.000 
+          222     0.000     0.000     0.000     0.000     0.000     0.000 
+          230     0.000     0.000     0.000     0.000     0.000     0.000 
+          231     0.000     0.000     0.000     0.000     0.000     0.000 
+          232     0.000     0.000     0.000     0.000     0.000     0.000 
+ 
+      Auflagerkräfte  Lastfall      2   Eigengewicht G0 -y 
+       Knoten       P-X       P-Y       P-Z       M-X       M-Y       M-Z
+           Nr      [kN]      [kN]      [kN]     [kNm]     [kNm]     [kNm]
+          210    -243.8    -861.6       6.6   -248.40     73.15    371.83 
+          211       0.0       0.0       0.8      0.00      0.00           
+          212     243.8       0.0      -6.4      9.83    -73.15    371.83 
+          220       0.0   -1793.9      10.5   -522.10      0.00      0.00 
+          221       0.0       0.0      -1.7      0.00      0.00           
+          222       0.0       0.0     -10.9     16.57      0.00      0.00 
+          230       0.0    -766.6       7.2   -219.05      0.00      0.00 
+          231       0.0       0.0       0.8      0.00      0.00           
+          232       0.0       0.0      -7.0     10.68      0.00      0.00 
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0          9.10.19         Seite:    15
+ 
+      
+      Eigengewicht zum Test
+ 
+ 
+      Dehnungsenergie der Gruppen
+      Lastfall      2
+      Gruppe  Energie [kNm]    =% der Summe
+         1         0.096586    29.272255
+         2         0.233372    70.727745
+      ---------------------------------
+      Summe         0.329958   100.000000
+ 
+      Stabschnittgrößen Lastfall      3   Eigengewicht G0 -z 
+       Grp  Nummer       x        N       Vy       Vz        Mt        My        Mz
+                       [m]     [kN]     [kN]     [kN]     [kNm]     [kNm]     [kNm]
+         1    1001   0.000      0.0     0.00     0.00      0.00      0.00      0.00
+                     0.120      0.0     0.00   -15.08      1.42     -0.90      0.00
+         1    1002   0.000      0.0    36.06   660.65    -78.68     -0.90    443.42
+                     1.380      0.0    36.06   487.28    -62.31    791.17    393.65
+         1    1003   0.000      0.0    36.06   487.28    -62.31    791.17    393.65
+                     1.380      0.0    36.06   313.92    -45.94   1344.00    343.88
+         1    1004   0.000      0.0    36.06   313.92    -45.94   1344.00    343.88
+                     1.380      0.0    36.06   140.55    -29.57   1657.58    294.11
+         1    1005   0.000      0.0    36.06   140.55    -29.57   1657.58    294.11
+                     1.380      0.0    36.06   -32.82    -13.20   1731.91    244.34
+         1    1006   0.000      0.0    36.06   -32.82    -13.20   1731.91    244.34
+                     1.380      0.0    36.06  -206.18      3.17   1567.00    194.58
+         1    1007   0.000      0.0    36.06  -206.18      3.17   1567.00    194.58
+                     1.380      0.0    36.06  -379.55     19.54   1162.84    144.81
+         1    1008   0.000      0.0    36.06  -379.55     19.54   1162.84    144.81
+                     1.380      0.0    36.06  -552.92     35.90    519.44     95.04
+         1    1009   0.000      0.0    36.06  -552.92     35.90    519.44     95.04
+                     1.380      0.0    36.06  -726.28     52.27   -363.21     45.27
+         1    1010   0.000      0.0    36.06  -726.28     52.27   -363.21     45.27
+                     1.380      0.0    36.06  -899.65     68.64  -1485.11     -4.50
+         1    1011   0.000      0.0    36.06  -899.65     68.64  -1485.11     -4.50
+                     1.380      0.0    36.06 -1073.02     85.01  -2846.25    -54.27
+         1    1012   0.000      0.0    -4.11  1044.70    -81.68  -2846.25    -54.27
+                     1.320      0.0    -4.11   878.87    -66.02  -1576.69    -48.84
+         1    1013   0.000      0.0    -4.11   878.87    -66.02  -1576.69    -48.84
+                     1.320      0.0    -4.11   713.04    -50.36   -526.02    -43.42
+         1    1014   0.000      0.0    -4.11   713.04    -50.36   -526.02    -43.42
+                     1.320      0.0    -4.11   547.21    -34.71    305.75    -37.99
+         1    1015   0.000      0.0    -4.11   547.21    -34.71    305.75    -37.99
+                     1.320      0.0    -4.11   381.39    -19.05    918.62    -32.56
+         1    1016   0.000      0.0    -4.11   381.39    -19.05    918.62    -32.56
+                     1.320      0.0    -4.11   215.56     -3.39   1312.60    -27.13
+         1    1017   0.000      0.0    -4.11   215.56     -3.39   1312.60    -27.13
+                     1.320      0.0    -4.11    49.73     12.27   1487.69    -21.71
+         1    1018   0.000      0.0    -4.11    49.73     12.27   1487.69    -21.71
+                     1.320      0.0    -4.11  -116.10     27.92   1443.88    -16.28
+         1    1019   0.000      0.0    -4.11  -116.10     27.92   1443.88    -16.28
+                     1.320      0.0    -4.11  -281.93     43.58   1181.18    -10.85
+         1    1020   0.000      0.0    -4.11  -281.93     43.58   1181.18    -10.85
+                     1.320      0.0    -4.11  -447.76     59.24    699.59     -5.43
+         1    1021   0.000      0.0    -4.11  -447.76     59.24    699.59     -5.43
+                     1.320      0.0    -4.11  -613.59     74.90     -0.90      0.00
+         1    1032   0.000      0.0     0.00    15.08     -1.42     -0.90      0.00
+                     0.120      0.0     0.00     0.00      0.00      0.00      0.00
+ 
+      Federkräfte und -verschiebungen Lastfall      3   Eigengewicht G0 -z 
+       Grp  Nummer         P       P-t         M         u       u-t       phi
+                        [kN]      [kN]     [kNm]      [mm]      [mm]    [mrad]
+         2    2101     145.4       0.0      0.00     0.015     0.004     0.002
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0          9.10.19         Seite:    16
+ 
+      
+      Eigengewicht zum Test
+ 
+ 
+      Federkräfte und -verschiebungen Lastfall      3   Eigengewicht G0 -z 
+       Grp  Nummer         P       P-t         M         u       u-t       phi
+                        [kN]      [kN]     [kNm]      [mm]      [mm]    [mrad]
+         2    2102      36.1       0.0      0.00     0.004     0.015    -1.492
+         2    2103      23.7       0.0      0.00     0.002     0.015     0.010
+         2    2111       0.0       0.0      0.00     0.000     0.007     0.002
+         2    2112       0.0       0.0      0.00     0.004     0.006    -1.492
+         2    2113     563.1       0.0      0.00     0.006     0.448     0.010
+         2    2121    -145.4       0.0      0.00    -0.015     0.010     0.002
+         2    2122       0.0       0.0      0.00     0.004     0.017    -1.492
+         2    2123      88.9       0.0      0.00     0.009     0.015     0.010
+         2    2201       0.0       0.0      0.00     0.032     0.006     0.009
+         2    2202     -40.2       0.0      0.00    -0.004     0.032     0.117
+         2    2203      44.3       0.0      0.00     0.004     0.032    -0.001
+         2    2211       0.0       0.0      0.00     0.033     0.018     0.009
+         2    2212       0.0       0.0      0.00    -0.004     0.037     0.117
+         2    2213    1764.8       0.0      0.00     0.018     0.003    -0.001
+         2    2221       0.0       0.0      0.00     0.034     0.031     0.009
+         2    2222       0.0       0.0      0.00    -0.004     0.046     0.117
+         2    2223     308.7       0.0      0.00     0.031     0.035    -0.001
+         2    2301       0.0       0.0      0.00     0.039     0.002     0.002
+         2    2302       4.1       0.0      0.00     0.000     0.039     1.202
+         2    2303      22.2       0.0      0.00     0.002     0.039    -0.010
+         2    2311       0.0       0.0      0.00     0.055     0.005     0.002
+         2    2312       0.0       0.0      0.00     0.000     0.055     1.202
+         2    2313     523.9       0.0      0.00     0.005     0.306    -0.010
+         2    2321       0.0       0.0      0.00     0.071     0.008     0.002
+         2    2322       0.0       0.0      0.00     0.000     0.071     1.202
+         2    2323      82.6       0.0      0.00     0.008     0.071    -0.010
+ 
+      Knotenverschiebungen  Lastfall      3   Eigengewicht G0 -z 
+       Knoten       u-X       u-Y       u-Z     phi-X     phi-Y     phi-Z
+           Nr      [mm]      [mm]      [mm]    [mrad]    [mrad]    [mrad]
+          100     0.448     0.003    -0.173     0.002    -1.492     0.010 
+          110     0.448     0.004     0.006     0.002    -1.492     0.010 
+          111     0.415     0.016     2.076    -0.012    -1.375     0.009 
+          112     0.329     0.026     3.827    -0.024    -1.068     0.007 
+          113     0.209     0.034     5.042    -0.031    -0.639     0.004 
+          114     0.074     0.036     5.599    -0.036    -0.154     0.001 
+          115    -0.058     0.035     5.468    -0.037     0.318    -0.003 
+          116    -0.168     0.029     4.713    -0.034     0.710    -0.006 
+          117    -0.236     0.020     3.493    -0.029     0.953    -0.008 
+          118    -0.244     0.010     2.059    -0.020     0.981    -0.008 
+          119    -0.172     0.002     0.754    -0.007     0.725    -0.006 
+          120    -0.002    -0.001     0.018     0.009     0.117    -0.001 
+          121     0.164     0.000     0.396    -0.006    -0.476     0.004 
+          122     0.242     0.006     1.326    -0.017    -0.756     0.006 
+          123     0.249     0.015     2.433    -0.026    -0.781     0.006 
+          124     0.201     0.023     3.419    -0.031    -0.610     0.005 
+          125     0.115     0.028     4.065    -0.033    -0.303     0.002 
+          126     0.008     0.030     4.230    -0.032     0.081    -0.001 
+          127    -0.104     0.027     3.852    -0.028     0.483    -0.004 
+          128    -0.205     0.021     2.946    -0.021     0.843    -0.007 
+          129    -0.278     0.012     1.606    -0.011     1.103    -0.009 
+          130    -0.306     0.001     0.005     0.002     1.202    -0.010 
+          140    -0.306    -0.000    -0.139     0.002     1.202    -0.010 
+          210     0.000     0.000     0.000     0.000     0.000     0.000 
+          211     0.000     0.000     0.000     0.000     0.000     0.000 
+          212     0.000     0.000     0.000     0.000     0.000     0.000 
+          220     0.000     0.000     0.000     0.000     0.000     0.000 
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0          9.10.19         Seite:    17
+ 
+      
+      Eigengewicht zum Test
+ 
+ 
+      Knotenverschiebungen  Lastfall      3   Eigengewicht G0 -z 
+       Knoten       u-X       u-Y       u-Z     phi-X     phi-Y     phi-Z
+           Nr      [mm]      [mm]      [mm]    [mrad]    [mrad]    [mrad]
+          221     0.000     0.000     0.000     0.000     0.000     0.000 
+          222     0.000     0.000     0.000     0.000     0.000     0.000 
+          230     0.000     0.000     0.000     0.000     0.000     0.000 
+          231     0.000     0.000     0.000     0.000     0.000     0.000 
+          232     0.000     0.000     0.000     0.000     0.000     0.000 
+ 
+      Auflagerkräfte  Lastfall      3   Eigengewicht G0 -z 
+       Knoten       P-X       P-Y       P-Z       M-X       M-Y       M-Z
+           Nr      [kN]      [kN]      [kN]     [kNm]     [kNm]     [kNm]
+          210    -145.4     -36.1     -23.7    -46.92     43.62    221.71 
+          211       0.0       0.0    -563.1      0.00      0.00           
+          212     145.4       0.0     -88.9    135.65    -43.62    221.71 
+          220       0.0      40.2     -44.3    -55.47      0.00      0.00 
+          221       0.0       0.0   -1764.8      0.00      0.00           
+          222       0.0       0.0    -308.7    470.73      0.00      0.00 
+          230       0.0      -4.1     -22.2    -35.06      0.00      0.00 
+          231       0.0       0.0    -523.9      0.00      0.00           
+          232       0.0       0.0     -82.6    125.96      0.00      0.00 
+ 
+      Dehnungsenergie der Gruppen
+      Lastfall      3
+      Gruppe  Energie [kNm]    =% der Summe
+         1         4.770392    99.448769
+         2         0.026441     0.551227
+      ---------------------------------
+      Summe         4.796834    99.999992
+ 
+      Summe der Auflagerkräfte und Lasten                                                        
+      Lastfall           Σ(Reaktionen)             Bezeichnung                            
+                     X[kN]       Y[kN]       Z[kN]                                        
+                           Σ(Lasten)                                                      
+             1     -3422.1         0.0         0.0 Eigengewicht G0 -x                     
+                    3422.1         0.0         0.0                                        
+             2         0.0     -3422.1         0.0 Eigengewicht G0 -y                     
+                       0.0      3422.1         0.0                                        
+             3         0.0         0.0     -3422.1 Eigengewicht G0 -z                     
+                       0.0         0.0      3422.1                                        
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0          9.10.19         Seite:    18
+ 
+      
+      Eigengewicht zum Test
+ 
+ 
+      Rechenzeiten
+      Initialisierung Dateien.....................: CPU =       1.31 WCT =          1 [sec]
+      Eingabeverarbeitung+FE-System initialisieren: CPU =       0.22 WCT =          0 [sec]
+      Aufbau Elementsteifigkeitsmatritzen.........: CPU =       0.06 WCT =          0 [sec]
+      Verarbeiten Belastungen.....................: CPU =       0.14 WCT =          1 [sec]
+      Aufbau Gesamtgleichungssystem...............: CPU =       0.08 WCT =          0 [sec]
+      Triangularisierung Gleichungssystem.........: CPU =       0.01 WCT =          0 [sec]
+      Aufbau Lastvektor...........................: CPU =       0.17 WCT =          0 [sec]
+      Iteration und Nachlauf: - Gleichungsloeser..: CPU =       0.01 WCT =          0 [sec]
+           - normale Element Spannungen,NL-Effekte: CPU =       0.23 WCT =          0 [sec]
+           - parallel rechnende Elemente..........: CPU =       0.00 WCT =          0 [sec]
+           - Restkraefte..........................: CPU =       0.00 WCT =          0 [sec]
+           - Iterationsstrategie..................: CPU =       0.00 WCT =          0 [sec]
+           - Abschluss Iteration und Nachlauf.....: CPU =       0.01 WCT =          0 [sec]
+      Ergebnisse in Knoten rechnen und drucken....: CPU =       0.04 WCT =          0 [sec]
+      -------------------------------------------------------------------------------------
+                                                    CPU =       2.29 WCT =          2 [sec]
+      Required licences:
+                        ASEB  is sufficient - or:
+        Standandversion ASE   is sufficient.
+ 
+ SOFiSTiK AG - Educational-Version -
+ ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0          9.10.19         Seite:      
+ 
+ 
+ 
+    1 +PROG ASE
+    2 $ Dat : C:\...\wisib\SOFI\esslingen - Kopie.dat  (#006)             09.10.2019
+    3 $ Job : BCI101:000869                                                    09:55
+    4 LF ALLE
+    5 ENDE
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0          9.10.19         Seite:    19
+ 
+      
+ 
+ 
+      Lastfall      1 (G   ) Eigengewicht G0 -x
+      Faktor P und M Lasten                1.000
+      Faktor Eigengewicht        EG-XX     1.000
+ 
+      Lastfall      2 (G   ) Eigengewicht G0 -y
+      Faktor P und M Lasten                1.000
+      Faktor Eigengewicht        EG-YY     1.000
+ 
+      Lastfall      3 (G   ) Eigengewicht G0 -z
+      Faktor P und M Lasten                1.000
+      Faktor Eigengewicht        EG-ZZ     1.000
+ 
+      Summe der Lasten                                                                           
+      Lastfall             Σ(Lasten)               Bezeichnung                            
+                     X[kN]       Y[kN]       Z[kN]                                        
+             1      3422.1         0.0         0.0 Eigengewicht G0 -x                     
+             2         0.0      3422.1         0.0 Eigengewicht G0 -y                     
+             3         0.0         0.0      3422.1 Eigengewicht G0 -z                     
+ 
+      Stabschnittgrößen Lastfall      1   Eigengewicht G0 -x 
+       Grp  Nummer       x        N       Vy       Vz        Mt        My        Mz
+                       [m]     [kN]     [kN]     [kN]     [kNm]     [kNm]     [kNm]
+         1    1001   0.000      0.0     0.00     0.00      0.00      0.00      0.00
+                     0.120    -15.1     0.00     0.00      0.00      0.00      0.00
+         1    1002   0.000   3407.0    32.47    -6.65      0.07     74.16    458.86
+                     1.380   3233.7    32.47    -6.65      0.07     64.99    414.05
+         1    1003   0.000   3233.7    32.47    -6.65      0.07     64.99    414.05
+                     1.380   3060.3    32.47    -6.65      0.07     55.81    369.25
+         1    1004   0.000   3060.3    32.47    -6.65      0.07     55.81    369.25
+                     1.380   2886.9    32.47    -6.65      0.07     46.63    324.44
+         1    1005   0.000   2886.9    32.47    -6.65      0.07     46.63    324.44
+                     1.380   2713.6    32.47    -6.65      0.07     37.46    279.63
+         1    1006   0.000   2713.6    32.47    -6.65      0.07     37.46    279.63
+                     1.380   2540.2    32.47    -6.65      0.07     28.28    234.82
+         1    1007   0.000   2540.2    32.47    -6.65      0.07     28.28    234.82
+                     1.380   2366.8    32.47    -6.65      0.07     19.11    190.02
+         1    1008   0.000   2366.8    32.47    -6.65      0.07     19.11    190.02
+                     1.380   2193.5    32.47    -6.65      0.07      9.93    145.21
+         1    1009   0.000   2193.5    32.47    -6.65      0.07      9.93    145.21
+                     1.380   2020.1    32.47    -6.65      0.07      0.75    100.40
+         1    1010   0.000   2020.1    32.47    -6.65      0.07      0.75    100.40
+                     1.380   1846.7    32.47    -6.65      0.07     -8.42     55.59
+         1    1011   0.000   1846.7    32.47    -6.65      0.07     -8.42     55.59
+                     1.380   1673.4    32.47    -6.65      0.07    -17.60     10.79
+         1    1012   0.000   1673.4     0.82     1.33     -0.04    -17.60     10.79
+                     1.320   1507.5     0.82     1.33     -0.04    -15.84      9.71
+         1    1013   0.000   1507.5     0.82     1.33     -0.04    -15.84      9.71
+                     1.320   1341.7     0.82     1.33     -0.04    -14.08      8.63
+         1    1014   0.000   1341.7     0.82     1.33     -0.04    -14.08      8.63
+                     1.320   1175.9     0.82     1.33     -0.04    -12.32      7.55
+         1    1015   0.000   1175.9     0.82     1.33     -0.04    -12.32      7.55
+                     1.320   1010.0     0.82     1.33     -0.04    -10.56      6.47
+         1    1016   0.000   1010.0     0.82     1.33     -0.04    -10.56      6.47
+                     1.320    844.2     0.82     1.33     -0.04     -8.80      5.39
+         1    1017   0.000    844.2     0.82     1.33     -0.04     -8.80      5.39
+                     1.320    678.4     0.82     1.33     -0.04     -7.04      4.31
+         1    1018   0.000    678.4     0.82     1.33     -0.04     -7.04      4.31
+                     1.320    512.6     0.82     1.33     -0.04     -5.28      3.24
+         1    1019   0.000    512.6     0.82     1.33     -0.04     -5.28      3.24
+                     1.320    346.7     0.82     1.33     -0.04     -3.52      2.16
+         1    1020   0.000    346.7     0.82     1.33     -0.04     -3.52      2.16
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0          9.10.19         Seite:    20
+ 
+      
+ 
+ 
+      Stabschnittgrößen Lastfall      1   Eigengewicht G0 -x 
+       Grp  Nummer       x        N       Vy       Vz        Mt        My        Mz
+                       [m]     [kN]     [kN]     [kN]     [kNm]     [kNm]     [kNm]
+         1    1020   1.320    180.9     0.82     1.33     -0.04     -1.76      1.08
+         1    1021   0.000    180.9     0.82     1.33     -0.04     -1.76      1.08
+                     1.320     15.1     0.82     1.33     -0.04      0.00      0.00
+         1    1032   0.000     15.1     0.00     0.00      0.00      0.00      0.00
+                     0.120      0.0     0.00     0.00      0.00      0.00      0.00
+ 
+      Federkräfte und -verschiebungen Lastfall      1   Eigengewicht G0 -x 
+       Grp  Nummer         P       P-t         M         u       u-t       phi
+                        [kN]      [kN]     [kNm]      [mm]      [mm]    [mrad]
+         2    2101    1666.5       0.0      0.00     0.167     0.003     0.000
+         2    2102      32.5       0.0      0.00     0.003     0.167    -0.058
+         2    2103       0.5       0.0      0.00     0.000     0.167    -0.003
+         2    2111       0.0       0.0      0.00     0.171     0.003     0.000
+         2    2112       0.0       0.0      0.00     0.003     0.171    -0.058
+         2    2113      -5.5       0.0      0.00     0.000     0.189    -0.003
+         2    2121    1755.7       0.0      0.00     0.176     0.003     0.000
+         2    2122       0.0       0.0      0.00     0.003     0.176    -0.058
+         2    2123      -1.6       0.0      0.00    -0.000     0.176    -0.003
+         2    2201       0.0       0.0      0.00     0.407     0.003     0.000
+         2    2202     -31.7       0.0      0.00    -0.003     0.407     0.016
+         2    2203      -0.5       0.0      0.00     0.000     0.407     0.000
+         2    2211       0.0       0.0      0.00     0.407     0.003     0.000
+         2    2212       0.0       0.0      0.00    -0.003     0.407     0.016
+         2    2213       6.7       0.0      0.00     0.000     0.402     0.000
+         2    2221       0.0       0.0      0.00     0.407     0.003     0.000
+         2    2222       0.0       0.0      0.00    -0.003     0.407     0.016
+         2    2223       1.8       0.0      0.00     0.000     0.407     0.000
+         2    2301       0.0       0.0      0.00     0.481     0.000     0.000
+         2    2302      -0.8       0.0      0.00     0.000     0.481    -0.008
+         2    2303      -0.0       0.0      0.00     0.000     0.481     0.000
+         2    2311       0.0       0.0      0.00     0.480     0.000     0.000
+         2    2312       0.0       0.0      0.00     0.000     0.480    -0.008
+         2    2313      -1.1       0.0      0.00     0.000     0.483     0.000
+         2    2321       0.0       0.0      0.00     0.480     0.000     0.000
+         2    2322       0.0       0.0      0.00     0.000     0.480    -0.008
+         2    2323      -0.2       0.0      0.00     0.000     0.480     0.000
+ 
+      Knotenverschiebungen  Lastfall      1   Eigengewicht G0 -x 
+       Knoten       u-X       u-Y       u-Z     phi-X     phi-Y     phi-Z
+           Nr      [mm]      [mm]      [mm]    [mrad]    [mrad]    [mrad]
+          100     0.189     0.004    -0.007     0.000    -0.058    -0.003 
+          110     0.189     0.003     0.000     0.000    -0.058    -0.003 
+          111     0.214     0.000     0.067     0.000    -0.040    -0.002 
+          112     0.239    -0.002     0.110     0.000    -0.024    -0.002 
+          113     0.262    -0.003     0.132     0.000    -0.010    -0.002 
+          114     0.285    -0.004     0.137     0.000     0.001    -0.001 
+          115     0.307    -0.005     0.129     0.000     0.010    -0.001 
+          116     0.327    -0.005     0.110     0.000     0.016    -0.001 
+          117     0.347    -0.005     0.084     0.000     0.020    -0.000 
+          118     0.367    -0.005     0.055     0.000     0.021    -0.000 
+          119     0.385    -0.004     0.026     0.000     0.020     0.000 
+          120     0.402    -0.003     0.000     0.000     0.016     0.000 
+          121     0.417    -0.003    -0.018     0.000     0.012     0.000 
+          122     0.431    -0.003    -0.030     0.000     0.007     0.000 
+          123     0.443    -0.003    -0.038     0.000     0.004     0.000 
+          124     0.453    -0.002    -0.040     0.000     0.001     0.000 
+          125     0.462    -0.002    -0.039     0.000    -0.002     0.000 
+          126     0.470    -0.002    -0.035     0.000    -0.004     0.000 
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0          9.10.19         Seite:    21
+ 
+      
+ 
+ 
+      Knotenverschiebungen  Lastfall      1   Eigengewicht G0 -x 
+       Knoten       u-X       u-Y       u-Z     phi-X     phi-Y     phi-Z
+           Nr      [mm]      [mm]      [mm]    [mrad]    [mrad]    [mrad]
+          127     0.475    -0.001    -0.029     0.000    -0.006     0.000 
+          128     0.479    -0.001    -0.020     0.000    -0.007     0.000 
+          129     0.482    -0.001    -0.010     0.000    -0.008     0.000 
+          130     0.483     0.000     0.000     0.000    -0.008     0.000 
+          140     0.483     0.000     0.001     0.000    -0.008     0.000 
+          210     0.000     0.000     0.000     0.000     0.000     0.000 
+          211     0.000     0.000     0.000     0.000     0.000     0.000 
+          212     0.000     0.000     0.000     0.000     0.000     0.000 
+          220     0.000     0.000     0.000     0.000     0.000     0.000 
+          221     0.000     0.000     0.000     0.000     0.000     0.000 
+          222     0.000     0.000     0.000     0.000     0.000     0.000 
+          230     0.000     0.000     0.000     0.000     0.000     0.000 
+          231     0.000     0.000     0.000     0.000     0.000     0.000 
+          232     0.000     0.000     0.000     0.000     0.000     0.000 
+ 
+      Auflagerkräfte  Lastfall      1   Eigengewicht G0 -x 
+       Knoten       P-X       P-Y       P-Z       M-X       M-Y       M-Z
+           Nr      [kN]      [kN]      [kN]     [kNm]     [kNm]     [kNm]
+          210   -1666.5     -32.5      -0.5    -10.48    499.94   2541.34 
+          211       0.0       0.0       5.5      0.00      0.00           
+          212   -1755.7       0.0       1.6     -2.43    526.70  -2677.38 
+          220       0.0      31.7       0.5     10.21      0.00      0.00 
+          221       0.0       0.0      -6.7      0.00      0.00           
+          222       0.0       0.0      -1.8      2.74      0.00      0.00 
+          230       0.0       0.8       0.0      0.27      0.00      0.00 
+          231       0.0       0.0       1.1      0.00      0.00           
+ 
+      Stabschnittgrößen Lastfall      2   Eigengewicht G0 -y 
+       Grp  Nummer       x        N       Vy       Vz        Mt        My        Mz
+                       [m]     [kN]     [kN]     [kN]     [kNm]     [kNm]     [kNm]
+         1    1001   0.000      0.0     0.00     0.00      0.00      0.00      0.00
+                     0.120      0.0   -15.08     0.00     -1.00      0.00      0.90
+         1    1002   0.000      0.0   846.50    -0.97     57.83      0.00    744.56
+                     1.380      0.0   673.14    -0.97     46.29     -1.34   -304.00
+         1    1003   0.000      0.0   673.14    -0.97     46.29     -1.34   -304.00
+                     1.380      0.0   499.77    -0.97     34.75     -2.68  -1113.30
+         1    1004   0.000      0.0   499.77    -0.97     34.75     -2.68  -1113.30
+                     1.380      0.0   326.40    -0.97     23.21     -4.02  -1683.36
+         1    1005   0.000      0.0   326.40    -0.97     23.21     -4.02  -1683.36
+                     1.380      0.0   153.04    -0.97     11.67     -5.36  -2014.18
+         1    1006   0.000      0.0   153.04    -0.97     11.67     -5.36  -2014.18
+                     1.380      0.0   -20.33    -0.97      0.13     -6.70  -2105.74
+         1    1007   0.000      0.0   -20.33    -0.97      0.13     -6.70  -2105.74
+                     1.380      0.0  -193.70    -0.97    -11.41     -8.04  -1958.06
+         1    1008   0.000      0.0  -193.70    -0.97    -11.41     -8.04  -1958.06
+                     1.380      0.0  -367.06    -0.97    -22.95     -9.38  -1571.14
+         1    1009   0.000      0.0  -367.06    -0.97    -22.95     -9.38  -1571.14
+                     1.380      0.0  -540.43    -0.97    -34.49    -10.72   -944.97
+         1    1010   0.000      0.0  -540.43    -0.97    -34.49    -10.72   -944.97
+                     1.380      0.0  -713.80    -0.97    -46.02    -12.06    -79.55
+         1    1011   0.000      0.0  -713.80    -0.97    -46.02    -12.06    -79.55
+                     1.380      0.0  -887.16    -0.97    -57.56    -13.40   1025.12
+         1    1012   0.000      0.0   906.74     1.02     55.07    -13.40   1025.12
+                     1.320      0.0   740.91     1.02     44.03    -12.06    -62.33
+         1    1013   0.000      0.0   740.91     1.02     44.03    -12.06    -62.33
+                     1.320      0.0   575.08     1.02     32.99    -10.72   -930.88
+         1    1014   0.000      0.0   575.08     1.02     32.99    -10.72   -930.88
+                     1.320      0.0   409.25     1.02     21.96     -9.38  -1580.54
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0          9.10.19         Seite:    22
+ 
+      
+ 
+ 
+      Stabschnittgrößen Lastfall      2   Eigengewicht G0 -y 
+       Grp  Nummer       x        N       Vy       Vz        Mt        My        Mz
+                       [m]     [kN]     [kN]     [kN]     [kNm]     [kNm]     [kNm]
+         1    1015   0.000      0.0   409.25     1.02     21.96     -9.38  -1580.54
+                     1.320      0.0   243.42     1.02     10.92     -8.04  -2011.30
+         1    1016   0.000      0.0   243.42     1.02     10.92     -8.04  -2011.30
+                     1.320      0.0    77.59     1.02     -0.12     -6.70  -2223.17
+         1    1017   0.000      0.0    77.59     1.02     -0.12     -6.70  -2223.17
+                     1.320      0.0   -88.24     1.02    -11.16     -5.36  -2216.14
+         1    1018   0.000      0.0   -88.24     1.02    -11.16     -5.36  -2216.14
+                     1.320      0.0  -254.07     1.02    -22.20     -4.02  -1990.22
+         1    1019   0.000      0.0  -254.07     1.02    -22.20     -4.02  -1990.22
+                     1.320      0.0  -419.90     1.02    -33.23     -2.68  -1545.41
+         1    1020   0.000      0.0  -419.90     1.02    -33.23     -2.68  -1545.41
+                     1.320      0.0  -585.72     1.02    -44.27     -1.34   -881.70
+         1    1021   0.000      0.0  -585.72     1.02    -44.27     -1.34   -881.70
+                     1.320      0.0  -751.55     1.02    -55.31      0.00      0.90
+         1    1032   0.000      0.0    15.08     0.00      1.00      0.00      0.90
+                     0.120      0.0     0.00     0.00      0.00      0.00      0.00
+ 
+      Federkräfte und -verschiebungen Lastfall      2   Eigengewicht G0 -y 
+       Grp  Nummer         P       P-t         M         u       u-t       phi
+                        [kN]      [kN]     [kNm]      [mm]      [mm]    [mrad]
+         2    2101     243.8       0.0      0.00     0.024     0.086     0.000
+         2    2102     861.6       0.0      0.00     0.086     0.024    -0.007
+         2    2103      -6.6       0.0      0.00    -0.001     0.090     0.016
+         2    2111       0.0       0.0      0.00     0.000     0.086     0.000
+         2    2112       0.0       0.0      0.00     0.086     0.000    -0.007
+         2    2113      -0.8       0.0      0.00     0.000     0.086     0.016
+         2    2121    -243.8       0.0      0.00    -0.024     0.086     0.000
+         2    2122       0.0       0.0      0.00     0.086     0.024    -0.007
+         2    2123       6.4       0.0      0.00     0.001     0.090     0.016
+         2    2201       0.0       0.0      0.00    -0.004     0.179     0.001
+         2    2202    1793.9       0.0      0.00     0.179     0.004    -0.000
+         2    2203     -10.5       0.0      0.00    -0.001     0.179    -0.001
+         2    2211       0.0       0.0      0.00    -0.003     0.179     0.001
+         2    2212       0.0       0.0      0.00     0.179     0.003    -0.000
+         2    2213       1.7       0.0      0.00     0.000     0.180    -0.001
+         2    2221       0.0       0.0      0.00    -0.001     0.179     0.001
+         2    2222       0.0       0.0      0.00     0.179     0.002    -0.000
+         2    2223      10.9       0.0      0.00     0.001     0.179    -0.001
+         2    2301       0.0       0.0      0.00    -0.037     0.077     0.000
+         2    2302     766.6       0.0      0.00     0.077     0.037     0.011
+         2    2303      -7.2       0.0      0.00    -0.001     0.085    -0.020
+         2    2311       0.0       0.0      0.00    -0.006     0.077     0.000
+         2    2312       0.0       0.0      0.00     0.077     0.006     0.011
+         2    2313      -0.8       0.0      0.00     0.000     0.077    -0.020
+         2    2321       0.0       0.0      0.00     0.025     0.077     0.000
+         2    2322       0.0       0.0      0.00     0.077     0.025     0.011
+         2    2323       7.0       0.0      0.00     0.001     0.081    -0.020
+ 
+      Knotenverschiebungen  Lastfall      2   Eigengewicht G0 -y 
+       Knoten       u-X       u-Y       u-Z     phi-X     phi-Y     phi-Z
+           Nr      [mm]      [mm]      [mm]    [mrad]    [mrad]    [mrad]
+          100     0.002     0.084    -0.001     0.000    -0.007     0.016 
+          110     0.002     0.086     0.000     0.000    -0.007     0.016 
+          111     0.002     0.132     0.011     0.011    -0.008     0.016 
+          112     0.002     0.172     0.022     0.020    -0.007     0.015 
+          113     0.001     0.204     0.030     0.025    -0.005     0.013 
+          114    -0.000     0.228     0.034     0.029    -0.001     0.010 
+          115    -0.002     0.242     0.034     0.030     0.002     0.007 
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0          9.10.19         Seite:    23
+ 
+      
+ 
+ 
+      Knotenverschiebungen  Lastfall      2   Eigengewicht G0 -y 
+       Knoten       u-X       u-Y       u-Z     phi-X     phi-Y     phi-Z
+           Nr      [mm]      [mm]      [mm]    [mrad]    [mrad]    [mrad]
+          116    -0.003     0.246     0.030     0.029     0.004     0.004 
+          117    -0.004     0.241     0.022     0.026     0.006     0.001 
+          118    -0.005     0.227     0.012     0.020     0.006    -0.001 
+          119    -0.004     0.206     0.004     0.011     0.004    -0.002 
+          120    -0.003     0.180     0.000     0.001    -0.000    -0.001 
+          121    -0.001     0.203     0.005     0.010    -0.005    -0.000 
+          122    -0.001     0.221     0.014     0.018    -0.007    -0.001 
+          123    -0.001     0.233     0.023     0.023    -0.007    -0.003 
+          124    -0.002     0.236     0.032     0.027    -0.005    -0.005 
+          125    -0.004     0.232     0.037     0.028    -0.002    -0.009 
+          126    -0.005     0.218     0.038     0.027     0.001    -0.012 
+          127    -0.007     0.194     0.034     0.023     0.005    -0.015 
+          128    -0.008     0.163     0.026     0.018     0.008    -0.018 
+          129    -0.009     0.123     0.014     0.010     0.010    -0.019 
+          130    -0.009     0.077     0.000     0.000     0.011    -0.020 
+          140    -0.009     0.074    -0.001     0.000     0.011    -0.020 
+          210     0.000     0.000     0.000     0.000     0.000     0.000 
+          211     0.000     0.000     0.000     0.000     0.000     0.000 
+          212     0.000     0.000     0.000     0.000     0.000     0.000 
+          220     0.000     0.000     0.000     0.000     0.000     0.000 
+          221     0.000     0.000     0.000     0.000     0.000     0.000 
+          222     0.000     0.000     0.000     0.000     0.000     0.000 
+          230     0.000     0.000     0.000     0.000     0.000     0.000 
+          231     0.000     0.000     0.000     0.000     0.000     0.000 
+          232     0.000     0.000     0.000     0.000     0.000     0.000 
+ 
+      Auflagerkräfte  Lastfall      2   Eigengewicht G0 -y 
+       Knoten       P-X       P-Y       P-Z       M-X       M-Y       M-Z
+           Nr      [kN]      [kN]      [kN]     [kNm]     [kNm]     [kNm]
+          210    -243.8    -861.6       6.6   -248.40     73.15    371.83 
+          211       0.0       0.0       0.8      0.00      0.00           
+          212     243.8       0.0      -6.4      9.83    -73.15    371.83 
+          220       0.0   -1793.9      10.5   -522.10      0.00      0.00 
+          221       0.0       0.0      -1.7      0.00      0.00           
+          222       0.0       0.0     -10.9     16.57      0.00      0.00 
+          230       0.0    -766.6       7.2   -219.05      0.00      0.00 
+          231       0.0       0.0       0.8      0.00      0.00           
+          232       0.0       0.0      -7.0     10.68      0.00      0.00 
+ 
+      Stabschnittgrößen Lastfall      3   Eigengewicht G0 -z 
+       Grp  Nummer       x        N       Vy       Vz        Mt        My        Mz
+                       [m]     [kN]     [kN]     [kN]     [kNm]     [kNm]     [kNm]
+         1    1001   0.000      0.0     0.00     0.00      0.00      0.00      0.00
+                     0.120      0.0     0.00   -15.08      1.42     -0.90      0.00
+         1    1002   0.000      0.0    36.06   660.65    -78.68     -0.90    443.42
+                     1.380      0.0    36.06   487.28    -62.31    791.17    393.65
+         1    1003   0.000      0.0    36.06   487.28    -62.31    791.17    393.65
+                     1.380      0.0    36.06   313.92    -45.94   1344.00    343.88
+         1    1004   0.000      0.0    36.06   313.92    -45.94   1344.00    343.88
+                     1.380      0.0    36.06   140.55    -29.57   1657.58    294.11
+         1    1005   0.000      0.0    36.06   140.55    -29.57   1657.58    294.11
+                     1.380      0.0    36.06   -32.82    -13.20   1731.91    244.34
+         1    1006   0.000      0.0    36.06   -32.82    -13.20   1731.91    244.34
+                     1.380      0.0    36.06  -206.18      3.17   1567.00    194.58
+         1    1007   0.000      0.0    36.06  -206.18      3.17   1567.00    194.58
+                     1.380      0.0    36.06  -379.55     19.54   1162.84    144.81
+         1    1008   0.000      0.0    36.06  -379.55     19.54   1162.84    144.81
+                     1.380      0.0    36.06  -552.92     35.90    519.44     95.04
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0          9.10.19         Seite:    24
+ 
+      
+ 
+ 
+      Stabschnittgrößen Lastfall      3   Eigengewicht G0 -z 
+       Grp  Nummer       x        N       Vy       Vz        Mt        My        Mz
+                       [m]     [kN]     [kN]     [kN]     [kNm]     [kNm]     [kNm]
+         1    1009   0.000      0.0    36.06  -552.92     35.90    519.44     95.04
+                     1.380      0.0    36.06  -726.28     52.27   -363.21     45.27
+         1    1010   0.000      0.0    36.06  -726.28     52.27   -363.21     45.27
+                     1.380      0.0    36.06  -899.65     68.64  -1485.11     -4.50
+         1    1011   0.000      0.0    36.06  -899.65     68.64  -1485.11     -4.50
+                     1.380      0.0    36.06 -1073.02     85.01  -2846.25    -54.27
+         1    1012   0.000      0.0    -4.11  1044.70    -81.68  -2846.25    -54.27
+                     1.320      0.0    -4.11   878.87    -66.02  -1576.69    -48.84
+         1    1013   0.000      0.0    -4.11   878.87    -66.02  -1576.69    -48.84
+                     1.320      0.0    -4.11   713.04    -50.36   -526.02    -43.42
+         1    1014   0.000      0.0    -4.11   713.04    -50.36   -526.02    -43.42
+                     1.320      0.0    -4.11   547.21    -34.71    305.75    -37.99
+         1    1015   0.000      0.0    -4.11   547.21    -34.71    305.75    -37.99
+                     1.320      0.0    -4.11   381.39    -19.05    918.62    -32.56
+         1    1016   0.000      0.0    -4.11   381.39    -19.05    918.62    -32.56
+                     1.320      0.0    -4.11   215.56     -3.39   1312.60    -27.13
+         1    1017   0.000      0.0    -4.11   215.56     -3.39   1312.60    -27.13
+                     1.320      0.0    -4.11    49.73     12.27   1487.69    -21.71
+         1    1018   0.000      0.0    -4.11    49.73     12.27   1487.69    -21.71
+                     1.320      0.0    -4.11  -116.10     27.92   1443.88    -16.28
+         1    1019   0.000      0.0    -4.11  -116.10     27.92   1443.88    -16.28
+                     1.320      0.0    -4.11  -281.93     43.58   1181.18    -10.85
+         1    1020   0.000      0.0    -4.11  -281.93     43.58   1181.18    -10.85
+                     1.320      0.0    -4.11  -447.76     59.24    699.59     -5.43
+         1    1021   0.000      0.0    -4.11  -447.76     59.24    699.59     -5.43
+                     1.320      0.0    -4.11  -613.59     74.90     -0.90      0.00
+         1    1032   0.000      0.0     0.00    15.08     -1.42     -0.90      0.00
+                     0.120      0.0     0.00     0.00      0.00      0.00      0.00
+ 
+      Federkräfte und -verschiebungen Lastfall      3   Eigengewicht G0 -z 
+       Grp  Nummer         P       P-t         M         u       u-t       phi
+                        [kN]      [kN]     [kNm]      [mm]      [mm]    [mrad]
+         2    2101     145.4       0.0      0.00     0.015     0.004     0.002
+         2    2102      36.1       0.0      0.00     0.004     0.015    -1.492
+         2    2103      23.7       0.0      0.00     0.002     0.015     0.010
+         2    2111       0.0       0.0      0.00     0.000     0.007     0.002
+         2    2112       0.0       0.0      0.00     0.004     0.006    -1.492
+         2    2113     563.1       0.0      0.00     0.006     0.448     0.010
+         2    2121    -145.4       0.0      0.00    -0.015     0.010     0.002
+         2    2122       0.0       0.0      0.00     0.004     0.017    -1.492
+         2    2123      88.9       0.0      0.00     0.009     0.015     0.010
+         2    2201       0.0       0.0      0.00     0.032     0.006     0.009
+         2    2202     -40.2       0.0      0.00    -0.004     0.032     0.117
+         2    2203      44.3       0.0      0.00     0.004     0.032    -0.001
+         2    2211       0.0       0.0      0.00     0.033     0.018     0.009
+         2    2212       0.0       0.0      0.00    -0.004     0.037     0.117
+         2    2213    1764.8       0.0      0.00     0.018     0.003    -0.001
+         2    2221       0.0       0.0      0.00     0.034     0.031     0.009
+         2    2222       0.0       0.0      0.00    -0.004     0.046     0.117
+         2    2223     308.7       0.0      0.00     0.031     0.035    -0.001
+         2    2301       0.0       0.0      0.00     0.039     0.002     0.002
+         2    2302       4.1       0.0      0.00     0.000     0.039     1.202
+         2    2303      22.2       0.0      0.00     0.002     0.039    -0.010
+         2    2311       0.0       0.0      0.00     0.055     0.005     0.002
+         2    2312       0.0       0.0      0.00     0.000     0.055     1.202
+         2    2313     523.9       0.0      0.00     0.005     0.306    -0.010
+         2    2321       0.0       0.0      0.00     0.071     0.008     0.002
+         2    2322       0.0       0.0      0.00     0.000     0.071     1.202
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0          9.10.19         Seite:    25
+ 
+      
+ 
+ 
+      Federkräfte und -verschiebungen Lastfall      3   Eigengewicht G0 -z 
+       Grp  Nummer         P       P-t         M         u       u-t       phi
+                        [kN]      [kN]     [kNm]      [mm]      [mm]    [mrad]
+         2    2323      82.6       0.0      0.00     0.008     0.071    -0.010
+ 
+      Knotenverschiebungen  Lastfall      3   Eigengewicht G0 -z 
+       Knoten       u-X       u-Y       u-Z     phi-X     phi-Y     phi-Z
+           Nr      [mm]      [mm]      [mm]    [mrad]    [mrad]    [mrad]
+          100     0.448     0.003    -0.173     0.002    -1.492     0.010 
+          110     0.448     0.004     0.006     0.002    -1.492     0.010 
+          111     0.415     0.016     2.076    -0.012    -1.375     0.009 
+          112     0.329     0.026     3.827    -0.024    -1.068     0.007 
+          113     0.209     0.034     5.042    -0.031    -0.639     0.004 
+          114     0.074     0.036     5.599    -0.036    -0.154     0.001 
+          115    -0.058     0.035     5.468    -0.037     0.318    -0.003 
+          116    -0.168     0.029     4.713    -0.034     0.710    -0.006 
+          117    -0.236     0.020     3.493    -0.029     0.953    -0.008 
+          118    -0.244     0.010     2.059    -0.020     0.981    -0.008 
+          119    -0.172     0.002     0.754    -0.007     0.725    -0.006 
+          120    -0.002    -0.001     0.018     0.009     0.117    -0.001 
+          121     0.164     0.000     0.396    -0.006    -0.476     0.004 
+          122     0.242     0.006     1.326    -0.017    -0.756     0.006 
+          123     0.249     0.015     2.433    -0.026    -0.781     0.006 
+          124     0.201     0.023     3.419    -0.031    -0.610     0.005 
+          125     0.115     0.028     4.065    -0.033    -0.303     0.002 
+          126     0.008     0.030     4.230    -0.032     0.081    -0.001 
+          127    -0.104     0.027     3.852    -0.028     0.483    -0.004 
+          128    -0.205     0.021     2.946    -0.021     0.843    -0.007 
+          129    -0.278     0.012     1.606    -0.011     1.103    -0.009 
+          130    -0.306     0.001     0.005     0.002     1.202    -0.010 
+          140    -0.306    -0.000    -0.139     0.002     1.202    -0.010 
+          210     0.000     0.000     0.000     0.000     0.000     0.000 
+          211     0.000     0.000     0.000     0.000     0.000     0.000 
+          212     0.000     0.000     0.000     0.000     0.000     0.000 
+          220     0.000     0.000     0.000     0.000     0.000     0.000 
+          221     0.000     0.000     0.000     0.000     0.000     0.000 
+          222     0.000     0.000     0.000     0.000     0.000     0.000 
+          230     0.000     0.000     0.000     0.000     0.000     0.000 
+          231     0.000     0.000     0.000     0.000     0.000     0.000 
+          232     0.000     0.000     0.000     0.000     0.000     0.000 
+ 
+      Auflagerkräfte  Lastfall      3   Eigengewicht G0 -z 
+       Knoten       P-X       P-Y       P-Z       M-X       M-Y       M-Z
+           Nr      [kN]      [kN]      [kN]     [kNm]     [kNm]     [kNm]
+          210    -145.4     -36.1     -23.7    -46.92     43.62    221.71 
+          211       0.0       0.0    -563.1      0.00      0.00           
+          212     145.4       0.0     -88.9    135.65    -43.62    221.71 
+          220       0.0      40.2     -44.3    -55.47      0.00      0.00 
+          221       0.0       0.0   -1764.8      0.00      0.00           
+          222       0.0       0.0    -308.7    470.73      0.00      0.00 
+          230       0.0      -4.1     -22.2    -35.06      0.00      0.00 
+          231       0.0       0.0    -523.9      0.00      0.00           
+          232       0.0       0.0     -82.6    125.96      0.00      0.00 
+ 
+      Summe der Auflagerkräfte und Lasten                                                        
+      Lastfall           Σ(Reaktionen)             Bezeichnung                            
+                     X[kN]       Y[kN]       Z[kN]                                        
+                           Σ(Lasten)                                                      
+             1     -3422.1         0.0         0.0 Eigengewicht G0 -x                     
+                    3422.1         0.0         0.0                                        
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0          9.10.19         Seite:    26
+ 
+      
+ 
+ 
+      Summe der Auflagerkräfte und Lasten                                                        
+      Lastfall           Σ(Reaktionen)             Bezeichnung                            
+                     X[kN]       Y[kN]       Z[kN]                                        
+                           Σ(Lasten)                                                      
+             2         0.0     -3422.1         0.0 Eigengewicht G0 -y                     
+                       0.0      3422.1         0.0                                        
+             3         0.0         0.0     -3422.1 Eigengewicht G0 -z                     
+                       0.0         0.0      3422.1                                        
+ 
+ SOFiSTiK AG - Educational-Version -
+ AQB    - BEMESSUNG  QUERSCHNITTE V 2018-8.0          9.10.19          Seite:      
+ 
+ 
+ 
+    1 +PROG AQB
+    2 $ Dat : C:\...\wisib\SOFI\esslingen - Kopie.dat  (#007)             09.10.2019
+    3 $ Job : BCI101:000869                                                    09:55
+    4 KOPF DEHNUNGEN ERMITTELN
+    5 ECHO QUER,DEHN VOLL
+    6 LF 3
+    7 DEHN S1 KSV CAL KSB CAL
+ 
+      +++++ Warnung Nr.  2055 in Programm AQBEI ; Eingabezeile:    7
+      DEHN S1/K1 sind nur erlaubt, wenn mit PROG AQB ITER auch eine Iteration erfolgt
+      Da sich Fehleingaben gehäuft haben, wird jetzt diese Warnung in jedem Falle ausgegeben.
+      Bitte mit STEU WARN 2055 deaktivieren, falls die Anwendung korrekt ist
+    8 ENDE
+ 
+      SOFiSTiK AG - Educational-Version -
+      AQB    - BEMESSUNG  QUERSCHNITTE V 2018-8.0          9.10.19          Seite:    27
+ 
+      
+      Dehnungen ermitteln
+ 
+ 
+      Standardnorm ist DIN 1045 (1988) (Germany) V 2018
+ 
+      Materialien 
+       Mat Materialbezeichnung             
+        35 C 35/45 (DIN 1045-1)            
+       420 BSt 420 (DIN 1045)              
+ 
+      Schlaffe Bewehrung wird bei Querschnitten so wie in AQUA berücksichtigt
+      Speicherung der Bewehrung als Bemessungsfall   1
+ 
+      Untersuchte Lastfälle 
+        LF ACT    REF    BA      Bezeichnung                     
+         3 G                     Eigengewicht G0 -z              
+ 
+      Schnitte und deren Querschnittswerte 
+         Stab    x[m] Querschnitt      A[m2]   yc[m]   zc[m]    Iyz[m4]     Iy[m4]     Iz[m4]  ycr[m]  zcr[m]
+         1001   0.000 Brutto       5.025E+00   0.174   0.278  -2.51E-01  1.653E-01  3.036E+01   0.174   0.278
+                0.120 Brutto       5.025E+00   0.174   0.278  -2.51E-01  1.653E-01  3.036E+01   0.174   0.278
+         1002   0.000 Brutto       5.025E+00   0.174   0.278  -2.51E-01  1.653E-01  3.036E+01   0.174   0.278
+                1.380 Brutto       5.025E+00   0.174   0.278  -2.51E-01  1.653E-01  3.036E+01   0.174   0.278
+         1003   0.000 Brutto       5.025E+00   0.174   0.278  -2.51E-01  1.653E-01  3.036E+01   0.174   0.278
+                1.380 Brutto       5.025E+00   0.174   0.278  -2.51E-01  1.653E-01  3.036E+01   0.174   0.278
+         1004   0.000 Brutto       5.025E+00   0.174   0.278  -2.51E-01  1.653E-01  3.036E+01   0.174   0.278
+                1.380 Brutto       5.025E+00   0.174   0.278  -2.51E-01  1.653E-01  3.036E+01   0.174   0.278
+         1005   0.000 Brutto       5.025E+00   0.174   0.278  -2.51E-01  1.653E-01  3.036E+01   0.174   0.278
+                1.380 Brutto       5.025E+00   0.174   0.278  -2.51E-01  1.653E-01  3.036E+01   0.174   0.278
+         1006   0.000 Brutto       5.025E+00   0.174   0.278  -2.51E-01  1.653E-01  3.036E+01   0.174   0.278
+                1.380 Brutto       5.025E+00   0.174   0.278  -2.51E-01  1.653E-01  3.036E+01   0.174   0.278
+         1007   0.000 Brutto       5.025E+00   0.174   0.278  -2.51E-01  1.653E-01  3.036E+01   0.174   0.278
+                1.380 Brutto       5.025E+00   0.174   0.278  -2.51E-01  1.653E-01  3.036E+01   0.174   0.278
+         1008   0.000 Brutto       5.025E+00   0.174   0.278  -2.51E-01  1.653E-01  3.036E+01   0.174   0.278
+                1.380 Brutto       5.025E+00   0.174   0.278  -2.51E-01  1.653E-01  3.036E+01   0.174   0.278
+         1009   0.000 Brutto       5.025E+00   0.174   0.278  -2.51E-01  1.653E-01  3.036E+01   0.174   0.278
+                1.380 Brutto       5.025E+00   0.174   0.278  -2.51E-01  1.653E-01  3.036E+01   0.174   0.278
+         1010   0.000 Brutto       5.025E+00   0.174   0.278  -2.51E-01  1.653E-01  3.036E+01   0.174   0.278
+                1.380 Brutto       5.025E+00   0.174   0.278  -2.51E-01  1.653E-01  3.036E+01   0.174   0.278
+         1011   0.000 Brutto       5.025E+00   0.174   0.278  -2.51E-01  1.653E-01  3.036E+01   0.174   0.278
+                1.380 Brutto       5.025E+00   0.174   0.278  -2.51E-01  1.653E-01  3.036E+01   0.174   0.278
+         1012   0.000 Brutto       5.025E+00   0.174   0.278  -2.51E-01  1.653E-01  3.036E+01   0.174   0.278
+                1.320 Brutto       5.025E+00   0.174   0.278  -2.51E-01  1.653E-01  3.036E+01   0.174   0.278
+         1013   0.000 Brutto       5.025E+00   0.174   0.278  -2.51E-01  1.653E-01  3.036E+01   0.174   0.278
+                1.320 Brutto       5.025E+00   0.174   0.278  -2.51E-01  1.653E-01  3.036E+01   0.174   0.278
+         1014   0.000 Brutto       5.025E+00   0.174   0.278  -2.51E-01  1.653E-01  3.036E+01   0.174   0.278
+                1.320 Brutto       5.025E+00   0.174   0.278  -2.51E-01  1.653E-01  3.036E+01   0.174   0.278
+         1015   0.000 Brutto       5.025E+00   0.174   0.278  -2.51E-01  1.653E-01  3.036E+01   0.174   0.278
+                1.320 Brutto       5.025E+00   0.174   0.278  -2.51E-01  1.653E-01  3.036E+01   0.174   0.278
+         1016   0.000 Brutto       5.025E+00   0.174   0.278  -2.51E-01  1.653E-01  3.036E+01   0.174   0.278
+                1.320 Brutto       5.025E+00   0.174   0.278  -2.51E-01  1.653E-01  3.036E+01   0.174   0.278
+         1017   0.000 Brutto       5.025E+00   0.174   0.278  -2.51E-01  1.653E-01  3.036E+01   0.174   0.278
+                1.320 Brutto       5.025E+00   0.174   0.278  -2.51E-01  1.653E-01  3.036E+01   0.174   0.278
+         1018   0.000 Brutto       5.025E+00   0.174   0.278  -2.51E-01  1.653E-01  3.036E+01   0.174   0.278
+                1.320 Brutto       5.025E+00   0.174   0.278  -2.51E-01  1.653E-01  3.036E+01   0.174   0.278
+         1019   0.000 Brutto       5.025E+00   0.174   0.278  -2.51E-01  1.653E-01  3.036E+01   0.174   0.278
+                1.320 Brutto       5.025E+00   0.174   0.278  -2.51E-01  1.653E-01  3.036E+01   0.174   0.278
+         1020   0.000 Brutto       5.025E+00   0.174   0.278  -2.51E-01  1.653E-01  3.036E+01   0.174   0.278
+                1.320 Brutto       5.025E+00   0.174   0.278  -2.51E-01  1.653E-01  3.036E+01   0.174   0.278
+         1021   0.000 Brutto       5.025E+00   0.174   0.278  -2.51E-01  1.653E-01  3.036E+01   0.174   0.278
+                1.320 Brutto       5.025E+00   0.174   0.278  -2.51E-01  1.653E-01  3.036E+01   0.174   0.278
+         1032   0.000 Brutto       5.025E+00   0.174   0.278  -2.51E-01  1.653E-01  3.036E+01   0.174   0.278
+                0.120 Brutto       5.025E+00   0.174   0.278  -2.51E-01  1.653E-01  3.036E+01   0.174   0.278
+ 
+      SOFiSTiK AG - Educational-Version -
+      AQB    - BEMESSUNG  QUERSCHNITTE V 2018-8.0          9.10.19          Seite:    28
+ 
+      
+      Dehnungen ermitteln
+ 
+ 
+      Dehnungszustand 
+ 
+      Parameter zur Dehnungsermittlung 
+      Gleichgewichts-Iteration nur der Normalkraft
+      Interaktion dünnwandige Normal- und Schubspannungen über Prandtl-Fließregel
+      Material Querschnitte mit calculatorischer Arbeitslinie ohne Sicherheitsbeiwerte
+      Material Bewehrungen  mit calculatorischer Arbeitslinie ohne Sicherheitsbeiwerte
+ 
+      Angesetzte Materialeigenschaften
+       Mat  Anz. Sicherheits   Max.Druck       bei     Max.Zug       bei      Tension-   Verbund
+            Temp     beiwert   -spannung   Dehnung   -spannung   Dehnung    stiffening    faktor
+                         [-]       [MPa]    [o/oo]       [MPa]    [o/oo]         [MPa]       [-]
+        35     0       1.000      -25.29     -2.40        0.00      0.00 fc,t =   0.00
+       420     0       1.000     -420.00     -2.00      420.00      2.00              
+ 
+      Dehnungszustand 
+         Stab    x[m]  QNr   LF        Ni      Myi      Mzi      yn     zn  σ-min    σ-s    σ-t      Ey-eff
+                                     [kN]    [kNm]    [kNm]     [m]    [m]  [MPa]  [MPa]  [MPa]       [MPa]
+                                      ε-0       ky       kz    fact      ε  σ-max    σ-s    σ-t      Ez-eff
+                                   [o/oo]   [1/km]   [1/km]     [-] [o/oo]  [MPa]  [MPa]  [MPa]       [MPa]
+         1001   0.000  100    3       0.0     0.00     0.00     -.-    -.-   0.00   0.00              29879
+                                    0.000    0.000    0.000          0.000   0.00   0.00              29878
+                0.120  100    3      -6.1    -1.64     0.05  33.782  0.280  -0.00  -0.01              29879
+                                    0.000   -0.000    0.000          0.000   0.00   0.01              29878
+         1002   0.000  100    3       2.5    10.85   340.73   2.040  1.079  -0.05  -0.28              29879
+                                    0.001   -0.001    0.000         -0.002   0.00   0.65              29878
+                1.380  100    3       4.8  1344.46   663.75  57.340  0.321  -2.20 -12.46              50509
+                                   -0.007    0.162   -0.001         -0.069   0.00   8.47              29878
+         1003   0.000  100    3       4.8  1344.46   663.75  57.340  0.321  -2.20 -12.46              50509
+                                   -0.007    0.162   -0.001         -0.069   0.00   8.47              29878
+                1.380  100    3       7.6  2267.08   735.93  46.715  0.323  -3.60 -20.93              50109
+                                   -0.012    0.275   -0.002         -0.116   0.00  14.60              29878
+         1004   0.000  100    3       7.6  2267.08   735.93  46.715  0.323  -3.60 -20.93              50109
+                                   -0.012    0.275   -0.002         -0.116   0.00  14.60              29878
+                1.380  100    3       9.0  2783.95   749.41  44.136  0.323  -4.36 -25.74              49885
+                                   -0.015    0.339   -0.002         -0.142   0.00  18.06              29878
+         1005   0.000  100    3       9.0  2783.95   749.41  44.136  0.323  -4.36 -25.74              49885
+                                   -0.015    0.339   -0.002         -0.142   0.00  18.06              29878
+                1.380  100    3       9.3  2905.90   709.55  43.015  0.324  -4.53 -26.85              49831
+                                   -0.016    0.355   -0.003         -0.148   0.00  18.92              29878
+         1006   0.000  100    3       9.3  2905.90   709.55  43.015  0.324  -4.53 -26.85              49831
+                                   -0.016    0.355   -0.003         -0.148   0.00  18.92              29878
+                1.380  100    3       8.5  2635.49   616.82  42.446  0.323  -4.13 -24.23              49947
+                                   -0.014    0.321   -0.002         -0.134   0.00  17.17              29878
+         1007   0.000  100    3       8.5  2635.49   616.82  42.446  0.323  -4.13 -24.23              49947
+                                   -0.014    0.321   -0.002         -0.134   0.00  17.17              29878
+                1.380  100    3       6.6  1967.02   466.80  42.320  0.322  -3.12 -17.93              50231
+                                   -0.010    0.238   -0.002         -0.099   0.00  12.79              29878
+         1008   0.000  100    3       6.6  1967.02   466.80  42.320  0.322  -3.12 -17.93              50231
+                                   -0.010    0.238   -0.002         -0.099   0.00  12.79              29878
+                1.380  100    3       3.2   886.57   249.98  43.913  0.320  -1.44  -8.00              50685
+                                   -0.004    0.106   -0.001         -0.044   0.00   5.72              29878
+         1009   0.000  100    3       3.2   886.57   249.98  43.913  0.320  -1.44  -8.00              50685
+                                   -0.004    0.106   -0.001         -0.044   0.00   5.72              29878
+                1.380  100    3       8.9   -90.68   256.89  59.174  0.530  -0.26  -0.83               7911
+                                              Mt-i    52.27     fac   1.00                G-eff        3310
+                                    0.019   -0.075    0.001         -0.008   0.00   8.76              29878
+         1010   0.000  100    3       8.9   -90.68   256.89  59.174  0.530  -0.26  -0.83               7911
+                                              Mt-i    52.27     fac   1.00                G-eff        3310
+                                    0.019   -0.075    0.001         -0.008   0.00   8.76              29878
+ 
+      SOFiSTiK AG - Educational-Version -
+      AQB    - BEMESSUNG  QUERSCHNITTE V 2018-8.0          9.10.19          Seite:    29
+ 
+      
+      Dehnungen ermitteln
+ 
+ 
+      Dehnungszustand 
+         Stab    x[m]  QNr   LF        Ni      Myi      Mzi      yn     zn  σ-min    σ-s    σ-t      Ey-eff
+                                     [kN]    [kNm]    [kNm]     [m]    [m]  [MPa]  [MPa]  [MPa]       [MPa]
+                                      ε-0       ky       kz    fact      ε  σ-max    σ-s    σ-t      Ez-eff
+                                   [o/oo]   [1/km]   [1/km]     [-] [o/oo]  [MPa]  [MPa]  [MPa]       [MPa]
+         1010   1.380  100    3      -0.0  -379.54   940.43  63.925  0.528  -1.03  -3.31               8075
+                                              Mt-i    68.64     fac   1.00                G-eff        3378
+                                    0.076   -0.305    0.003         -0.031   0.00  35.91              29878
+         1011   0.000  100    3      -0.0  -379.54   940.43  63.925  0.528  -1.03  -3.31               8075
+                                              Mt-i    68.64     fac   1.00                G-eff        3378
+                                    0.076   -0.305    0.003         -0.031   0.00  35.91              29878
+                1.380  100    3      -0.1  -727.18  1772.33  64.590  0.528  -1.93  -6.32               8071
+                                              Mt-i    85.01     fac   1.00                G-eff        3376
+                                    0.145   -0.584    0.005         -0.060   0.00  68.86              29878
+         1012   0.000  100    3      -0.1  -727.18  1772.33  64.590  0.528  -1.93  -6.32               8071
+                                              Mt-i   -81.68     fac   1.00                G-eff        3376
+                                    0.145   -0.584    0.005         -0.060   0.00  68.86              29878
+                1.320  100    3      -0.0  -402.90   973.87  65.106  0.528  -1.08  -3.48               8072
+                                              Mt-i   -66.02     fac   1.00                G-eff        3377
+                                    0.080   -0.323    0.003         -0.033   0.00  38.17              29878
+         1013   0.000  100    3      -0.0  -402.90   973.87  65.106  0.528  -1.08  -3.48               8072
+                                              Mt-i   -66.02     fac   1.00                G-eff        3377
+                                    0.080   -0.323    0.003         -0.033   0.00  38.17              29878
+                1.320  100    3      12.8  -131.22   311.61  67.561  0.530  -0.36  -1.11               7890
+                                              Mt-i   -50.36     fac   1.00                G-eff        3301
+                                    0.027   -0.108    0.001         -0.011   0.00  12.79              29878
+         1014   0.000  100    3      12.8  -131.22   311.61  67.561  0.530  -0.36  -1.11               7890
+                                              Mt-i   -50.36     fac   1.00                G-eff        3301
+                                    0.027   -0.108    0.001         -0.011   0.00  12.79              29878
+                1.320  100    3       1.9   523.68    38.53  35.768  0.320  -0.84  -4.61              50821
+                                   -0.003    0.063   -0.001         -0.026   0.00   3.46              29878
+         1015   0.000  100    3       1.9   523.68    38.53  35.768  0.320  -0.84  -4.61              50821
+                                   -0.003    0.063   -0.001         -0.026   0.00   3.46              29878
+                1.320  100    3       5.2  1559.71   203.74  37.960  0.322  -2.47 -14.00              50395
+                                   -0.008    0.188   -0.002         -0.078   0.00  10.26              29878
+         1016   0.000  100    3       5.2  1559.71   203.74  37.960  0.322  -2.47 -14.00              50395
+                                   -0.008    0.188   -0.002         -0.078   0.00  10.26              29878
+                1.320  100    3       7.2  2216.20   306.33  38.439  0.323  -3.47 -20.08              50119
+                                   -0.012    0.269   -0.002         -0.111   0.00  14.59              29878
+         1017   0.000  100    3       7.2  2216.20   306.33  38.439  0.323  -3.47 -20.08              50119
+                                   -0.012    0.269   -0.002         -0.111   0.00  14.59              29878
+                1.320  100    3       8.0  2505.54   353.82  38.642  0.323  -3.90 -22.79              49996
+                                   -0.013    0.305   -0.003         -0.126   0.00  16.50              29878
+         1018   0.000  100    3       8.0  2505.54   353.82  38.642  0.323  -3.90 -22.79              49996
+                                   -0.013    0.305   -0.003         -0.126   0.00  16.50              29878
+                1.320  100    3       7.8  2433.27   349.73  38.711  0.323  -3.80 -22.12              50027
+                                   -0.013    0.296   -0.002         -0.123   0.00  16.02              29878
+         1019   0.000  100    3       7.8  2433.27   349.73  38.711  0.323  -3.80 -22.12              50027
+                                   -0.013    0.296   -0.002         -0.123   0.00  16.02              29878
+                1.320  100    3       6.6  1997.99   293.31  38.682  0.322  -3.14 -18.06              50212
+                                   -0.010    0.242   -0.002         -0.100   0.00  13.14              29878
+         1020   0.000  100    3       6.6  1997.99   293.31  38.682  0.322  -3.14 -18.06              50212
+                                   -0.010    0.242   -0.002         -0.100   0.00  13.14              29878
+                1.320  100    3       4.1  1191.42   179.63  38.568  0.321  -1.90 -10.66              50550
+                                   -0.006    0.144   -0.001         -0.059   0.00   7.82              29878
+         1021   0.000  100    3       4.1  1191.42   179.63  38.568  0.321  -1.90 -10.66              50550
+                                   -0.006    0.144   -0.001         -0.059   0.00   7.82              29878
+                1.320  100    3      -6.1    -1.64     0.05  33.781  0.280  -0.00  -0.01              29879
+                                    0.000   -0.000    0.000          0.000   0.00   0.01              29878
+ 
+      SOFiSTiK AG - Educational-Version -
+      AQB    - BEMESSUNG  QUERSCHNITTE V 2018-8.0          9.10.19          Seite:    30
+ 
+      
+      Dehnungen ermitteln
+ 
+ 
+      Dehnungszustand 
+         Stab    x[m]  QNr   LF        Ni      Myi      Mzi      yn     zn  σ-min    σ-s    σ-t      Ey-eff
+                                     [kN]    [kNm]    [kNm]     [m]    [m]  [MPa]  [MPa]  [MPa]       [MPa]
+                                      ε-0       ky       kz    fact      ε  σ-max    σ-s    σ-t      Ez-eff
+                                   [o/oo]   [1/km]   [1/km]     [-] [o/oo]  [MPa]  [MPa]  [MPa]       [MPa]
+         1032   0.000  100    3      -6.1    -1.64     0.05  33.782  0.280  -0.00  -0.01              29879
+                                    0.000   -0.000    0.000          0.000   0.00   0.01              29878
+                0.120  100    3       0.0     0.00     0.00     -.-    -.-   0.00   0.00              29879
+                                    0.000    0.000    0.000          0.000   0.00   0.00              29878
+ 
+      Maximalspannungen und überprüfte Grenzwerte 
+       Mat Nachweis oder Kriterium                     Wert    Limit Unit      Level     LF     Stab     x[m]
+        35 Längsdruckspannung               σ-x       -4.53           MPa                 3     1005    1.380
+           Längszugspannung                 σ+x        0.00           MPa                 3     1013    1.320
+       420 Längsdruckspannung               σ-x      -26.85           MPa                 3     1005    1.380
+           Längszugspannung                 σ+x       68.86           MPa                 3     1011    1.380
+ 
+      Sekanten-Steifigkeiten werden in Datenbasis gespeichert
+      Momentendifferenz      0.361
+      Kraftdifferenz         0.001
+      Kraftdifferenz         0.000
+      minimale Steifigkeit   0.010
+      maximale Steifigkeit   4.000
+      Crisfield Faktoren     0.000
+                             1.000
+ 
+      SOFiSTiK AG - Educational-Version -
+      AQB    - BEMESSUNG  QUERSCHNITTE V 2018-8.0          9.10.19          Seite:    31
+ 
+      
+      Dehnungen ermitteln
+ 
+ 
+       +++++    0 FEHLER UND    1 WARNUNGEN +++++
+ 

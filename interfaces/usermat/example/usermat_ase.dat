@@ -1,0 +1,156 @@
+!#!Info Example:    Test Routine for USERMAT Interface
+!#!Info Program:    ASE
+!#!Info Keywords:   User-defined Constitutive Model
+!#!Info Date:       2006-06,  Holger Heidkamp
+
+// --------------------------------------------------------------
+//
+// ATTENTION:
+//
+//      TWO PREREQUISITES ARE REQUIRED IN ORDER TO MAKE
+//      THIS FILE RUN PROPERLY, NAMELY
+//
+//      - the environment variable SOFISTIK_USERMATDLL must be set
+//        to "sof_usermat<VERSION>", e.g., by copying the SOFISTIK.DEF file
+//        from the example directory to the current working directory
+//
+//      - a copy of "sof_usermat<VERSION>.dll" must be present in the SOFISTIK installation directory
+//
+// --------------------------------------------------------------
+
+#define lt=0.1         // lt < 1.0 m
+#define ltot=2.0
+#define umax=0.10
+
++PROG AQUA URS:1
+HEAD Material
+NORM en 1992-2004
+MAT 1 E 10000 MUE 0.0 TITL 'stiff'
+$ Imperfektion $ imperfection:
+MAT 2 E 10000 MUE 0.0 TITL 'ft_x=10'
+NMAT 2 USP1  P1 10000 P2 0
+MAT 3 E 10000 MUE 0.0 TITL 'elast'
+END
+
++PROG SOFIMSHA URS:2
+HEAD 'bar modelled by 3 hex elements'
+$
+UNIT 5 ; SYST SPAC GDIR POSY GDIV 10000
+let#lt $(lt)
+let#ltot $(ltot)
+let#x2 (#ltot/2-#lt)
+let#x3 (#ltot/2)
+let#x4 #ltot
+NODE NO    X      Y    Z    FIX
+      1   0.0    0.0  0.0   pxpz
+     11   #x2    0.0  0.0   -
+     21   #x3    0.0  0.0   -
+     31   #x4    0.0  0.0   -
+    101   0.0    0.2  0.0   pxpypz
+    111   #x2    0.2  0.0   py
+    121   #x3    0.2  0.0   py
+    131   #x4    0.2  0.0   py
+   1001   0.0    0.0  0.2   px
+   1011   #x2    0.0  0.2   -
+   1021   #x3    0.0  0.2   -
+   1031   #x4    0.0  0.2   -
+   1101   0.0    0.2  0.2   pxpy
+   1111   #x2    0.2  0.2   py
+   1121   #x3    0.2  0.2   py
+   1131   #x4    0.2  0.2   py
+
+
+BRIC    NO   N1   N2   N3   N4    N5    N6    N7    N8    M   N   MNO
+        FIT   1  101  111   11  1001  1101  1111  1011    1   1    3
+        FIT  11  111  121   21  1011  1111  1121  1021    1   1    2
+        FIT  21  121  131   31  1021  1121  1131  1031    1   1    1
+
+
+SPRI   NO   NA  DX=1.0  CP=1.e5
+        1   31
+      101  131
+     1001 1031
+     1101 1131
+END
+
++PROG SOFILOAD urs:5
+HEAD
+LC 901 TYPE NONE
+  let#umax $(umax)
+  NODE 31,131,1031,1131 PXX 1.e5*#umax/4
+END
+
++PROG ASE URS:3
+HEAD 'loading of bar, disp. controlled'
+SYST PROB NONL ITER - TOL -0.001 NMAT YES
+LC 11
+  LCC 901
+END
+
+$
+$ now reduce stiffness of user-defined material...
+$
++PROG AQUA URS:4
+HEAD Material
+MAT 1 E 10000 MUE 0.0 TITL 'stiff'
+$ imperfection:
+MAT 2 E 10000 MUE 0.0 TITL 'ft_x=10'
+NMAT 2 USP1  P1 500 P2 0.4
+MAT 3 E 10000 MUE 0.0 TITL 'elast'
+END
+
++PROG ASE URS:7
+HEAD 'loading of bar, disp. controlled'
+let#umax $(umax)
+SYST PROB NONL ITER - TOL -0.001  NMAT YES
+LC 21
+  LCC 901
+END
+
+$
+$ same without using user-defined material...
+$
++PROG AQUA URS:6
+HEAD Material
+MAT 1 E 10000 MUE 0.0 TITL 'stiff'
+$ imperfection:
+MAT 2 E 500 MUE 0.4 TITL 'ft_x=10'
+MAT 3 E 10000 MUE 0.0 TITL 'elast'
+END
+
++PROG ASE URS:8
+HEAD 'loading of bar, disp. controlled'
+let#umax $(umax)
+SYST PROB NONL ITER - TOL -0.001  NMAT YES
+LC 31
+  LCC 901
+END
+
+
++PROG RESULTS urs:9
+HEAD Displacements
+SIZE TYPE "-URS"
+PICT
+FILT NAME "n_disp.nr" TYPE SING OPTI  YES VAL1 1
+FILT NAME "n_disp.nr" TYPE SING OPTI  YES VAL1 11
+FILT NAME "n_disp.nr" TYPE SING OPTI  YES VAL1 21
+FILT NAME "n_disp.nr" TYPE SING OPTI  YES VAL1 31
+LC   NO 11
+LC   NO 21
+LC   NO 31
+NODE TYPE   UX REPR DLST
+END
+
++PROG RESULTS urs:10
+HEAD Stresses
+SIZE TYPE "-URS"
+PICT
+FILT NAME "n_disp.nr" TYPE SING OPTI  YES VAL1 1
+FILT NAME "n_disp.nr" TYPE SING OPTI  YES VAL1 11
+FILT NAME "n_disp.nr" TYPE SING OPTI  YES VAL1 21
+FILT NAME "n_disp.nr" TYPE SING OPTI  YES VAL1 31
+LC   NO 11
+LC   NO 21
+LC   NO 31
+BRIC TYPE   SX REPR DLST
+END

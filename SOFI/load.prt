@@ -1,0 +1,454 @@
+   *** Start: Program WPS - Version 2018-8.0
+   *** Start: Program SOFILOAD : Traffic-Load   
+   SOFiSTiK 2018-8.0.14    SOFILOAD - LOAD GENERATOR
+   Output on file load.plb
+   Project data base esslingen.cdb        -    28. access
+   +++++ warning no. 10270 in program SL_IA
+   There are actions defined, but the load case 1001 has not been assigned to
+   an action, if that is intended, please spcify TYPE "NONE".
+   +++++ warning no. 10270 in program SL_IA
+   There are actions defined, but the load case 1002 has not been assigned to
+   an action, if that is intended, please spcify TYPE "NONE".
+   +++++ warning no. 10270 in program SL_IA
+   There are actions defined, but the load case 1003 has not been assigned to
+   an action, if that is intended, please spcify TYPE "NONE".
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:   30
+   LC 1003 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:   31
+   LC 1003 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no. 10270 in program SL_IA
+   There are actions defined, but the load case 1004 has not been assigned to
+   an action, if that is intended, please spcify TYPE "NONE".
+   +++++ warning no. 10270 in program SL_IA
+   There are actions defined, but the load case 1005 has not been assigned to
+   an action, if that is intended, please spcify TYPE "NONE".
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:   56
+   LC 1005 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:   57
+   LC 1005 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:   58
+   LC 1005 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:   59
+   LC 1005 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no. 10270 in program SL_IA
+   There are actions defined, but the load case 1006 has not been assigned to
+   an action, if that is intended, please spcify TYPE "NONE".
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:   72
+   LC 1006 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:   73
+   LC 1006 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:   74
+   LC 1006 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:   75
+   LC 1006 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:   80
+   LC 1006 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:   81
+   LC 1006 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:   82
+   LC 1006 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:   83
+   LC 1006 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:   84
+   LC 1006 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:   85
+   LC 1006 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no. 10270 in program SL_IA
+   There are actions defined, but the load case 1007 has not been assigned to
+   an action, if that is intended, please spcify TYPE "NONE".
+   +++++ warning no. 10270 in program SL_IA
+   There are actions defined, but the load case 1008 has not been assigned to
+   an action, if that is intended, please spcify TYPE "NONE".
+   +++++ warning no. 10270 in program SL_IA
+   There are actions defined, but the load case 1009 has not been assigned to
+   an action, if that is intended, please spcify TYPE "NONE".
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:  112
+   LC 1009 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:  113
+   LC 1009 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:  114
+   LC 1009 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:  115
+   LC 1009 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:  116
+   LC 1009 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:  117
+   LC 1009 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:  118
+   LC 1009 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:  119
+   LC 1009 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:  120
+   LC 1009 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:  121
+   LC 1009 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:  122
+   LC 1009 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:  123
+   LC 1009 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:  124
+   LC 1009 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:  125
+   LC 1009 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:  126
+   LC 1009 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:  127
+   LC 1009 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no. 10270 in program SL_IA
+   There are actions defined, but the load case 1010 has not been assigned to
+   an action, if that is intended, please spcify TYPE "NONE".
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:  136
+   LC 1010 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:  137
+   LC 1010 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:  144
+   LC 1010 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:  145
+   LC 1010 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no. 10270 in program SL_IA
+   There are actions defined, but the load case 1011 has not been assigned to
+   an action, if that is intended, please spcify TYPE "NONE".
+   +++++ warning no. 10270 in program SL_IA
+   There are actions defined, but the load case 1012 has not been assigned to
+   an action, if that is intended, please spcify TYPE "NONE".
+   +++++ warning no. 10270 in program SL_IA
+   There are actions defined, but the load case 1013 has not been assigned to
+   an action, if that is intended, please spcify TYPE "NONE".
+   +++++ warning no. 10270 in program SL_IA
+   There are actions defined, but the load case 1014 has not been assigned to
+   an action, if that is intended, please spcify TYPE "NONE".
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:  186
+   LC 1014 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:  187
+   LC 1014 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:  188
+   LC 1014 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:  189
+   LC 1014 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no. 10270 in program SL_IA
+   There are actions defined, but the load case 1015 has not been assigned to
+   an action, if that is intended, please spcify TYPE "NONE".
+   +++++ warning no. 10270 in program SL_IA
+   There are actions defined, but the load case 1016 has not been assigned to
+   an action, if that is intended, please spcify TYPE "NONE".
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:  206
+   LC 1016 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:  207
+   LC 1016 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:  208
+   LC 1016 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:  209
+   LC 1016 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:  210
+   LC 1016 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:  211
+   LC 1016 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:  212
+   LC 1016 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:  213
+   LC 1016 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no. 10270 in program SL_IA
+   There are actions defined, but the load case 1017 has not been assigned to
+   an action, if that is intended, please spcify TYPE "NONE".
+   +++++ warning no. 10270 in program SL_IA
+   There are actions defined, but the load case 1018 has not been assigned to
+   an action, if that is intended, please spcify TYPE "NONE".
+   +++++ warning no. 10270 in program SL_IA
+   There are actions defined, but the load case 1019 has not been assigned to
+   an action, if that is intended, please spcify TYPE "NONE".
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:  242
+   LC 1019 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no.  2057 in program SL_IA_BEAM ; input line:  243
+   LC 1019 Load ordinates outside the selected beams 1001 1032
+   +++++ warning no. 10989 in program SL_IA_BEAM
+   Warning
+   +++++ warning no. 10270 in program SL_IA
+   There are actions defined, but the load case 1020 has not been assigned to
+   an action, if that is intended, please spcify TYPE "NONE".
+   +++++ warning no. 10270 in program SL_IA
+   There are actions defined, but the load case 1021 has not been assigned to
+   an action, if that is intended, please spcify TYPE "NONE".
+   +++++ warning no. 10270 in program SL_IA
+   There are actions defined, but the load case 1022 has not been assigned to
+   an action, if that is intended, please spcify TYPE "NONE".
+   +++++ warning no. 10270 in program SL_IA
+   There are actions defined, but the load case 1023 has not been assigned to
+   an action, if that is intended, please spcify TYPE "NONE".
+   +++++ warning no. 10270 in program SL_IA
+   There are actions defined, but the load case 1024 has not been assigned to
+   an action, if that is intended, please spcify TYPE "NONE".
+   +++++ warning no. 10270 in program SL_IA
+   There are actions defined, but the load case 1025 has not been assigned to
+   an action, if that is intended, please spcify TYPE "NONE".
+   +++++ warning no. 10270 in program SL_IA
+   There are actions defined, but the load case 1026 has not been assigned to
+   an action, if that is intended, please spcify TYPE "NONE".
+   +++++ warning no. 10270 in program SL_IA
+   There are actions defined, but the load case 1027 has not been assigned to
+   an action, if that is intended, please spcify TYPE "NONE".
+   +++++ warning no. 10270 in program SL_IA
+   There are actions defined, but the load case 1028 has not been assigned to
+   an action, if that is intended, please spcify TYPE "NONE".
+   +++++ warning no. 10270 in program SL_IA
+   There are actions defined, but the load case 1029 has not been assigned to
+   an action, if that is intended, please spcify TYPE "NONE".
+   +++++ warning no. 10270 in program SL_IA
+   There are actions defined, but the load case 1030 has not been assigned to
+   an action, if that is intended, please spcify TYPE "NONE".
+   TIME NEEDED         2, TOTAL         2
+   TIME NEEDED         0, TOTAL         2
+   DATE       2019-12-23, 16:32:51
+   
+   
+   
+    +++++    0 errors and   80 warnings +++++
+   *** Stop : Program SOFILOAD : Traffic-Load
+
+   *** Start: Program ASE : LF 2001+#1 fakg 1   
+   SOFiSTiK 2018-8.0.14    ASE   - ADVANCED SOLUTION ENGINE
+   Output on file load.plb
+   Project data base esslingen.cdb        -    29. access
+   Lastfall  2001
+   
+   Parameter des Gleichungssystems   3
+   (Sparse Direct Solver)
+   Anzahl Gleichungen              138
+   Profil                         1074
+   Profil nach fill in            1587
+   TIME NEEDED         1, TOTAL         1
+   Lastfall  2002
+   
+   Parameter des Gleichungssystems   3
+   (Sparse Direct Solver)
+   Anzahl Gleichungen              138
+   Profil                         1074
+   Profil nach fill in            1587
+   TIME NEEDED         0, TOTAL         1
+   Lastfall  2003
+   
+   Parameter des Gleichungssystems   3
+   (Sparse Direct Solver)
+   Anzahl Gleichungen              138
+   Profil                         1074
+   Profil nach fill in            1587
+   TIME NEEDED         0, TOTAL         1
+   Lastfall  2004
+   
+   Parameter des Gleichungssystems   3
+   (Sparse Direct Solver)
+   Anzahl Gleichungen              138
+   Profil                         1074
+   Profil nach fill in            1587
+   TIME NEEDED         0, TOTAL         1
+   Lastfall  2005
+   
+   Parameter des Gleichungssystems   3
+   (Sparse Direct Solver)
+   Anzahl Gleichungen              138
+   Profil                         1074
+   Profil nach fill in            1587
+   TIME NEEDED         1, TOTAL         2
+   Lastfall  2006
+   
+   Parameter des Gleichungssystems   3
+   (Sparse Direct Solver)
+   Anzahl Gleichungen              138
+   Profil                         1074
+   Profil nach fill in            1587
+   TIME NEEDED         0, TOTAL         2
+   Lastfall  2007
+   
+   Parameter des Gleichungssystems   3
+   (Sparse Direct Solver)
+   Anzahl Gleichungen              138
+   Profil                         1074
+   Profil nach fill in            1587
+   TIME NEEDED         0, TOTAL         2
+   Lastfall  2008
+   
+   Parameter des Gleichungssystems   3
+   (Sparse Direct Solver)
+   Anzahl Gleichungen              138
+   Profil                         1074
+   Profil nach fill in            1587
+   TIME NEEDED         0, TOTAL         2
+   Lastfall  2009
+   
+   Parameter des Gleichungssystems   3
+   (Sparse Direct Solver)
+   Anzahl Gleichungen              138
+   Profil                         1074
+   Profil nach fill in            1587
+   TIME NEEDED         0, TOTAL         2
+   Lastfall  2010
+   
+   Parameter des Gleichungssystems   3
+   (Sparse Direct Solver)
+   Anzahl Gleichungen              138
+   Profil                         1074
+   Profil nach fill in            1587
+   TIME NEEDED         0, TOTAL         2
+   Lastfall  2011
+   
+   Parameter des Gleichungssystems   3
+   (Sparse Direct Solver)
+   Anzahl Gleichungen              138
+   Profil                         1074
+   Profil nach fill in            1587
+   TIME NEEDED         0, TOTAL         2
+   Lastfall  2012
+   
+   Parameter des Gleichungssystems   3
+   (Sparse Direct Solver)
+   Anzahl Gleichungen              138
+   Profil                         1074
+   Profil nach fill in            1587
+   TIME NEEDED         0, TOTAL         2
+   Lastfall  2013
+   
+   Parameter des Gleichungssystems   3
+   (Sparse Direct Solver)
+   Anzahl Gleichungen              138
+   Profil                         1074
+   Profil nach fill in            1587
+   TIME NEEDED         0, TOTAL         2
+   Lastfall  2014
+   
+   Parameter des Gleichungssystems   3
+   (Sparse Direct Solver)
+   Anzahl Gleichungen              138
+   Profil                         1074
+   Profil nach fill in            1587
+   TIME NEEDED         0, TOTAL         2
+   Lastfall  2015
+   
+   Parameter des Gleichungssystems   3
+   (Sparse Direct Solver)
+   Anzahl Gleichungen              138
+   Profil                         1074
+   Profil nach fill in            1587
+   TIME NEEDED         0, TOTAL         2
+   Lastfall  2016
+   
+   Parameter des Gleichungssystems   3
+   (Sparse Direct Solver)
+   Anzahl Gleichungen              138
+   Profil                         1074
+   Profil nach fill in            1587
+   TIME NEEDED         0, TOTAL         2
+   Lastfall  2017
+   
+   Parameter des Gleichungssystems   3
+   (Sparse Direct Solver)
+   Anzahl Gleichungen              138
+   Profil                         1074
+   Profil nach fill in            1587
+   TIME NEEDED         0, TOTAL         2
+   Lastfall  2018
+   
+   Parameter des Gleichungssystems   3
+   (Sparse Direct Solver)
+   Anzahl Gleichungen              138
+   Profil                         1074
+   Profil nach fill in            1587
+   TIME NEEDED         0, TOTAL         2
+   Lastfall  2019
+   
+   Parameter des Gleichungssystems   3
+   (Sparse Direct Solver)
+   Anzahl Gleichungen              138
+   Profil                         1074
+   Profil nach fill in            1587
+   TIME NEEDED         0, TOTAL         2
+   Lastfall  2020
+   
+   Parameter des Gleichungssystems   3
+   (Sparse Direct Solver)
+   Anzahl Gleichungen              138
+   Profil                         1074
+   Profil nach fill in            1587
+   TIME NEEDED         1, TOTAL         3
+   Lastfall  2021
+   
+   Parameter des Gleichungssystems   3
+   (Sparse Direct Solver)
+   Anzahl Gleichungen              138
+   Profil                         1074
+   Profil nach fill in            1587
+   TIME NEEDED         0, TOTAL         3
+   Lastfall  2022
+   
+   Parameter des Gleichungssystems   3
+   (Sparse Direct Solver)
+   Anzahl Gleichungen              138
+   Profil                         1074
+   Profil nach fill in            1587
+   TIME NEEDED         0, TOTAL         3
+   Lastfall  2023
+   
+   Parameter des Gleichungssystems   3
+   (Sparse Direct Solver)
+   Anzahl Gleichungen              138
+   Profil                         1074
+   Profil nach fill in            1587
+   TIME NEEDED         0, TOTAL         3
+   Lastfall  2024
+   
+   Parameter des Gleichungssystems   3
+   (Sparse Direct Solver)
+   Anzahl Gleichungen              138
+   Profil                         1074
+   Profil nach fill in            1587
+   TIME NEEDED         0, TOTAL         3
+   Lastfall  2025
+   
+   Parameter des Gleichungssystems   3
+   (Sparse Direct Solver)
+   Anzahl Gleichungen              138
+   Profil                         1074
+   Profil nach fill in            1587
+   TIME NEEDED         0, TOTAL         3
+   Lastfall  2026
+   
+   Parameter des Gleichungssystems   3
+   (Sparse Direct Solver)
+   Anzahl Gleichungen              138
+   Profil                         1074
+   Profil nach fill in            1587
+   TIME NEEDED         0, TOTAL         3
+   Lastfall  2027
+   
+   Parameter des Gleichungssystems   3
+   (Sparse Direct Solver)
+   Anzahl Gleichungen              138
+   Profil                         1074
+   Profil nach fill in            1587
+   TIME NEEDED         0, TOTAL         3
+   Lastfall  2028
+   
+   Parameter des Gleichungssystems   3
+   (Sparse Direct Solver)
+   Anzahl Gleichungen              138
+   Profil                         1074
+   Profil nach fill in            1587
+   TIME NEEDED         0, TOTAL         3
+   Lastfall  2029
+   
+   Parameter des Gleichungssystems   3
+   (Sparse Direct Solver)
+   Anzahl Gleichungen              138
+   Profil                         1074
+   Profil nach fill in            1587
+   TIME NEEDED         0, TOTAL         3
+   Lastfall  2030
+   
+   Parameter des Gleichungssystems   3
+   (Sparse Direct Solver)
+   Anzahl Gleichungen              138
+   Profil                         1074
+   Profil nach fill in            1587
+   TIME NEEDED         1, TOTAL         4
+   TIME NEEDED         0, TOTAL         4
+   DATE       2019-12-23, 16:32:55
+   *** Stop : Program ASE : LF 2001+#1 fakg 1
+   *** End of Calculation!

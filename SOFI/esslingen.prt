@@ -1,0 +1,156 @@
+   *** Start: Program WPS - Version 2018-8.0
+   *** Start: Program AQUA : Material- und Querschnittsdefinition   
+   SOFiSTiK 2018-8.0.14    AQUA   - GENERAL SECTIONS
+   Output on file esslingen.plb
+   Project data base esslingen.cdb        -     1. access
+   RECHENZEIT          3, TOTAL         3
+   DATUM      2019-12-05, 10:52:36
+   *** Stop : Program AQUA : Material- und Querschnittsdefinition
+
+   *** Start: Program SOFIMSHA   
+   SOFiSTiK 2018-8.0.14    SOFIMSHA - IMPORT/EXPORT FEM
+   Output on file esslingen.plb
+   Project data base esslingen.cdb        -     2. access
+   Workspace                    38.1 Megabyte
+   TIME NEEDED         2, TOTAL         2
+   DATE       2019-12-05, 10:52:39
+   *** Stop : Program SOFIMSHA
+
+   *** Start: Program TENDON   
+   SOFiSTiK 2018-8.0.14    TENDON  -  Prestressing Tendons
+   Output on file esslingen.plb
+   Project data base esslingen.cdb        -     3. access
+   Tabelle: tendon.tab                                                                                                                                                                                                                                                     
+   TIME NEEDED         2, TOTAL         2
+   DATE       2019-12-05, 10:52:41
+   *** Stop : Program TENDON
+
+   *** Start: Program SOFILOAD : Teilsicherheits- u. Kombinationsbeiwerte   
+   SOFiSTiK 2018-8.0.14    SOFILOAD - LOAD GENERATOR
+   Output on file esslingen.plb
+   Project data base esslingen.cdb        -     4. access
+   +++++ warning no. 12287 in program SL_IA ; input line:    5
+   Selected design code does not use partial safety factors, Input of action    G is ignored
+   +++++ warning no. 12287 in program SL_IA ; input line:    6
+   Selected design code does not use partial safety factors, Input of action  G_1 is ignored
+   +++++ warning no. 12287 in program SL_IA ; input line:    7
+   Selected design code does not use partial safety factors, Input of action  G_2 is ignored
+   +++++ warning no. 12287 in program SL_IA ; input line:    8
+   Selected design code does not use partial safety factors, Input of action    P is ignored
+   +++++ warning no. 12287 in program SL_IA ; input line:    9
+   Selected design code does not use partial safety factors, Input of action   ZS is ignored
+   +++++ warning no. 12287 in program SL_IA ; input line:   10
+   Selected design code does not use partial safety factors, Input of action    K is ignored
+   +++++ warning no. 12287 in program SL_IA ; input line:   11
+   Selected design code does not use partial safety factors, Input of action  L_T is ignored
+   +++++ warning no. 12287 in program SL_IA ; input line:   12
+   Selected design code does not use partial safety factors, Input of action  L_U is ignored
+   +++++ warning no. 12287 in program SL_IA ; input line:   13
+   Selected design code does not use partial safety factors, Input of action   ZF is ignored
+   +++++ warning no. 12287 in program SL_IA ; input line:   14
+   Selected design code does not use partial safety factors, Input of action   SF is ignored
+   +++++ warning no. 12287 in program SL_IA ; input line:   15
+   Selected design code does not use partial safety factors, Input of action    W is ignored
+   +++++ warning no. 12287 in program SL_IA ; input line:   16
+   Selected design code does not use partial safety factors, Input of action    T is ignored
+   +++++ warning no. 12287 in program SL_IA ; input line:   17
+   Selected design code does not use partial safety factors, Input of action  T_1 is ignored
+   +++++ warning no. 12287 in program SL_IA ; input line:   18
+   Selected design code does not use partial safety factors, Input of action  T_2 is ignored
+   +++++ warning no. 12287 in program SL_IA ; input line:   19
+   Selected design code does not use partial safety factors, Input of action  H_B is ignored
+   +++++ warning no. 12287 in program SL_IA ; input line:   20
+   Selected design code does not use partial safety factors, Input of action  H_L is ignored
+   +++++ warning no. 12287 in program SL_IA ; input line:   21
+   Selected design code does not use partial safety factors, Input of action  H_Q is ignored
+   +++++ warning no. 12287 in program SL_IA ; input line:   22
+   Selected design code does not use partial safety factors, Input of action    B is ignored
+   +++++ warning no. 12287 in program SL_IA ; input line:   23
+   Selected design code does not use partial safety factors, Input of action    X is ignored
+   +++++ warning no. 12287 in program SL_IA ; input line:   24
+   Selected design code does not use partial safety factors, Input of action    Z is ignored
+   +++++ warning no. 12287 in program SL_IA ; input line:   25
+   Selected design code does not use partial safety factors, Input of action  Z_1 is ignored
+   +++++ warning no. 12287 in program SL_IA ; input line:   26
+   Selected design code does not use partial safety factors, Input of action  Z_2 is ignored
+   +++++ warning no. 12287 in program SL_IA ; input line:   27
+   Selected design code does not use partial safety factors, Input of action  Z_3 is ignored
+   +++++ warning no. 12287 in program SL_IA ; input line:   28
+   Selected design code does not use partial safety factors, Input of action  Z_4 is ignored
+   +++++ warning no. 12287 in program SL_IA ; input line:   29
+   Selected design code does not use partial safety factors, Input of action    A is ignored
+   TIME NEEDED         1, TOTAL         1
+   TIME NEEDED         0, TOTAL         1
+   DATE       2019-12-05, 10:52:42
+   
+   
+   
+    +++++    0 errors and   25 warnings +++++
+   *** Stop : Program SOFILOAD : Teilsicherheits- u. Kombinationsbeiwerte
+
+   *** Start: Program ASE : Eigengewicht zum Test   
+   SOFiSTiK 2018-8.0.14    ASE   - ADVANCED SOLUTION ENGINE
+   Output on file esslingen.plb
+   Project data base esslingen.cdb        -     5. access
+   Start preprocessing nodes               TKNOT
+   Start preprocessing materials           TMAT
+   Start preprocessing nodes-2             TKNOP
+   Start preprocessing elements            ASE
+   Start preprocessing loads               TRLAS
+   Lastfall     1
+   Start initialize solver                 TFBLO
+   ID Matrix Workspace                       7 Megabyte
+   
+   Parameter des Gleichungssystems   3
+   (Sparse Direct Solver)
+   Anzahl Gleichungen              138
+   Start assembling stiffness matrix       TADDS
+   Start solving stiffness matrix          TTRIN
+   Profil                         1074
+   Profil nach fill in            1587
+   Start building  load vector IREST=1     TLAST
+   u-vectors       Workspace                       0 Megabyte
+   Start computing displacements           TREDV
+   Start postprocessing stresses           TVERS
+   Start extrapolate nodal stresses        TNOST
+   TIME NEEDED         2, TOTAL         2
+   TIME NEEDED         0, TOTAL         2
+   DATE       2019-12-05, 10:52:45
+   *** Stop : Program ASE : Eigengewicht zum Test
+
+   *** Start: Program ASE : LF alle   
+   SOFiSTiK 2018-8.0.14    ASE   - ADVANCED SOLUTION ENGINE
+   Output on file esslingen.plb
+   Project data base esslingen.cdb        -     6. access
+   Lastfall     1
+   
+   Parameter des Gleichungssystems   3
+   (Sparse Direct Solver)
+   Anzahl Gleichungen              138
+   Profil                         1074
+   Profil nach fill in            1587
+   TIME NEEDED         2, TOTAL         2
+   TIME NEEDED         0, TOTAL         2
+   DATE       2019-12-05, 10:52:47
+   *** Stop : Program ASE : LF alle
+
+   *** Start: Program AQB : Dehnungen ermitteln   
+   SOFiSTiK 2018-8.0.14    AQB     - DESIGN OF SECTIONS
+   Output on file esslingen.plb
+   Project data base esslingen.cdb        -     7. access
+   Workspace                    38.1 Megabyte
+   +++++ warning no.  2055 in program AQBEI ; input line:    7
+   NSTR S1/K1 is only allowed, if an external Iteration with PROG AQB ITER is defined
+   As improper input definitions have been encountered quite often, this message is always generated
+   Please deactivate it with CTRL WARN 2055 if the usage is correct
+   CRISFIELDFACTORS      0.000     1.000
+   M/N/V DIFFERENCES    0.3607    0.0009    0.0000
+   TIME NEEDED         1, TOTAL         1
+   TIME NEEDED         0, TOTAL         1
+   DATE       2019-12-05, 10:52:49
+   
+   
+   
+    +++++    0 errors and    1 warnings +++++
+   *** Stop : Program AQB : Dehnungen ermitteln
+   *** End of Calculation!

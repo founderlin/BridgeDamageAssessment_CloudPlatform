@@ -1,0 +1,60 @@
++prog aqua urs:1
+head materials
+echo opt full   val extr
+norm dc "din"    ndc "en1992-2004"     coun 49
+page unii 5 unio 5  $define the output dimensions
+
+conc no 1   type c  fcn 30  gam 25
+stee no 2   type b  clas 500
+
+srec no 1   h 600   b 400   su 25   so 25
+end
+
++prog sofimsha urs:2
+head model and geometry
+syst type 3d    gdiv 1000   gdir posz
+
+node no (1 11 1) x (0.0 1)  y 0     z 0
+
+loop#i  10
+let#i #i+1
+    grp no 2
+    beam no #i    na #i    ne #i+1   ncs 1
+endloop
+
+node no 1   fix ppmx
+node no 11  fix xp
+end
+
++prog sofiload urs:4
+echo opt full   val extr
+head loads and load-cases
+lc no 1     type "none"     facd 1.0    titl "self-weight"
+lc no 2     type "none"
+    beam grp 2  type pzz    pa 5  pe 5
+    !node 11     type pxx    p1 200
+end
+
++prog ase urs:3 $ linear analysis
+echo opt full   val extr
+head Calculation of forces and moments
+lc all
+end
+
++prog maxima urs:7
+head superposition
+echo opt no
+comb no 1   extr desi   type desi
+    act type g
+        lc 1
+        lc 2
+supp comb 1 extr max   etyp beam   type MY  lc 1001     $This is the loadcases that is read by sof_cdb_get
+end
+
++prog aqb urs:6
+head Cross-section design
+norm dc "din"    ndc "en1992-2004"      coun 49
+echo opt full   val extr
+beam  from 2006     inc 1
+desi stat ulti
+end

@@ -1,0 +1,2071 @@
+ SOFiSTiK AG - Educational-Version -
+ SOFiLOAD - LAST DEFINITIONEN V 2018-8.0           29.10.20            Seite:      
+ 
+ 
+ 
+    1 +PROG SOFILOAD
+    2 $ Dat : C:\...\PycharmProjects\wisib\WareHouse\sim_39.dat  (#001)   29.10.2020
+    3 $ Job : BCI101:002045                                                    15:09
+    4 KOPF TRAFFIC-LOAD
+    5 LF 1001
+    6 STEL 1001 1032 1 TYP PZZ A 7.47 P 14.94603 EY 1[M]
+    7 STEL 1001 1032 1 TYP PZZ A 7.47 P 14.94603 EY -1[M]
+    8 STEL 1001 1032 1 TYP PZZ A 6.76 P 14.94603 EY 1[M]
+    9 STEL 1001 1032 1 TYP PZZ A 6.76 P 14.94603 EY -1[M]
+   10
+   11 LF 1002
+   12 STEL 1001 1032 1 TYP PZZ A 7.91 P 55.798511999999995 EY 1[M]
+   13 STEL 1001 1032 1 TYP PZZ A 7.91 P 55.798511999999995 EY -1[M]
+   14 STEL 1001 1032 1 TYP PZZ A 6.76 P 2.989206 EY 1[M]
+   15 STEL 1001 1032 1 TYP PZZ A 6.76 P 2.989206 EY -1[M]
+   16
+   17 LF 1003
+   18 STEL 1001 1032 1 TYP PZZ A 16.869999999999997 P 14.94603 EY 1[M]
+   19 STEL 1001 1032 1 TYP PZZ A 16.869999999999997 P 14.94603 EY -1[M]
+   20 STEL 1001 1032 1 TYP PZZ A 6.759999999999998 P 30.888462 EY 1[M]
+   21 STEL 1001 1032 1 TYP PZZ A 6.759999999999998 P 30.888462 EY -1[M]
+   22
+   23 LF 1004
+   24 STEL 1001 1032 1 TYP PZZ A 15.14 P 32.881266 EY 1[M]
+   25 STEL 1001 1032 1 TYP PZZ A 15.14 P 32.881266 EY -1[M]
+   26 STEL 1001 1032 1 TYP PZZ A 6.76 P 63.769728 EY 1[M]
+   27 STEL 1001 1032 1 TYP PZZ A 6.76 P 63.769728 EY -1[M]
+   28
+   29 LF 1005
+   30 STEL 1001 1032 1 TYP PZZ A 16.490000000000002 P 15.942432 EY 1[M]
+   31 STEL 1001 1032 1 TYP PZZ A 16.490000000000002 P 15.942432 EY -1[M]
+   32 STEL 1001 1032 1 TYP PZZ A 6.760000000000002 P 31.884864 EY 1[M]
+   33 STEL 1001 1032 1 TYP PZZ A 6.760000000000002 P 31.884864 EY -1[M]
+   34
+   35 LF 1006
+   36 STEL 1001 1032 1 TYP PZZ A 7.55 P 43.841688000000005 EY 1[M]
+   37 STEL 1001 1032 1 TYP PZZ A 7.55 P 43.841688000000005 EY -1[M]
+   38 STEL 1001 1032 1 TYP PZZ A 6.76 P 14.94603 EY 1[M]
+   39 STEL 1001 1032 1 TYP PZZ A 6.76 P 14.94603 EY -1[M]
+   40
+   41 LF 1007
+   42 STEL 1001 1032 1 TYP PZZ A 18.34 P 55.798511999999995 EY 1[M]
+   43 STEL 1001 1032 1 TYP PZZ A 18.34 P 55.798511999999995 EY -1[M]
+   44 STEL 1001 1032 1 TYP PZZ A 6.76 P 86.68697399999999 EY 1[M]
+   45 STEL 1001 1032 1 TYP PZZ A 6.76 P 86.68697399999999 EY -1[M]
+   46
+   47 LF 1008
+   48 STEL 1001 1032 1 TYP PZZ A 17.84 P 50.81650199999999 EY 1[M]
+   49 STEL 1001 1032 1 TYP PZZ A 17.84 P 50.81650199999999 EY -1[M]
+   50 STEL 1001 1032 1 TYP PZZ A 6.76 P 82.70136600000001 EY 1[M]
+   51 STEL 1001 1032 1 TYP PZZ A 6.76 P 82.70136600000001 EY -1[M]
+   52
+   53 LF 1009
+   54 STEL 1001 1032 1 TYP PZZ A 8.53 P 84.69417 EY 1[M]
+   55 STEL 1001 1032 1 TYP PZZ A 8.53 P 84.69417 EY -1[M]
+   56 STEL 1001 1032 1 TYP PZZ A 6.76 P 2.989206 EY 1[M]
+   57 STEL 1001 1032 1 TYP PZZ A 6.76 P 2.989206 EY -1[M]
+   58
+   59 LF 1010
+   60 STEL 1001 1032 1 TYP PZZ A 9.059999999999999 P 29.89206 EY 1[M]
+   61 STEL 1001 1032 1 TYP PZZ A 9.059999999999999 P 29.89206 EY -1[M]
+   62 STEL 1001 1032 1 TYP PZZ A 6.759999999999999 P 18.931638 EY 1[M]
+ 
+ SOFiSTiK AG - Educational-Version -
+ SOFiLOAD - LAST DEFINITIONEN V 2018-8.0           29.10.20            Seite:      
+ 
+ 
+ Traffic-Load
+ 
+   63 STEL 1001 1032 1 TYP PZZ A 6.759999999999999 P 18.931638 EY -1[M]
+   64
+   65 ENDE
+ 
+      +++++ Warnung Nr. 10270 in Programm SL_IA
+      Der Lastfall 1001 wurde keiner der existierenden Einwirkungen zugeordnet
+      falls dies beabsichtigt ist, geben Sie bitte TYP "NONE" an.
+      +++++ Warnung Nr. 10270 in Programm SL_IA
+      Der Lastfall 1002 wurde keiner der existierenden Einwirkungen zugeordnet
+      falls dies beabsichtigt ist, geben Sie bitte TYP "NONE" an.
+      +++++ Warnung Nr. 10270 in Programm SL_IA
+      Der Lastfall 1003 wurde keiner der existierenden Einwirkungen zugeordnet
+      falls dies beabsichtigt ist, geben Sie bitte TYP "NONE" an.
+      +++++ Warnung Nr. 10270 in Programm SL_IA
+      Der Lastfall 1004 wurde keiner der existierenden Einwirkungen zugeordnet
+      falls dies beabsichtigt ist, geben Sie bitte TYP "NONE" an.
+      +++++ Warnung Nr. 10270 in Programm SL_IA
+      Der Lastfall 1005 wurde keiner der existierenden Einwirkungen zugeordnet
+      falls dies beabsichtigt ist, geben Sie bitte TYP "NONE" an.
+      +++++ Warnung Nr. 10270 in Programm SL_IA
+      Der Lastfall 1006 wurde keiner der existierenden Einwirkungen zugeordnet
+      falls dies beabsichtigt ist, geben Sie bitte TYP "NONE" an.
+      +++++ Warnung Nr. 10270 in Programm SL_IA
+      Der Lastfall 1007 wurde keiner der existierenden Einwirkungen zugeordnet
+      falls dies beabsichtigt ist, geben Sie bitte TYP "NONE" an.
+      +++++ Warnung Nr. 10270 in Programm SL_IA
+      Der Lastfall 1008 wurde keiner der existierenden Einwirkungen zugeordnet
+      falls dies beabsichtigt ist, geben Sie bitte TYP "NONE" an.
+      +++++ Warnung Nr. 10270 in Programm SL_IA
+      Der Lastfall 1009 wurde keiner der existierenden Einwirkungen zugeordnet
+      falls dies beabsichtigt ist, geben Sie bitte TYP "NONE" an.
+      +++++ Warnung Nr. 10270 in Programm SL_IA
+      Der Lastfall 1010 wurde keiner der existierenden Einwirkungen zugeordnet
+      falls dies beabsichtigt ist, geben Sie bitte TYP "NONE" an.
+ 
+      SOFiSTiK AG - Educational-Version -
+      SOFiLOAD - LAST DEFINITIONEN V 2018-8.0           29.10.20            Seite:   491
+ 
+      
+      Traffic-Load
+ 
+ 
+      Einwirkungen 
+      Typ     part  sup Bezeichnung                      
+      G       G    perm Eigengewicht                     
+ 
+      Lastfall   1001  
+      Faktor P und M Lasten                1.000
+ 
+      Lasten auf Stab-Elemente 
+       Nummer Typ        a[m]    l[m]    Lastwert    Lastwert Einheit     ya[m]   za[m]   ye[m]   ze[m] Mess 
+         1006 PZZ       1.120                14.9             [kN]       -1.000   0.000
+         1006 PZZ       1.120                14.9             [kN]        1.000   0.000
+         1007 PZZ       0.450                14.9             [kN]       -1.000   0.000
+         1007 PZZ       0.450                14.9             [kN]        1.000   0.000
+ 
+      Lastfall   1002  
+      Faktor P und M Lasten                1.000
+ 
+      Lasten auf Stab-Elemente 
+       Nummer Typ        a[m]    l[m]    Lastwert    Lastwert Einheit     ya[m]   za[m]   ye[m]   ze[m] Mess 
+         1006 PZZ       1.120                 3.0             [kN]       -1.000   0.000
+         1006 PZZ       1.120                 3.0             [kN]        1.000   0.000
+         1007 PZZ       0.890                55.8             [kN]       -1.000   0.000
+         1007 PZZ       0.890                55.8             [kN]        1.000   0.000
+ 
+      Lastfall   1003  
+      Faktor P und M Lasten                1.000
+ 
+      Lasten auf Stab-Elemente 
+       Nummer Typ        a[m]    l[m]    Lastwert    Lastwert Einheit     ya[m]   za[m]   ye[m]   ze[m] Mess 
+         1006 PZZ       1.120                30.9             [kN]       -1.000   0.000
+         1006 PZZ       1.120                30.9             [kN]        1.000   0.000
+         1014 PZZ       0.310                14.9             [kN]       -1.000   0.000
+         1014 PZZ       0.310                14.9             [kN]        1.000   0.000
+ 
+      Lastfall   1004  
+      Faktor P und M Lasten                1.000
+ 
+      Lasten auf Stab-Elemente 
+       Nummer Typ        a[m]    l[m]    Lastwert    Lastwert Einheit     ya[m]   za[m]   ye[m]   ze[m] Mess 
+         1006 PZZ       1.120                63.8             [kN]       -1.000   0.000
+         1006 PZZ       1.120                63.8             [kN]        1.000   0.000
+         1012 PZZ       1.220                32.9             [kN]       -1.000   0.000
+         1012 PZZ       1.220                32.9             [kN]        1.000   0.000
+ 
+      Lastfall   1005  
+      Faktor P und M Lasten                1.000
+ 
+      Lasten auf Stab-Elemente 
+       Nummer Typ        a[m]    l[m]    Lastwert    Lastwert Einheit     ya[m]   za[m]   ye[m]   ze[m] Mess 
+         1006 PZZ       1.120                31.9             [kN]       -1.000   0.000
+         1006 PZZ       1.120                31.9             [kN]        1.000   0.000
+         1013 PZZ       1.250                15.9             [kN]       -1.000   0.000
+         1013 PZZ       1.250                15.9             [kN]        1.000   0.000
+ 
+      Lastfall   1006  
+      Faktor P und M Lasten                1.000
+ 
+      Lasten auf Stab-Elemente 
+       Nummer Typ        a[m]    l[m]    Lastwert    Lastwert Einheit     ya[m]   za[m]   ye[m]   ze[m] Mess 
+         1006 PZZ       1.120                14.9             [kN]       -1.000   0.000
+ 
+      SOFiSTiK AG - Educational-Version -
+      SOFiLOAD - LAST DEFINITIONEN V 2018-8.0           29.10.20            Seite:   492
+ 
+      
+      Traffic-Load
+ 
+ 
+      Lasten auf Stab-Elemente 
+       Nummer Typ        a[m]    l[m]    Lastwert    Lastwert Einheit     ya[m]   za[m]   ye[m]   ze[m] Mess 
+         1006 PZZ       1.120                14.9             [kN]        1.000   0.000
+         1007 PZZ       0.530                43.8             [kN]       -1.000   0.000
+         1007 PZZ       0.530                43.8             [kN]        1.000   0.000
+ 
+      Lastfall   1007  
+      Faktor P und M Lasten                1.000
+ 
+      Lasten auf Stab-Elemente 
+       Nummer Typ        a[m]    l[m]    Lastwert    Lastwert Einheit     ya[m]   za[m]   ye[m]   ze[m] Mess 
+         1006 PZZ       1.120                86.7             [kN]       -1.000   0.000
+         1006 PZZ       1.120                86.7             [kN]        1.000   0.000
+         1015 PZZ       0.460                55.8             [kN]       -1.000   0.000
+         1015 PZZ       0.460                55.8             [kN]        1.000   0.000
+ 
+      Lastfall   1008  
+      Faktor P und M Lasten                1.000
+ 
+      Lasten auf Stab-Elemente 
+       Nummer Typ        a[m]    l[m]    Lastwert    Lastwert Einheit     ya[m]   za[m]   ye[m]   ze[m] Mess 
+         1006 PZZ       1.120                82.7             [kN]       -1.000   0.000
+         1006 PZZ       1.120                82.7             [kN]        1.000   0.000
+         1014 PZZ       1.280                50.8             [kN]       -1.000   0.000
+         1014 PZZ       1.280                50.8             [kN]        1.000   0.000
+ 
+      Lastfall   1009  
+      Faktor P und M Lasten                1.000
+ 
+      Lasten auf Stab-Elemente 
+       Nummer Typ        a[m]    l[m]    Lastwert    Lastwert Einheit     ya[m]   za[m]   ye[m]   ze[m] Mess 
+         1006 PZZ       1.120                 3.0             [kN]       -1.000   0.000
+         1006 PZZ       1.120                 3.0             [kN]        1.000   0.000
+         1008 PZZ       0.130                84.7             [kN]       -1.000   0.000
+         1008 PZZ       0.130                84.7             [kN]        1.000   0.000
+ 
+      Lastfall   1010  
+      Faktor P und M Lasten                1.000
+ 
+      Lasten auf Stab-Elemente 
+       Nummer Typ        a[m]    l[m]    Lastwert    Lastwert Einheit     ya[m]   za[m]   ye[m]   ze[m] Mess 
+         1006 PZZ       1.120                18.9             [kN]       -1.000   0.000
+         1006 PZZ       1.120                18.9             [kN]        1.000   0.000
+         1008 PZZ       0.660                29.9             [kN]       -1.000   0.000
+         1008 PZZ       0.660                29.9             [kN]        1.000   0.000
+ 
+      SOFiSTiK AG - Educational-Version -
+      SOFiLOAD - LAST DEFINITIONEN V 2018-8.0           29.10.20            Seite:   493
+ 
+      
+      Traffic-Load
+ 
+ 
+       +++++    0 FEHLER UND   10 WARNUNGEN +++++
+ 
+ SOFiSTiK AG - Educational-Version -
+ ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0         29.10.20         Seite:      
+ 
+ 
+ 
+    1 +PROG ASE
+    2 $ Dat : C:\...\PycharmProjects\wisib\WareHouse\sim_39.dat  (#002)   29.10.2020
+    3 $ Job : BCI101:002045                                                    15:09
+    4 LOOP#1 10
+    5 SFIX 3 PLF 3
+    6 LF 2001+#1 FAKG 1
+    7  LC 1001+#1
+    8 ENDE
+    9 ENDLOOP
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0         29.10.20         Seite:   494
+ 
+      
+ 
+ 
+      Lastfall   2001  
+      Faktor P und M Lasten                1.000
+      Faktor Eigengewicht        EG-ZZ     1.000
+ 
+      Lasten auf Stab-Elemente 
+       Nummer Typ        a[m]    l[m]    Lastwert    Lastwert Einheit     ya[m]   za[m]   ye[m]   ze[m] Mess 
+         1006 PZZ       1.120                14.9             [kN]       -1.000   0.000
+         1006 PZZ       1.120                14.9             [kN]        1.000   0.000
+         1007 PZZ       0.450                14.9             [kN]       -1.000   0.000
+         1007 PZZ       0.450                14.9             [kN]        1.000   0.000
+ 
+      Summe der Lasten                                                                           
+      Lastfall             Σ(Lasten)               Bezeichnung                            
+                     X[kN]       Y[kN]       Z[kN]                                        
+          2001         0.0         0.0      3481.9                                        
+ 
+      Stabschnittgrößen Lastfall   2001    
+       Grp  Nummer       x        N       Vy       Vz        Mt        My        Mz
+                       [m]     [kN]     [kN]     [kN]     [kNm]     [kNm]     [kNm]
+         1    1001   0.000      0.0     0.00     0.00      0.00      0.00      0.00
+                     0.120      0.0     0.00   -15.08      1.42     -0.90      0.00
+         1    1002   0.000      0.0    11.99   771.61   -105.40     -0.90    657.38
+                     1.380      0.0    11.99   598.25    -89.06    944.30    640.84
+         1    1003   0.000      0.0    11.99   598.25    -89.06    944.30    640.84
+                     1.380      0.0    11.99   424.88    -72.78   1650.25    624.29
+         1    1004   0.000      0.0    11.99   424.88    -72.78   1650.25    624.29
+                     1.380      0.0    11.99   251.51    -56.51   2116.96    607.75
+         1    1005   0.000      0.0    11.99   251.51    -56.51   2116.96    607.75
+                     1.380      0.0    11.99    78.14    -40.50   2344.42    591.21
+         1    1006   0.000      0.0    11.99    78.14    -40.50   2344.42    591.21
+                     1.120      0.0    11.99   -62.56    -27.22   2353.15    577.78
+                     1.120      0.0    11.99   -92.45    -19.20   2353.15    577.78
+                     1.380      0.0    11.99  -125.11    -16.21   2324.87    574.66
+         1    1007   0.000      0.0    11.99  -125.11    -16.21   2324.87    574.66
+                     0.450      0.0    11.99  -181.65    -10.87   2255.85    569.27
+                     0.450      0.0    11.99  -211.54     -2.85   2255.85    569.27
+                     1.380      0.0    11.99  -328.37      8.10   2004.79    558.12
+         1    1008   0.000      0.0    11.99  -328.37      8.10   2004.79    558.12
+                     1.380      0.0    11.99  -501.74     24.42   1432.01    541.58
+         1    1009   0.000      0.0    11.99  -501.74     24.42   1432.01    541.58
+                     1.380      0.0    11.99  -675.11     40.77    619.99    525.03
+         1    1010   0.000      0.0    11.99  -675.11     40.77    619.99    525.03
+                     1.380      0.0    11.99  -848.47     57.12   -431.29    508.49
+         1    1011   0.000      0.0    11.99  -848.47     57.12   -431.29    508.49
+                     1.380      0.0    11.99 -1021.84     73.42  -1721.80    491.95
+         1    1012   0.000      0.0    37.27   959.52    -64.76  -1721.80    491.95
+                     1.320      0.0    37.27   793.69    -49.19   -564.69    442.75
+         1    1013   0.000      0.0    37.27   793.69    -49.19   -564.69    442.75
+                     1.320      0.0    37.27   627.86    -33.54    373.53    393.56
+         1    1014   0.000      0.0    37.27   627.86    -33.54    373.53    393.56
+                     1.320      0.0    37.27   462.03    -17.88   1092.86    344.36
+         1    1015   0.000      0.0    37.27   462.03    -17.88   1092.86    344.36
+                     1.320      0.0    37.27   296.20     -2.22   1593.29    295.17
+         1    1016   0.000      0.0    37.27   296.20     -2.22   1593.29    295.17
+                     1.320      0.0    37.27   130.37     13.45   1874.83    245.97
+         1    1017   0.000      0.0    37.27   130.37     13.45   1874.83    245.97
+                     1.320      0.0    37.27   -35.46     29.11   1937.47    196.78
+         1    1018   0.000      0.0    37.27   -35.46     29.11   1937.47    196.78
+                     1.320      0.0    37.27  -201.29     44.77   1781.22    147.58
+         1    1019   0.000      0.0    37.27  -201.29     44.77   1781.22    147.58
+                     1.320      0.0    37.27  -367.12     60.42   1406.07     98.39
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0         29.10.20         Seite:   495
+ 
+      
+ 
+ 
+      Stabschnittgrößen Lastfall   2001    
+       Grp  Nummer       x        N       Vy       Vz        Mt        My        Mz
+                       [m]     [kN]     [kN]     [kN]     [kNm]     [kNm]     [kNm]
+         1    1020   0.000      0.0    37.27  -367.12     60.42   1406.07     98.39
+                     1.320      0.0    37.27  -532.95     76.08    812.03     49.19
+         1    1021   0.000      0.0    37.27  -532.95     76.08    812.03     49.19
+                     1.320      0.0    37.27  -698.77     91.74     -0.90      0.00
+         1    1032   0.000      0.0     0.00    15.08     -1.42     -0.90      0.00
+                     0.120      0.0     0.00     0.00      0.00      0.00      0.00
+ 
+      Federkräfte und -verschiebungen Lastfall   2001    
+       Grp  Nummer         P       P-t         M         u       u-t       phi
+                        [kN]      [kN]     [kNm]      [mm]      [mm]    [mrad]
+         2    2101     215.5       0.0      0.00     0.022     0.003     0.002
+         2    2102      12.0       0.0      0.00     0.001     0.022    -1.953
+         2    2103      31.6       0.0      0.00     0.003     0.022     0.014
+         2    2111       0.0       0.0      0.00     0.000     0.007     0.002
+         2    2112       0.0       0.0      0.00     0.001     0.007    -1.953
+         2    2113     655.6       0.0      0.00     0.007     0.586     0.014
+         2    2121    -215.5       0.0      0.00    -0.022     0.010     0.002
+         2    2122       0.0       0.0      0.00     0.001     0.024    -1.953
+         2    2123      99.6       0.0      0.00     0.010     0.022     0.014
+         2    2201       0.0       0.0      0.00     0.043     0.004     0.008
+         2    2202      25.3       0.0      0.00     0.003     0.043     0.415
+         2    2203      36.5       0.0      0.00     0.004     0.043    -0.004
+         2    2211       0.0       0.0      0.00     0.048     0.017     0.008
+         2    2212       0.0       0.0      0.00     0.003     0.051     0.415
+         2    2213    1651.1       0.0      0.00     0.017     0.076    -0.004
+         2    2221       0.0       0.0      0.00     0.054     0.029     0.008
+         2    2222       0.0       0.0      0.00     0.003     0.061     0.415
+         2    2223     293.7       0.0      0.00     0.029     0.054    -0.004
+         2    2301       0.0       0.0      0.00     0.043     0.005     0.002
+         2    2302     -37.3       0.0      0.00    -0.004     0.043     1.008
+         2    2303      26.7       0.0      0.00     0.003     0.043    -0.011
+         2    2311       0.0       0.0      0.00     0.060     0.007     0.002
+         2    2312       0.0       0.0      0.00    -0.004     0.060     1.008
+         2    2313     594.9       0.0      0.00     0.006     0.242    -0.011
+         2    2321       0.0       0.0      0.00     0.077     0.010     0.002
+         2    2322       0.0       0.0      0.00    -0.004     0.077     1.008
+         2    2323      92.3       0.0      0.00     0.009     0.077    -0.011
+ 
+      Knotenverschiebungen  Lastfall   2001    
+       Knoten       u-X       u-Y       u-Z     phi-X     phi-Y     phi-Z
+           Nr      [mm]      [mm]      [mm]    [mrad]    [mrad]    [mrad]
+          100     0.586     0.000    -0.228     0.002    -1.953     0.014 
+          110     0.586     0.002     0.007     0.002    -1.953     0.014 
+          111     0.560     0.015     2.775    -0.028    -1.860     0.014 
+          112     0.499     0.028     5.293    -0.053    -1.640     0.013 
+          113     0.409     0.039     7.406    -0.073    -1.321     0.010 
+          114     0.050     0.043     8.387    -0.088    -0.035     0.000 
+          115    -0.061     0.038     8.162    -0.097     0.362    -0.003 
+          116    -0.190     0.030     7.299    -0.098     0.822    -0.007 
+          117    -0.271     0.020     5.885    -0.093     1.111    -0.008 
+          118    -0.364     0.010     4.053    -0.079     1.443    -0.011 
+          119    -0.398     0.003     1.710    -0.041     1.566    -0.012 
+          120    -0.076     0.005     0.017     0.008     0.415    -0.004 
+          121     0.252    -0.002     0.523    -0.033    -0.758     0.005 
+          122     0.275    -0.001     1.805    -0.063    -0.841     0.005 
+          123     0.213     0.004     2.842    -0.074    -0.618     0.003 
+          124     0.152     0.010     3.584    -0.077    -0.402     0.002 
+          125     0.074     0.014     3.968    -0.076    -0.122    -0.000 
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0         29.10.20         Seite:   496
+ 
+      
+ 
+ 
+      Knotenverschiebungen  Lastfall   2001    
+       Knoten       u-X       u-Y       u-Z     phi-X     phi-Y     phi-Z
+           Nr      [mm]      [mm]      [mm]    [mrad]    [mrad]    [mrad]
+          126    -0.013     0.015     3.932    -0.069     0.187    -0.003 
+          127    -0.097     0.014     3.462    -0.058     0.489    -0.006 
+          128    -0.170     0.010     2.591    -0.043     0.748    -0.008 
+          129    -0.220     0.004     1.399    -0.023     0.928    -0.010 
+          130    -0.242    -0.003     0.006     0.002     1.008    -0.011 
+          140    -0.242    -0.004    -0.115     0.002     1.008    -0.011 
+          210     0.000     0.000     0.000     0.000     0.000     0.000 
+          211     0.000     0.000     0.000     0.000     0.000     0.000 
+          212     0.000     0.000     0.000     0.000     0.000     0.000 
+          220     0.000     0.000     0.000     0.000     0.000     0.000 
+          221     0.000     0.000     0.000     0.000     0.000     0.000 
+          222     0.000     0.000     0.000     0.000     0.000     0.000 
+          230     0.000     0.000     0.000     0.000     0.000     0.000 
+          231     0.000     0.000     0.000     0.000     0.000     0.000 
+          232     0.000     0.000     0.000     0.000     0.000     0.000 
+ 
+      Auflagerkräfte  Lastfall   2001    
+       Knoten       P-X       P-Y       P-Z       M-X       M-Y       M-Z
+           Nr      [kN]      [kN]      [kN]     [kNm]     [kNm]     [kNm]
+          210    -215.5     -12.0     -31.6    -51.73     64.66    328.69 
+          211       0.0       0.0    -655.6      0.00      0.00           
+          212     215.5       0.0     -99.6    151.81    -64.66    328.69 
+          220       0.0     -25.3     -36.5    -63.28      0.00      0.00 
+          221       0.0       0.0   -1651.1      0.00      0.00           
+          222       0.0       0.0    -293.7    447.90      0.00      0.00 
+          230       0.0      37.3     -26.7    -29.53      0.00      0.00 
+          231       0.0       0.0    -594.9      0.00      0.00           
+          232       0.0       0.0     -92.3    140.72      0.00      0.00 
+ 
+      Summe der Auflagerkräfte und Lasten                                                        
+      Lastfall           Σ(Reaktionen)             Bezeichnung                            
+                     X[kN]       Y[kN]       Z[kN]                                        
+                           Σ(Lasten)                                                      
+          2001         0.0         0.0     -3481.9 EGZ= 1.00 sum_PZ=3481.9 kN     .       
+                       0.0         0.0      3481.9                                        
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0         29.10.20         Seite:   497
+ 
+      
+ 
+ 
+      Lastfall   2002  
+      Faktor P und M Lasten                1.000
+      Faktor Eigengewicht        EG-ZZ     1.000
+ 
+      Lasten auf Stab-Elemente 
+       Nummer Typ        a[m]    l[m]    Lastwert    Lastwert Einheit     ya[m]   za[m]   ye[m]   ze[m] Mess 
+         1006 PZZ       1.120                 3.0             [kN]       -1.000   0.000
+         1006 PZZ       1.120                 3.0             [kN]        1.000   0.000
+         1007 PZZ       0.890                55.8             [kN]       -1.000   0.000
+         1007 PZZ       0.890                55.8             [kN]        1.000   0.000
+ 
+      Summe der Lasten                                                                           
+      Lastfall             Σ(Lasten)               Bezeichnung                            
+                     X[kN]       Y[kN]       Z[kN]                                        
+          2002         0.0         0.0      3539.7                                        
+ 
+      Stabschnittgrößen Lastfall   2002    
+       Grp  Nummer       x        N       Vy       Vz        Mt        My        Mz
+                       [m]     [kN]     [kN]     [kN]     [kNm]     [kNm]     [kNm]
+         1    1001   0.000      0.0     0.00     0.00      0.00      0.00      0.00
+                     0.120      0.0     0.00   -15.08      1.42     -0.90      0.00
+         1    1002   0.000      0.0    13.91   790.45   -113.70     -0.90    684.65
+                     1.380      0.0    13.91   617.09    -97.37    970.30    665.45
+         1    1003   0.000      0.0    13.91   617.09    -97.37    970.30    665.45
+                     1.380      0.0    13.91   443.72    -81.08   1702.26    646.26
+         1    1004   0.000      0.0    13.91   443.72    -81.08   1702.26    646.26
+                     1.380      0.0    13.91   270.35    -64.82   2194.97    627.06
+         1    1005   0.000      0.0    13.91   270.35    -64.82   2194.97    627.06
+                     1.380      0.0    13.91    96.99    -48.83   2448.43    607.86
+         1    1006   0.000      0.0    13.91    96.99    -48.83   2448.43    607.86
+                     1.120      0.0    13.91   -43.72    -35.54   2478.26    592.29
+                     1.120      0.0    13.91   -49.70    -33.94   2478.26    592.29
+                     1.380      0.0    13.91   -82.36    -30.95   2461.09    588.67
+         1    1007   0.000      0.0    13.91   -82.36    -30.95   2461.09    588.67
+                     0.890      0.0    13.91  -194.17    -20.39   2338.04    576.29
+                     0.890      0.0    13.91  -305.76      9.54   2338.04    576.29
+                     1.380      0.0    13.91  -367.32     15.27   2173.13    569.47
+         1    1008   0.000      0.0    13.91  -367.32     15.27   2173.13    569.47
+                     1.380      0.0    13.91  -540.69     31.59   1546.61    550.28
+         1    1009   0.000      0.0    13.91  -540.69     31.59   1546.61    550.28
+                     1.380      0.0    13.91  -714.06     47.93    680.83    531.08
+         1    1010   0.000      0.0    13.91  -714.06     47.93    680.83    531.08
+                     1.380      0.0    13.91  -887.42     64.29   -424.19    511.89
+         1    1011   0.000      0.0    13.91  -887.42     64.29   -424.19    511.89
+                     1.380      0.0    13.91 -1060.79     80.59  -1768.46    492.69
+         1    1012   0.000      0.0    37.33   963.05    -64.79  -1768.46    492.69
+                     1.320      0.0    37.33   797.22    -49.22   -606.68    443.42
+         1    1013   0.000      0.0    37.33   797.22    -49.22   -606.68    443.42
+                     1.320      0.0    37.33   631.39    -33.57    336.21    394.15
+         1    1014   0.000      0.0    37.33   631.39    -33.57    336.21    394.15
+                     1.320      0.0    37.33   465.56    -17.91   1060.20    344.88
+         1    1015   0.000      0.0    37.33   465.56    -17.91   1060.20    344.88
+                     1.320      0.0    37.33   299.73     -2.25   1565.30    295.61
+         1    1016   0.000      0.0    37.33   299.73     -2.25   1565.30    295.61
+                     1.320      0.0    37.33   133.91     13.42   1851.50    246.35
+         1    1017   0.000      0.0    37.33   133.91     13.42   1851.50    246.35
+                     1.320      0.0    37.33   -31.92     29.08   1918.81    197.08
+         1    1018   0.000      0.0    37.33   -31.92     29.08   1918.81    197.08
+                     1.320      0.0    37.33  -197.75     44.74   1767.22    147.81
+         1    1019   0.000      0.0    37.33  -197.75     44.74   1767.22    147.81
+                     1.320      0.0    37.33  -363.58     60.39   1396.74     98.54
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0         29.10.20         Seite:   498
+ 
+      
+ 
+ 
+      Stabschnittgrößen Lastfall   2002    
+       Grp  Nummer       x        N       Vy       Vz        Mt        My        Mz
+                       [m]     [kN]     [kN]     [kN]     [kNm]     [kNm]     [kNm]
+         1    1020   0.000      0.0    37.33  -363.58     60.39   1396.74     98.54
+                     1.320      0.0    37.33  -529.41     76.05    807.37     49.27
+         1    1021   0.000      0.0    37.33  -529.41     76.05    807.37     49.27
+                     1.320      0.0    37.33  -695.24     91.71     -0.90      0.00
+         1    1032   0.000      0.0     0.00    15.08     -1.42     -0.90      0.00
+                     0.120      0.0     0.00     0.00      0.00      0.00      0.00
+ 
+      Federkräfte und -verschiebungen Lastfall   2002    
+       Grp  Nummer         P       P-t         M         u       u-t       phi
+                        [kN]      [kN]     [kNm]      [mm]      [mm]    [mrad]
+         2    2101     224.5       0.0      0.00     0.022     0.004     0.002
+         2    2102      13.9       0.0      0.00     0.001     0.023    -2.051
+         2    2103      34.2       0.0      0.00     0.003     0.022     0.015
+         2    2111       0.0       0.0      0.00     0.000     0.007     0.002
+         2    2112       0.0       0.0      0.00     0.001     0.007    -2.051
+         2    2113     671.3       0.0      0.00     0.007     0.615     0.015
+         2    2121    -224.5       0.0      0.00    -0.022     0.010     0.002
+         2    2122       0.0       0.0      0.00     0.001     0.025    -2.051
+         2    2123     100.0       0.0      0.00     0.010     0.022     0.015
+         2    2201       0.0       0.0      0.00     0.046     0.005     0.009
+         2    2202      23.4       0.0      0.00     0.002     0.046     0.512
+         2    2203      38.7       0.0      0.00     0.004     0.046    -0.004
+         2    2211       0.0       0.0      0.00     0.052     0.017     0.009
+         2    2212       0.0       0.0      0.00     0.002     0.055     0.512
+         2    2213    1686.5       0.0      0.00     0.017     0.101    -0.004
+         2    2221       0.0       0.0      0.00     0.059     0.030     0.009
+         2    2222       0.0       0.0      0.00     0.002     0.066     0.512
+         2    2223     298.7       0.0      0.00     0.030     0.059    -0.004
+         2    2301       0.0       0.0      0.00     0.045     0.005     0.002
+         2    2302     -37.3       0.0      0.00    -0.004     0.045     0.987
+         2    2303      26.7       0.0      0.00     0.003     0.045    -0.011
+         2    2311       0.0       0.0      0.00     0.061     0.007     0.002
+         2    2312       0.0       0.0      0.00    -0.004     0.062     0.987
+         2    2313     591.9       0.0      0.00     0.006     0.235    -0.011
+         2    2321       0.0       0.0      0.00     0.078     0.010     0.002
+         2    2322       0.0       0.0      0.00    -0.004     0.078     0.987
+         2    2323      91.7       0.0      0.00     0.009     0.078    -0.011
+ 
+      Knotenverschiebungen  Lastfall   2002    
+       Knoten       u-X       u-Y       u-Z     phi-X     phi-Y     phi-Z
+           Nr      [mm]      [mm]      [mm]    [mrad]    [mrad]    [mrad]
+          100     0.615     0.000    -0.239     0.002    -2.051     0.015 
+          110     0.615     0.002     0.007     0.002    -2.051     0.015 
+          111     0.588     0.015     2.911    -0.030    -1.954     0.015 
+          112     0.525     0.028     5.561    -0.058    -1.728     0.013 
+          113     0.433     0.040     7.792    -0.081    -1.398     0.011 
+          114     0.059     0.043     8.849    -0.098    -0.060     0.000 
+          115    -0.058     0.037     8.649    -0.111     0.357    -0.003 
+          116    -0.196     0.029     7.777    -0.114     0.851    -0.007 
+          117    -0.284     0.019     6.299    -0.107     1.164    -0.009 
+          118    -0.384     0.009     4.370    -0.090     1.525    -0.011 
+          119    -0.429     0.003     1.874    -0.047     1.685    -0.013 
+          120    -0.101     0.005     0.017     0.009     0.512    -0.004 
+          121     0.239    -0.003     0.426    -0.033    -0.706     0.004 
+          122     0.274    -0.002     1.669    -0.063    -0.831     0.005 
+          123     0.215     0.003     2.704    -0.074    -0.621     0.003 
+          124     0.156     0.009     3.453    -0.077    -0.409     0.002 
+          125     0.079     0.013     3.850    -0.076    -0.133    -0.000 
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0         29.10.20         Seite:   499
+ 
+      
+ 
+ 
+      Knotenverschiebungen  Lastfall   2002    
+       Knoten       u-X       u-Y       u-Z     phi-X     phi-Y     phi-Z
+           Nr      [mm]      [mm]      [mm]    [mrad]    [mrad]    [mrad]
+          126    -0.007     0.014     3.832    -0.069     0.173    -0.003 
+          127    -0.090     0.013     3.383    -0.058     0.472    -0.006 
+          128    -0.162     0.009     2.536    -0.043     0.729    -0.008 
+          129    -0.212     0.003     1.371    -0.023     0.908    -0.010 
+          130    -0.235    -0.003     0.006     0.002     0.987    -0.011 
+          140    -0.235    -0.004    -0.112     0.002     0.987    -0.011 
+          210     0.000     0.000     0.000     0.000     0.000     0.000 
+          211     0.000     0.000     0.000     0.000     0.000     0.000 
+          212     0.000     0.000     0.000     0.000     0.000     0.000 
+          220     0.000     0.000     0.000     0.000     0.000     0.000 
+          221     0.000     0.000     0.000     0.000     0.000     0.000 
+          222     0.000     0.000     0.000     0.000     0.000     0.000 
+          230     0.000     0.000     0.000     0.000     0.000     0.000 
+          231     0.000     0.000     0.000     0.000     0.000     0.000 
+          232     0.000     0.000     0.000     0.000     0.000     0.000 
+ 
+      Auflagerkräfte  Lastfall   2002    
+       Knoten       P-X       P-Y       P-Z       M-X       M-Y       M-Z
+           Nr      [kN]      [kN]      [kN]     [kNm]     [kNm]     [kNm]
+          210    -224.5     -13.9     -34.2    -56.37     67.34    342.32 
+          211       0.0       0.0    -671.3      0.00      0.00           
+          212     224.5       0.0    -100.0    152.54    -67.34    342.32 
+          220       0.0     -23.4     -38.7    -65.97      0.00      0.00 
+          221       0.0       0.0   -1686.5      0.00      0.00           
+          222       0.0       0.0    -298.7    455.44      0.00      0.00 
+          230       0.0      37.3     -26.7    -29.52      0.00      0.00 
+          231       0.0       0.0    -591.9      0.00      0.00           
+          232       0.0       0.0     -91.7    139.82      0.00      0.00 
+ 
+      Summe der Auflagerkräfte und Lasten                                                        
+      Lastfall           Σ(Reaktionen)             Bezeichnung                            
+                     X[kN]       Y[kN]       Z[kN]                                        
+                           Σ(Lasten)                                                      
+          2002         0.0         0.0     -3539.7 EGZ= 1.00 sum_PZ=3539.7 kN     .       
+                       0.0         0.0      3539.7                                        
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0         29.10.20         Seite:   500
+ 
+      
+ 
+ 
+      Lastfall   2003  
+      Faktor P und M Lasten                1.000
+      Faktor Eigengewicht        EG-ZZ     1.000
+ 
+      Lasten auf Stab-Elemente 
+       Nummer Typ        a[m]    l[m]    Lastwert    Lastwert Einheit     ya[m]   za[m]   ye[m]   ze[m] Mess 
+         1006 PZZ       1.120                30.9             [kN]       -1.000   0.000
+         1006 PZZ       1.120                30.9             [kN]        1.000   0.000
+         1014 PZZ       0.310                14.9             [kN]       -1.000   0.000
+         1014 PZZ       0.310                14.9             [kN]        1.000   0.000
+ 
+      Summe der Lasten                                                                           
+      Lastfall             Σ(Lasten)               Bezeichnung                            
+                     X[kN]       Y[kN]       Z[kN]                                        
+          2003         0.0         0.0      3513.8                                        
+ 
+      Stabschnittgrößen Lastfall   2003    
+       Grp  Nummer       x        N       Vy       Vz        Mt        My        Mz
+                       [m]     [kN]     [kN]     [kN]     [kNm]     [kNm]     [kNm]
+         1    1001   0.000      0.0     0.00     0.00      0.00      0.00      0.00
+                     0.120      0.0     0.00   -15.08      1.42     -0.90      0.00
+         1    1002   0.000      0.0    11.93   772.67   -106.03     -0.90    656.21
+                     1.380      0.0    11.93   599.30    -89.70    945.76    639.74
+         1    1003   0.000      0.0    11.93   599.30    -89.70    945.76    639.74
+                     1.380      0.0    11.93   425.94    -73.41   1653.17    623.28
+         1    1004   0.000      0.0    11.93   425.94    -73.41   1653.17    623.28
+                     1.380      0.0    11.93   252.57    -57.15   2121.34    606.81
+         1    1005   0.000      0.0    11.93   252.57    -57.15   2121.34    606.81
+                     1.380      0.0    11.93    79.20    -41.14   2350.26    590.35
+         1    1006   0.000      0.0    11.93    79.20    -41.14   2350.26    590.35
+                     1.120      0.0    11.93   -61.50    -27.86   2360.18    576.98
+                     1.120      0.0    11.93  -123.28    -11.28   2360.18    576.98
+                     1.380      0.0    11.93  -155.94     -8.29   2323.88    573.88
+         1    1007   0.000      0.0    11.93  -155.94     -8.29   2323.88    573.88
+                     1.380      0.0    11.93  -329.31      7.99   1989.06    557.42
+         1    1008   0.000      0.0    11.93  -329.31      7.99   1989.06    557.42
+                     1.380      0.0    11.93  -502.67     24.32   1414.99    540.95
+         1    1009   0.000      0.0    11.93  -502.67     24.32   1414.99    540.95
+                     1.380      0.0    11.93  -676.04     40.66    601.67    524.49
+         1    1010   0.000      0.0    11.93  -676.04     40.66    601.67    524.49
+                     1.380      0.0    11.93  -849.41     57.02   -450.89    508.02
+         1    1011   0.000      0.0    11.93  -849.41     57.02   -450.89    508.02
+                     1.380      0.0    11.93 -1022.78     73.32  -1742.70    491.56
+         1    1012   0.000      0.0    37.24   984.31    -69.64  -1742.70    491.56
+                     1.320      0.0    37.24   818.48    -54.07   -552.85    442.40
+         1    1013   0.000      0.0    37.24   818.48    -54.07   -552.85    442.40
+                     1.320      0.0    37.24   652.65    -38.42    418.10    393.25
+         1    1014   0.000      0.0    37.24   652.65    -38.42    418.10    393.25
+                     0.310      0.0    37.24   613.71    -34.74    614.38    381.70
+                     0.310      0.0    37.24   583.82    -26.72    614.38    381.70
+                     1.320      0.0    37.24   456.93    -14.73   1139.96    344.09
+         1    1015   0.000      0.0    37.24   456.93    -14.73   1139.96    344.09
+                     1.320      0.0    37.24   291.10      0.93   1633.66    294.94
+         1    1016   0.000      0.0    37.24   291.10      0.93   1633.66    294.94
+                     1.320      0.0    37.24   125.27     16.59   1908.47    245.78
+         1    1017   0.000      0.0    37.24   125.27     16.59   1908.47    245.78
+                     1.320      0.0    37.24   -40.56     32.25   1964.39    196.62
+         1    1018   0.000      0.0    37.24   -40.56     32.25   1964.39    196.62
+                     1.320      0.0    37.24  -206.38     47.91   1801.40    147.47
+         1    1019   0.000      0.0    37.24  -206.38     47.91   1801.40    147.47
+                     1.320      0.0    37.24  -372.21     63.57   1419.53     98.31
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0         29.10.20         Seite:   501
+ 
+      
+ 
+ 
+      Stabschnittgrößen Lastfall   2003    
+       Grp  Nummer       x        N       Vy       Vz        Mt        My        Mz
+                       [m]     [kN]     [kN]     [kN]     [kNm]     [kNm]     [kNm]
+         1    1020   0.000      0.0    37.24  -372.21     63.57   1419.53     98.31
+                     1.320      0.0    37.24  -538.04     79.23    818.76     49.16
+         1    1021   0.000      0.0    37.24  -538.04     79.23    818.76     49.16
+                     1.320      0.0    37.24  -703.87     94.88     -0.90      0.00
+         1    1032   0.000      0.0     0.00    15.08     -1.42     -0.90      0.00
+                     0.120      0.0     0.00     0.00      0.00      0.00      0.00
+ 
+      Federkräfte und -verschiebungen Lastfall   2003    
+       Grp  Nummer         P       P-t         M         u       u-t       phi
+                        [kN]      [kN]     [kNm]      [mm]      [mm]    [mrad]
+         2    2101     215.1       0.0      0.00     0.022     0.003     0.002
+         2    2102      11.9       0.0      0.00     0.001     0.022    -1.949
+         2    2103      31.8       0.0      0.00     0.003     0.022     0.014
+         2    2111       0.0       0.0      0.00     0.000     0.007     0.002
+         2    2112       0.0       0.0      0.00     0.001     0.007    -1.949
+         2    2113     656.5       0.0      0.00     0.007     0.585     0.014
+         2    2121    -215.1       0.0      0.00    -0.022     0.010     0.002
+         2    2122       0.0       0.0      0.00     0.001     0.024    -1.949
+         2    2123      99.5       0.0      0.00     0.010     0.022     0.014
+         2    2201       0.0       0.0      0.00     0.042     0.005     0.008
+         2    2202      25.3       0.0      0.00     0.003     0.043     0.369
+         2    2203      38.0       0.0      0.00     0.004     0.042    -0.003
+         2    2211       0.0       0.0      0.00     0.047     0.017     0.008
+         2    2212       0.0       0.0      0.00     0.003     0.050     0.369
+         2    2213    1672.6       0.0      0.00     0.017     0.064    -0.003
+         2    2221       0.0       0.0      0.00     0.052     0.030     0.008
+         2    2222       0.0       0.0      0.00     0.003     0.060     0.369
+         2    2223     296.5       0.0      0.00     0.030     0.052    -0.003
+         2    2301       0.0       0.0      0.00     0.043     0.005     0.002
+         2    2302     -37.2       0.0      0.00    -0.004     0.043     1.031
+         2    2303      27.7       0.0      0.00     0.003     0.043    -0.011
+         2    2311       0.0       0.0      0.00     0.060     0.007     0.002
+         2    2312       0.0       0.0      0.00    -0.004     0.060     1.031
+         2    2313     599.1       0.0      0.00     0.006     0.249    -0.011
+         2    2321       0.0       0.0      0.00     0.077     0.010     0.002
+         2    2322       0.0       0.0      0.00    -0.004     0.078     1.031
+         2    2323      92.1       0.0      0.00     0.009     0.077    -0.011
+ 
+      Knotenverschiebungen  Lastfall   2003    
+       Knoten       u-X       u-Y       u-Z     phi-X     phi-Y     phi-Z
+           Nr      [mm]      [mm]      [mm]    [mrad]    [mrad]    [mrad]
+          100     0.585     0.000    -0.227     0.002    -1.949     0.014 
+          110     0.585     0.002     0.007     0.002    -1.949     0.014 
+          111     0.559     0.015     2.769    -0.028    -1.855     0.014 
+          112     0.497     0.028     5.281    -0.053    -1.635     0.013 
+          113     0.408     0.039     7.387    -0.073    -1.315     0.010 
+          114     0.047     0.042     8.359    -0.089    -0.026     0.000 
+          115    -0.064     0.037     8.121    -0.098     0.371    -0.003 
+          116    -0.192     0.030     7.245    -0.098     0.828    -0.007 
+          117    -0.272     0.020     5.824    -0.093     1.115    -0.008 
+          118    -0.363     0.010     3.989    -0.079     1.441    -0.011 
+          119    -0.392     0.003     1.663    -0.041     1.543    -0.012 
+          120    -0.064     0.005     0.017     0.008     0.369    -0.003 
+          121     0.265    -0.003     0.594    -0.037    -0.808     0.005 
+          122     0.280    -0.002     1.932    -0.071    -0.861     0.005 
+          123     0.213     0.003     2.981    -0.081    -0.622     0.003 
+          124     0.151     0.009     3.722    -0.083    -0.399     0.002 
+          125     0.071     0.013     4.096    -0.080    -0.112    -0.001 
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0         29.10.20         Seite:   502
+ 
+      
+ 
+ 
+      Knotenverschiebungen  Lastfall   2003    
+       Knoten       u-X       u-Y       u-Z     phi-X     phi-Y     phi-Z
+           Nr      [mm]      [mm]      [mm]    [mrad]    [mrad]    [mrad]
+          126    -0.017     0.015     4.043    -0.073     0.202    -0.003 
+          127    -0.102     0.014     3.550    -0.061     0.507    -0.006 
+          128    -0.176     0.010     2.652    -0.045     0.769    -0.009 
+          129    -0.227     0.004     1.430    -0.024     0.950    -0.010 
+          130    -0.249    -0.003     0.006     0.002     1.031    -0.011 
+          140    -0.249    -0.004    -0.118     0.002     1.031    -0.011 
+          210     0.000     0.000     0.000     0.000     0.000     0.000 
+          211     0.000     0.000     0.000     0.000     0.000     0.000 
+          212     0.000     0.000     0.000     0.000     0.000     0.000 
+          220     0.000     0.000     0.000     0.000     0.000     0.000 
+          221     0.000     0.000     0.000     0.000     0.000     0.000 
+          222     0.000     0.000     0.000     0.000     0.000     0.000 
+          230     0.000     0.000     0.000     0.000     0.000     0.000 
+          231     0.000     0.000     0.000     0.000     0.000     0.000 
+          232     0.000     0.000     0.000     0.000     0.000     0.000 
+ 
+      Auflagerkräfte  Lastfall   2003    
+       Knoten       P-X       P-Y       P-Z       M-X       M-Y       M-Z
+           Nr      [kN]      [kN]      [kN]     [kNm]     [kNm]     [kNm]
+          210    -215.1     -11.9     -31.8    -52.02     64.54    328.10 
+          211       0.0       0.0    -656.5      0.00      0.00           
+          212     215.1       0.0     -99.5    151.77    -64.54    328.10 
+          220       0.0     -25.3     -38.0    -65.50      0.00      0.00 
+          221       0.0       0.0   -1672.6      0.00      0.00           
+          222       0.0       0.0    -296.5    452.23      0.00      0.00 
+          230       0.0      37.2     -27.7    -31.08      0.00      0.00 
+          231       0.0       0.0    -599.1      0.00      0.00           
+          232       0.0       0.0     -92.1    140.48      0.00      0.00 
+ 
+      Summe der Auflagerkräfte und Lasten                                                        
+      Lastfall           Σ(Reaktionen)             Bezeichnung                            
+                     X[kN]       Y[kN]       Z[kN]                                        
+                           Σ(Lasten)                                                      
+          2003         0.0         0.0     -3513.8 EGZ= 1.00 sum_PZ=3513.8 kN     .       
+                       0.0         0.0      3513.8                                        
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0         29.10.20         Seite:   503
+ 
+      
+ 
+ 
+      Lastfall   2004  
+      Faktor P und M Lasten                1.000
+      Faktor Eigengewicht        EG-ZZ     1.000
+ 
+      Lasten auf Stab-Elemente 
+       Nummer Typ        a[m]    l[m]    Lastwert    Lastwert Einheit     ya[m]   za[m]   ye[m]   ze[m] Mess 
+         1006 PZZ       1.120                63.8             [kN]       -1.000   0.000
+         1006 PZZ       1.120                63.8             [kN]        1.000   0.000
+         1012 PZZ       1.220                32.9             [kN]       -1.000   0.000
+         1012 PZZ       1.220                32.9             [kN]        1.000   0.000
+ 
+      Summe der Lasten                                                                           
+      Lastfall             Σ(Lasten)               Bezeichnung                            
+                     X[kN]       Y[kN]       Z[kN]                                        
+          2004         0.0         0.0      3615.4                                        
+ 
+      Stabschnittgrößen Lastfall   2004    
+       Grp  Nummer       x        N       Vy       Vz        Mt        My        Mz
+                       [m]     [kN]     [kN]     [kN]     [kNm]     [kNm]     [kNm]
+         1    1001   0.000      0.0     0.00     0.00      0.00      0.00      0.00
+                     0.120      0.0     0.00   -15.08      1.42     -0.90      0.00
+         1    1002   0.000      0.0    14.43   802.66   -117.25     -0.90    691.63
+                     1.380      0.0    14.43   629.29   -100.92    987.14    671.72
+         1    1003   0.000      0.0    14.43   629.29   -100.92    987.14    671.72
+                     1.380      0.0    14.43   455.93    -84.63   1735.95    651.80
+         1    1004   0.000      0.0    14.43   455.93    -84.63   1735.95    651.80
+                     1.380      0.0    14.43   282.56    -68.37   2245.50    631.89
+         1    1005   0.000      0.0    14.43   282.56    -68.37   2245.50    631.89
+                     1.380      0.0    14.43   109.19    -52.39   2515.81    611.98
+         1    1006   0.000      0.0    14.43   109.19    -52.39   2515.81    611.98
+                     1.120      0.0    14.43   -31.51    -39.11   2559.31    595.82
+                     1.120      0.0    14.43  -159.05     -4.89   2559.31    595.82
+                     1.380      0.0    14.43  -191.71     -1.91   2513.71    592.06
+         1    1007   0.000      0.0    14.43  -191.71     -1.91   2513.71    592.06
+                     1.380      0.0    14.43  -365.08     14.37   2129.53    572.15
+         1    1008   0.000      0.0    14.43  -365.08     14.37   2129.53    572.15
+                     1.380      0.0    14.43  -538.45     30.70   1506.09    552.24
+         1    1009   0.000      0.0    14.43  -538.45     30.70   1506.09    552.24
+                     1.380      0.0    14.43  -711.81     47.04    643.41    532.33
+         1    1010   0.000      0.0    14.43  -711.81     47.04    643.41    532.33
+                     1.380      0.0    14.43  -885.18     63.39   -458.51    512.41
+         1    1011   0.000      0.0    14.43  -885.18     63.39   -458.51    512.41
+                     1.380      0.0    14.43 -1058.55     79.69  -1799.68    492.50
+         1    1012   0.000      0.0    37.31  1025.10    -79.46  -1799.68    492.50
+                     1.220      0.0    37.31   871.84    -64.99   -642.55    446.98
+                     1.220      0.0    37.31   806.07    -47.34   -642.55    446.98
+                     1.320      0.0    37.31   793.51    -46.25   -562.57    443.25
+         1    1013   0.000      0.0    37.31   793.51    -46.25   -562.57    443.25
+                     1.320      0.0    37.31   627.68    -30.60    375.41    394.00
+         1    1014   0.000      0.0    37.31   627.68    -30.60    375.41    394.00
+                     1.320      0.0    37.31   461.85    -14.93   1094.50    344.75
+         1    1015   0.000      0.0    37.31   461.85    -14.93   1094.50    344.75
+                     1.320      0.0    37.31   296.02      0.73   1594.70    295.50
+         1    1016   0.000      0.0    37.31   296.02      0.73   1594.70    295.50
+                     1.320      0.0    37.31   130.19     16.39   1876.00    246.25
+         1    1017   0.000      0.0    37.31   130.19     16.39   1876.00    246.25
+                     1.320      0.0    37.31   -35.64     32.05   1938.41    197.00
+         1    1018   0.000      0.0    37.31   -35.64     32.05   1938.41    197.00
+                     1.320      0.0    37.31  -201.47     47.71   1781.92    147.75
+         1    1019   0.000      0.0    37.31  -201.47     47.71   1781.92    147.75
+                     1.320      0.0    37.31  -367.29     63.37   1406.54     98.50
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0         29.10.20         Seite:   504
+ 
+      
+ 
+ 
+      Stabschnittgrößen Lastfall   2004    
+       Grp  Nummer       x        N       Vy       Vz        Mt        My        Mz
+                       [m]     [kN]     [kN]     [kN]     [kNm]     [kNm]     [kNm]
+         1    1020   0.000      0.0    37.31  -367.29     63.37   1406.54     98.50
+                     1.320      0.0    37.31  -533.12     79.03    812.27     49.25
+         1    1021   0.000      0.0    37.31  -533.12     79.03    812.27     49.25
+                     1.320      0.0    37.31  -698.95     94.68     -0.90      0.00
+         1    1032   0.000      0.0     0.00    15.08     -1.42     -0.90      0.00
+                     0.120      0.0     0.00     0.00      0.00      0.00      0.00
+ 
+      Federkräfte und -verschiebungen Lastfall   2004    
+       Grp  Nummer         P       P-t         M         u       u-t       phi
+                        [kN]      [kN]     [kNm]      [mm]      [mm]    [mrad]
+         2    2101     226.8       0.0      0.00     0.023     0.004     0.002
+         2    2102      14.4       0.0      0.00     0.001     0.023    -2.075
+         2    2103      35.3       0.0      0.00     0.004     0.023     0.015
+         2    2111       0.0       0.0      0.00     0.000     0.007     0.002
+         2    2112       0.0       0.0      0.00     0.001     0.007    -2.075
+         2    2113     681.4       0.0      0.00     0.007     0.623     0.015
+         2    2121    -226.8       0.0      0.00    -0.023     0.010     0.002
+         2    2122       0.0       0.0      0.00     0.001     0.025    -2.075
+         2    2123     100.9       0.0      0.00     0.010     0.023     0.015
+         2    2201       0.0       0.0      0.00     0.046     0.005     0.009
+         2    2202      22.9       0.0      0.00     0.002     0.046     0.448
+         2    2203      42.9       0.0      0.00     0.004     0.046    -0.004
+         2    2211       0.0       0.0      0.00     0.051     0.018     0.009
+         2    2212       0.0       0.0      0.00     0.002     0.054     0.448
+         2    2213    1736.4       0.0      0.00     0.017     0.083    -0.004
+         2    2221       0.0       0.0      0.00     0.057     0.031     0.009
+         2    2222       0.0       0.0      0.00     0.002     0.065     0.448
+         2    2223     304.4       0.0      0.00     0.030     0.057    -0.004
+         2    2301       0.0       0.0      0.00     0.046     0.005     0.002
+         2    2302     -37.3       0.0      0.00    -0.004     0.046     1.008
+         2    2303      27.7       0.0      0.00     0.003     0.046    -0.011
+         2    2311       0.0       0.0      0.00     0.062     0.007     0.002
+         2    2312       0.0       0.0      0.00    -0.004     0.063     1.008
+         2    2313     595.0       0.0      0.00     0.006     0.240    -0.011
+         2    2321       0.0       0.0      0.00     0.079     0.010     0.002
+         2    2322       0.0       0.0      0.00    -0.004     0.080     1.008
+         2    2323      91.3       0.0      0.00     0.009     0.079    -0.011
+ 
+      Knotenverschiebungen  Lastfall   2004    
+       Knoten       u-X       u-Y       u-Z     phi-X     phi-Y     phi-Z
+           Nr      [mm]      [mm]      [mm]    [mrad]    [mrad]    [mrad]
+          100     0.623     0.000    -0.242     0.002    -2.075     0.015 
+          110     0.623     0.002     0.007     0.002    -2.075     0.015 
+          111     0.595     0.015     2.947    -0.032    -1.977     0.015 
+          112     0.531     0.028     5.628    -0.060    -1.747     0.014 
+          113     0.437     0.039     7.883    -0.084    -1.410     0.011 
+          114     0.053     0.042     8.936    -0.103    -0.038     0.000 
+          115    -0.067     0.036     8.698    -0.114     0.391    -0.003 
+          116    -0.204     0.029     7.764    -0.112     0.882    -0.007 
+          117    -0.290     0.019     6.248    -0.105     1.188    -0.009 
+          118    -0.387     0.008     4.292    -0.088     1.536    -0.011 
+          119    -0.421     0.002     1.809    -0.046     1.656    -0.013 
+          120    -0.083     0.005     0.017     0.009     0.448    -0.004 
+          121     0.255    -0.006     0.526    -0.043    -0.761     0.005 
+          122     0.278    -0.004     1.811    -0.071    -0.842     0.005 
+          123     0.215     0.002     2.847    -0.081    -0.619     0.003 
+          124     0.155     0.008     3.590    -0.083    -0.402     0.002 
+          125     0.076     0.012     3.973    -0.080    -0.122    -0.000 
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0         29.10.20         Seite:   505
+ 
+      
+ 
+ 
+      Knotenverschiebungen  Lastfall   2004    
+       Knoten       u-X       u-Y       u-Z     phi-X     phi-Y     phi-Z
+           Nr      [mm]      [mm]      [mm]    [mrad]    [mrad]    [mrad]
+          126    -0.010     0.014     3.936    -0.073     0.188    -0.003 
+          127    -0.095     0.013     3.465    -0.061     0.490    -0.006 
+          128    -0.167     0.009     2.593    -0.045     0.748    -0.008 
+          129    -0.218     0.003     1.400    -0.024     0.928    -0.010 
+          130    -0.240    -0.003     0.006     0.002     1.008    -0.011 
+          140    -0.240    -0.004    -0.115     0.002     1.008    -0.011 
+          210     0.000     0.000     0.000     0.000     0.000     0.000 
+          211     0.000     0.000     0.000     0.000     0.000     0.000 
+          212     0.000     0.000     0.000     0.000     0.000     0.000 
+          220     0.000     0.000     0.000     0.000     0.000     0.000 
+          221     0.000     0.000     0.000     0.000     0.000     0.000 
+          222     0.000     0.000     0.000     0.000     0.000     0.000 
+          230     0.000     0.000     0.000     0.000     0.000     0.000 
+          231     0.000     0.000     0.000     0.000     0.000     0.000 
+          232     0.000     0.000     0.000     0.000     0.000     0.000 
+ 
+      Auflagerkräfte  Lastfall   2004    
+       Knoten       P-X       P-Y       P-Z       M-X       M-Y       M-Z
+           Nr      [kN]      [kN]      [kN]     [kNm]     [kNm]     [kNm]
+          210    -226.8     -14.4     -35.3    -58.23     68.03    345.81 
+          211       0.0       0.0    -681.4      0.00      0.00           
+          212     226.8       0.0    -100.9    153.94    -68.03    345.81 
+          220       0.0     -22.9     -42.9    -72.27      0.00      0.00 
+          221       0.0       0.0   -1736.4      0.00      0.00           
+          222       0.0       0.0    -304.4    464.19      0.00      0.00 
+          230       0.0      37.3     -27.7    -30.99      0.00      0.00 
+          231       0.0       0.0    -595.0      0.00      0.00           
+          232       0.0       0.0     -91.3    139.30      0.00      0.00 
+ 
+      Summe der Auflagerkräfte und Lasten                                                        
+      Lastfall           Σ(Reaktionen)             Bezeichnung                            
+                     X[kN]       Y[kN]       Z[kN]                                        
+                           Σ(Lasten)                                                      
+          2004         0.0         0.0     -3615.4 EGZ= 1.00 sum_PZ=3615.4 kN     .       
+                       0.0         0.0      3615.4                                        
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0         29.10.20         Seite:   506
+ 
+      
+ 
+ 
+      Lastfall   2005  
+      Faktor P und M Lasten                1.000
+      Faktor Eigengewicht        EG-ZZ     1.000
+ 
+      Lasten auf Stab-Elemente 
+       Nummer Typ        a[m]    l[m]    Lastwert    Lastwert Einheit     ya[m]   za[m]   ye[m]   ze[m] Mess 
+         1006 PZZ       1.120                31.9             [kN]       -1.000   0.000
+         1006 PZZ       1.120                31.9             [kN]        1.000   0.000
+         1013 PZZ       1.250                15.9             [kN]       -1.000   0.000
+         1013 PZZ       1.250                15.9             [kN]        1.000   0.000
+ 
+      Summe der Lasten                                                                           
+      Lastfall             Σ(Lasten)               Bezeichnung                            
+                     X[kN]       Y[kN]       Z[kN]                                        
+          2005         0.0         0.0      3517.8                                        
+ 
+      Stabschnittgrößen Lastfall   2005    
+       Grp  Nummer       x        N       Vy       Vz        Mt        My        Mz
+                       [m]     [kN]     [kN]     [kN]     [kNm]     [kNm]     [kNm]
+         1    1001   0.000      0.0     0.00     0.00      0.00      0.00      0.00
+                     0.120      0.0     0.00   -15.08      1.42     -0.90      0.00
+         1    1002   0.000      0.0    12.00   773.53   -106.37     -0.90    657.18
+                     1.380      0.0    12.00   600.17    -90.04    946.95    640.62
+         1    1003   0.000      0.0    12.00   600.17    -90.04    946.95    640.62
+                     1.380      0.0    12.00   426.80    -73.75   1655.56    624.05
+         1    1004   0.000      0.0    12.00   426.80    -73.75   1655.56    624.05
+                     1.380      0.0    12.00   253.43    -57.49   2124.92    607.48
+         1    1005   0.000      0.0    12.00   253.43    -57.49   2124.92    607.48
+                     1.380      0.0    12.00    80.07    -41.48   2355.03    590.92
+         1    1006   0.000      0.0    12.00    80.07    -41.48   2355.03    590.92
+                     1.120      0.0    12.00   -60.64    -28.20   2365.91    577.47
+                     1.120      0.0    12.00  -124.41    -11.09   2365.91    577.47
+                     1.380      0.0    12.00  -157.07     -8.10   2329.32    574.35
+         1    1007   0.000      0.0    12.00  -157.07     -8.10   2329.32    574.35
+                     1.380      0.0    12.00  -330.44      8.19   1992.94    557.79
+         1    1008   0.000      0.0    12.00  -330.44      8.19   1992.94    557.79
+                     1.380      0.0    12.00  -503.80     24.51   1417.31    541.22
+         1    1009   0.000      0.0    12.00  -503.80     24.51   1417.31    541.22
+                     1.380      0.0    12.00  -677.17     40.86    602.44    524.66
+         1    1010   0.000      0.0    12.00  -677.17     40.86    602.44    524.66
+                     1.380      0.0    12.00  -850.54     57.21   -451.68    508.09
+         1    1011   0.000      0.0    12.00  -850.54     57.21   -451.68    508.09
+                     1.380      0.0    12.00 -1023.90     73.51  -1745.04    491.52
+         1    1012   0.000      0.0    37.24   986.95    -70.26  -1745.04    491.52
+                     1.320      0.0    37.24   821.13    -54.69   -551.71    442.37
+         1    1013   0.000      0.0    37.24   821.13    -54.69   -551.71    442.37
+                     1.250      0.0    37.24   664.09    -39.87    376.55    395.83
+                     1.250      0.0    37.24   632.21    -31.31    376.55    395.83
+                     1.320      0.0    37.24   623.41    -30.49    420.50    393.22
+         1    1014   0.000      0.0    37.24   623.41    -30.49    420.50    393.22
+                     1.320      0.0    37.24   457.58    -14.82   1133.95    344.07
+         1    1015   0.000      0.0    37.24   457.58    -14.82   1133.95    344.07
+                     1.320      0.0    37.24   291.75      0.84   1628.51    294.91
+         1    1016   0.000      0.0    37.24   291.75      0.84   1628.51    294.91
+                     1.320      0.0    37.24   125.92     16.50   1904.18    245.76
+         1    1017   0.000      0.0    37.24   125.92     16.50   1904.18    245.76
+                     1.320      0.0    37.24   -39.91     32.16   1960.95    196.61
+         1    1018   0.000      0.0    37.24   -39.91     32.16   1960.95    196.61
+                     1.320      0.0    37.24  -205.73     47.82   1798.83    147.46
+         1    1019   0.000      0.0    37.24  -205.73     47.82   1798.83    147.46
+                     1.320      0.0    37.24  -371.56     63.48   1417.81     98.30
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0         29.10.20         Seite:   507
+ 
+      
+ 
+ 
+      Stabschnittgrößen Lastfall   2005    
+       Grp  Nummer       x        N       Vy       Vz        Mt        My        Mz
+                       [m]     [kN]     [kN]     [kN]     [kNm]     [kNm]     [kNm]
+         1    1020   0.000      0.0    37.24  -371.56     63.48   1417.81     98.30
+                     1.320      0.0    37.24  -537.39     79.14    817.90     49.15
+         1    1021   0.000      0.0    37.24  -537.39     79.14    817.90     49.15
+                     1.320      0.0    37.24  -703.22     94.79     -0.90      0.00
+         1    1032   0.000      0.0     0.00    15.08     -1.42     -0.90      0.00
+                     0.120      0.0     0.00     0.00      0.00      0.00      0.00
+ 
+      Federkräfte und -verschiebungen Lastfall   2005    
+       Grp  Nummer         P       P-t         M         u       u-t       phi
+                        [kN]      [kN]     [kNm]      [mm]      [mm]    [mrad]
+         2    2101     215.5       0.0      0.00     0.022     0.003     0.002
+         2    2102      12.0       0.0      0.00     0.001     0.022    -1.953
+         2    2103      31.9       0.0      0.00     0.003     0.022     0.014
+         2    2111       0.0       0.0      0.00     0.000     0.007     0.002
+         2    2112       0.0       0.0      0.00     0.001     0.007    -1.953
+         2    2113     657.2       0.0      0.00     0.007     0.586     0.014
+         2    2121    -215.5       0.0      0.00    -0.022     0.010     0.002
+         2    2122       0.0       0.0      0.00     0.001     0.024    -1.953
+         2    2123      99.6       0.0      0.00     0.010     0.022     0.014
+         2    2201       0.0       0.0      0.00     0.042     0.005     0.008
+         2    2202      25.2       0.0      0.00     0.003     0.043     0.370
+         2    2203      38.2       0.0      0.00     0.004     0.043    -0.003
+         2    2211       0.0       0.0      0.00     0.047     0.017     0.008
+         2    2212       0.0       0.0      0.00     0.003     0.050     0.370
+         2    2213    1675.7       0.0      0.00     0.017     0.064    -0.003
+         2    2221       0.0       0.0      0.00     0.052     0.030     0.008
+         2    2222       0.0       0.0      0.00     0.003     0.060     0.370
+         2    2223     296.9       0.0      0.00     0.030     0.052    -0.003
+         2    2301       0.0       0.0      0.00     0.043     0.005     0.002
+         2    2302     -37.2       0.0      0.00    -0.004     0.043     1.029
+         2    2303      27.7       0.0      0.00     0.003     0.043    -0.011
+         2    2311       0.0       0.0      0.00     0.060     0.007     0.002
+         2    2312       0.0       0.0      0.00    -0.004     0.061     1.029
+         2    2313     598.6       0.0      0.00     0.006     0.249    -0.011
+         2    2321       0.0       0.0      0.00     0.077     0.010     0.002
+         2    2322       0.0       0.0      0.00    -0.004     0.078     1.029
+         2    2323      92.0       0.0      0.00     0.009     0.077    -0.011
+ 
+      Knotenverschiebungen  Lastfall   2005    
+       Knoten       u-X       u-Y       u-Z     phi-X     phi-Y     phi-Z
+           Nr      [mm]      [mm]      [mm]    [mrad]    [mrad]    [mrad]
+          100     0.586     0.000    -0.228     0.002    -1.953     0.014 
+          110     0.586     0.002     0.007     0.002    -1.953     0.014 
+          111     0.560     0.015     2.774    -0.028    -1.858     0.014 
+          112     0.498     0.028     5.291    -0.053    -1.638     0.013 
+          113     0.408     0.039     7.401    -0.074    -1.318     0.010 
+          114     0.047     0.042     8.375    -0.089    -0.026     0.000 
+          115    -0.064     0.037     8.136    -0.098     0.372    -0.003 
+          116    -0.192     0.030     7.259    -0.098     0.830    -0.007 
+          117    -0.273     0.020     5.835    -0.093     1.117    -0.008 
+          118    -0.364     0.009     3.996    -0.079     1.444    -0.011 
+          119    -0.392     0.003     1.666    -0.041     1.546    -0.012 
+          120    -0.064     0.005     0.017     0.008     0.370    -0.003 
+          121     0.265    -0.003     0.595    -0.037    -0.807     0.005 
+          122     0.279    -0.002     1.930    -0.071    -0.858     0.005 
+          123     0.213     0.003     2.975    -0.081    -0.620     0.003 
+          124     0.151     0.009     3.715    -0.083    -0.398     0.002 
+          125     0.071     0.013     4.088    -0.080    -0.112    -0.001 
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0         29.10.20         Seite:   508
+ 
+      
+ 
+ 
+      Knotenverschiebungen  Lastfall   2005    
+       Knoten       u-X       u-Y       u-Z     phi-X     phi-Y     phi-Z
+           Nr      [mm]      [mm]      [mm]    [mrad]    [mrad]    [mrad]
+          126    -0.017     0.015     4.036    -0.073     0.201    -0.003 
+          127    -0.102     0.014     3.544    -0.061     0.506    -0.006 
+          128    -0.175     0.010     2.647    -0.045     0.767    -0.009 
+          129    -0.226     0.004     1.428    -0.024     0.949    -0.010 
+          130    -0.248    -0.003     0.006     0.002     1.029    -0.011 
+          140    -0.248    -0.004    -0.117     0.002     1.029    -0.011 
+          210     0.000     0.000     0.000     0.000     0.000     0.000 
+          211     0.000     0.000     0.000     0.000     0.000     0.000 
+          212     0.000     0.000     0.000     0.000     0.000     0.000 
+          220     0.000     0.000     0.000     0.000     0.000     0.000 
+          221     0.000     0.000     0.000     0.000     0.000     0.000 
+          222     0.000     0.000     0.000     0.000     0.000     0.000 
+          230     0.000     0.000     0.000     0.000     0.000     0.000 
+          231     0.000     0.000     0.000     0.000     0.000     0.000 
+          232     0.000     0.000     0.000     0.000     0.000     0.000 
+ 
+      Auflagerkräfte  Lastfall   2005    
+       Knoten       P-X       P-Y       P-Z       M-X       M-Y       M-Z
+           Nr      [kN]      [kN]      [kN]     [kNm]     [kNm]     [kNm]
+          210    -215.5     -12.0     -31.9    -52.21     64.64    328.59 
+          211       0.0       0.0    -657.2      0.00      0.00           
+          212     215.5       0.0     -99.6    151.83    -64.64    328.59 
+          220       0.0     -25.2     -38.2    -65.85      0.00      0.00 
+          221       0.0       0.0   -1675.7      0.00      0.00           
+          222       0.0       0.0    -296.9    452.81      0.00      0.00 
+          230       0.0      37.2     -27.7    -31.04      0.00      0.00 
+          231       0.0       0.0    -598.6      0.00      0.00           
+          232       0.0       0.0     -92.0    140.36      0.00      0.00 
+ 
+      Summe der Auflagerkräfte und Lasten                                                        
+      Lastfall           Σ(Reaktionen)             Bezeichnung                            
+                     X[kN]       Y[kN]       Z[kN]                                        
+                           Σ(Lasten)                                                      
+          2005         0.0         0.0     -3517.8 EGZ= 1.00 sum_PZ=3517.8 kN     .       
+                       0.0         0.0      3517.8                                        
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0         29.10.20         Seite:   509
+ 
+      
+ 
+ 
+      Lastfall   2006  
+      Faktor P und M Lasten                1.000
+      Faktor Eigengewicht        EG-ZZ     1.000
+ 
+      Lasten auf Stab-Elemente 
+       Nummer Typ        a[m]    l[m]    Lastwert    Lastwert Einheit     ya[m]   za[m]   ye[m]   ze[m] Mess 
+         1006 PZZ       1.120                14.9             [kN]       -1.000   0.000
+         1006 PZZ       1.120                14.9             [kN]        1.000   0.000
+         1007 PZZ       0.530                43.8             [kN]       -1.000   0.000
+         1007 PZZ       0.530                43.8             [kN]        1.000   0.000
+ 
+      Summe der Lasten                                                                           
+      Lastfall             Σ(Lasten)               Bezeichnung                            
+                     X[kN]       Y[kN]       Z[kN]                                        
+          2006         0.0         0.0      3539.7                                        
+ 
+      Stabschnittgrößen Lastfall   2006    
+       Grp  Nummer       x        N       Vy       Vz        Mt        My        Mz
+                       [m]     [kN]     [kN]     [kN]     [kNm]     [kNm]     [kNm]
+         1    1001   0.000      0.0     0.00     0.00      0.00      0.00      0.00
+                     0.120      0.0     0.00   -15.08      1.42     -0.90      0.00
+         1    1002   0.000      0.0    14.13   794.91   -114.56     -0.90    687.74
+                     1.380      0.0    14.13   621.55    -98.22    976.45    668.24
+         1    1003   0.000      0.0    14.13   621.55    -98.22    976.45    668.24
+                     1.380      0.0    14.13   448.18    -81.94   1714.57    648.75
+         1    1004   0.000      0.0    14.13   448.18    -81.94   1714.57    648.75
+                     1.380      0.0    14.13   274.81    -65.68   2213.43    629.25
+         1    1005   0.000      0.0    14.13   274.81    -65.68   2213.43    629.25
+                     1.380      0.0    14.13   101.45    -49.69   2473.06    609.76
+         1    1006   0.000      0.0    14.13   101.45    -49.69   2473.06    609.76
+                     1.120      0.0    14.13   -39.26    -36.40   2507.88    593.93
+                     1.120      0.0    14.13   -69.15    -28.38   2507.88    593.93
+                     1.380      0.0    14.13  -101.81    -25.40   2485.66    590.26
+         1    1007   0.000      0.0    14.13  -101.81    -25.40   2485.66    590.26
+                     0.530      0.0    14.13  -168.39    -19.11   2414.05    582.77
+                     0.530      0.0    14.13  -256.08      4.41   2414.05    582.77
+                     1.380      0.0    14.13  -362.86     14.40   2151.00    570.76
+         1    1008   0.000      0.0    14.13  -362.86     14.40   2151.00    570.76
+                     1.380      0.0    14.13  -536.23     30.73   1530.63    551.27
+         1    1009   0.000      0.0    14.13  -536.23     30.73   1530.63    551.27
+                     1.380      0.0    14.13  -709.60     47.07    671.01    531.77
+         1    1010   0.000      0.0    14.13  -709.60     47.07    671.01    531.77
+                     1.380      0.0    14.13  -882.96     63.42   -427.85    512.28
+         1    1011   0.000      0.0    14.13  -882.96     63.42   -427.85    512.28
+                     1.380      0.0    14.13 -1056.33     79.72  -1765.96    492.78
+         1    1012   0.000      0.0    37.33   962.86    -64.78  -1765.96    492.78
+                     1.320      0.0    37.33   797.03    -49.22   -604.43    443.50
+         1    1013   0.000      0.0    37.33   797.03    -49.22   -604.43    443.50
+                     1.320      0.0    37.33   631.20    -33.57    338.20    394.22
+         1    1014   0.000      0.0    37.33   631.20    -33.57    338.20    394.22
+                     1.320      0.0    37.33   465.37    -17.91   1061.95    344.95
+         1    1015   0.000      0.0    37.33   465.37    -17.91   1061.95    344.95
+                     1.320      0.0    37.33   299.55     -2.24   1566.79    295.67
+         1    1016   0.000      0.0    37.33   299.55     -2.24   1566.79    295.67
+                     1.320      0.0    37.33   133.72     13.42   1852.75    246.39
+         1    1017   0.000      0.0    37.33   133.72     13.42   1852.75    246.39
+                     1.320      0.0    37.33   -32.11     29.08   1919.81    197.11
+         1    1018   0.000      0.0    37.33   -32.11     29.08   1919.81    197.11
+                     1.320      0.0    37.33  -197.94     44.74   1767.97    147.83
+         1    1019   0.000      0.0    37.33  -197.94     44.74   1767.97    147.83
+                     1.320      0.0    37.33  -363.77     60.40   1397.24     98.56
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0         29.10.20         Seite:   510
+ 
+      
+ 
+ 
+      Stabschnittgrößen Lastfall   2006    
+       Grp  Nummer       x        N       Vy       Vz        Mt        My        Mz
+                       [m]     [kN]     [kN]     [kN]     [kNm]     [kNm]     [kNm]
+         1    1020   0.000      0.0    37.33  -363.77     60.40   1397.24     98.56
+                     1.320      0.0    37.33  -529.60     76.05    807.61     49.28
+         1    1021   0.000      0.0    37.33  -529.60     76.05    807.61     49.28
+                     1.320      0.0    37.33  -695.43     91.71     -0.90      0.00
+         1    1032   0.000      0.0     0.00    15.08     -1.42     -0.90      0.00
+                     0.120      0.0     0.00     0.00      0.00      0.00      0.00
+ 
+      Federkräfte und -verschiebungen Lastfall   2006    
+       Grp  Nummer         P       P-t         M         u       u-t       phi
+                        [kN]      [kN]     [kNm]      [mm]      [mm]    [mrad]
+         2    2101     225.5       0.0      0.00     0.023     0.004     0.002
+         2    2102      14.1       0.0      0.00     0.001     0.023    -2.061
+         2    2103      34.5       0.0      0.00     0.003     0.023     0.015
+         2    2111       0.0       0.0      0.00     0.000     0.007     0.002
+         2    2112       0.0       0.0      0.00     0.001     0.007    -2.061
+         2    2113     675.0       0.0      0.00     0.007     0.618     0.015
+         2    2121    -225.5       0.0      0.00    -0.023     0.010     0.002
+         2    2122       0.0       0.0      0.00     0.001     0.025    -2.061
+         2    2123     100.5       0.0      0.00     0.010     0.023     0.015
+         2    2201       0.0       0.0      0.00     0.046     0.004     0.009
+         2    2202      23.2       0.0      0.00     0.002     0.046     0.507
+         2    2203      38.4       0.0      0.00     0.004     0.046    -0.004
+         2    2211       0.0       0.0      0.00     0.052     0.017     0.009
+         2    2212       0.0       0.0      0.00     0.002     0.055     0.507
+         2    2213    1682.7       0.0      0.00     0.017     0.100    -0.004
+         2    2221       0.0       0.0      0.00     0.059     0.030     0.009
+         2    2222       0.0       0.0      0.00     0.002     0.066     0.507
+         2    2223     298.1       0.0      0.00     0.030     0.059    -0.004
+         2    2301       0.0       0.0      0.00     0.045     0.005     0.002
+         2    2302     -37.3       0.0      0.00    -0.004     0.045     0.988
+         2    2303      26.7       0.0      0.00     0.003     0.045    -0.011
+         2    2311       0.0       0.0      0.00     0.062     0.007     0.002
+         2    2312       0.0       0.0      0.00    -0.004     0.062     0.988
+         2    2313     592.1       0.0      0.00     0.006     0.235    -0.011
+         2    2321       0.0       0.0      0.00     0.078     0.010     0.002
+         2    2322       0.0       0.0      0.00    -0.004     0.079     0.988
+         2    2323      91.7       0.0      0.00     0.009     0.078    -0.011
+ 
+      Knotenverschiebungen  Lastfall   2006    
+       Knoten       u-X       u-Y       u-Z     phi-X     phi-Y     phi-Z
+           Nr      [mm]      [mm]      [mm]    [mrad]    [mrad]    [mrad]
+          100     0.618     0.000    -0.241     0.002    -2.061     0.015 
+          110     0.618     0.002     0.007     0.002    -2.061     0.015 
+          111     0.591     0.015     2.927    -0.031    -1.965     0.015 
+          112     0.528     0.028     5.590    -0.059    -1.737     0.013 
+          113     0.435     0.040     7.832    -0.081    -1.404     0.011 
+          114     0.057     0.043     8.891    -0.099    -0.054     0.000 
+          115    -0.061     0.037     8.680    -0.112     0.367    -0.003 
+          116    -0.199     0.029     7.784    -0.113     0.861    -0.007 
+          117    -0.285     0.019     6.294    -0.106     1.171    -0.009 
+          118    -0.385     0.009     4.359    -0.088     1.528    -0.011 
+          119    -0.428     0.003     1.865    -0.046     1.680    -0.013 
+          120    -0.100     0.005     0.017     0.009     0.507    -0.004 
+          121     0.240    -0.003     0.432    -0.033    -0.709     0.004 
+          122     0.274    -0.002     1.677    -0.063    -0.832     0.005 
+          123     0.215     0.003     2.711    -0.074    -0.620     0.003 
+          124     0.156     0.009     3.460    -0.077    -0.409     0.002 
+          125     0.079     0.013     3.856    -0.076    -0.133    -0.000 
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0         29.10.20         Seite:   511
+ 
+      
+ 
+ 
+      Knotenverschiebungen  Lastfall   2006    
+       Knoten       u-X       u-Y       u-Z     phi-X     phi-Y     phi-Z
+           Nr      [mm]      [mm]      [mm]    [mrad]    [mrad]    [mrad]
+          126    -0.007     0.014     3.837    -0.069     0.173    -0.003 
+          127    -0.090     0.013     3.387    -0.058     0.473    -0.006 
+          128    -0.162     0.009     2.539    -0.043     0.730    -0.008 
+          129    -0.213     0.004     1.373    -0.023     0.909    -0.010 
+          130    -0.235    -0.003     0.006     0.002     0.988    -0.011 
+          140    -0.235    -0.004    -0.113     0.002     0.988    -0.011 
+          210     0.000     0.000     0.000     0.000     0.000     0.000 
+          211     0.000     0.000     0.000     0.000     0.000     0.000 
+          212     0.000     0.000     0.000     0.000     0.000     0.000 
+          220     0.000     0.000     0.000     0.000     0.000     0.000 
+          221     0.000     0.000     0.000     0.000     0.000     0.000 
+          222     0.000     0.000     0.000     0.000     0.000     0.000 
+          230     0.000     0.000     0.000     0.000     0.000     0.000 
+          231     0.000     0.000     0.000     0.000     0.000     0.000 
+          232     0.000     0.000     0.000     0.000     0.000     0.000 
+ 
+      Auflagerkräfte  Lastfall   2006    
+       Knoten       P-X       P-Y       P-Z       M-X       M-Y       M-Z
+           Nr      [kN]      [kN]      [kN]     [kNm]     [kNm]     [kNm]
+          210    -225.5     -14.1     -34.5    -56.84     67.65    343.87 
+          211       0.0       0.0    -675.0      0.00      0.00           
+          212     225.5       0.0    -100.5    153.27    -67.65    343.87 
+          220       0.0     -23.2     -38.4    -65.51      0.00      0.00 
+          221       0.0       0.0   -1682.7      0.00      0.00           
+          222       0.0       0.0    -298.1    454.67      0.00      0.00 
+          230       0.0      37.3     -26.7    -29.52      0.00      0.00 
+          231       0.0       0.0    -592.1      0.00      0.00           
+          232       0.0       0.0     -91.7    139.86      0.00      0.00 
+ 
+      Summe der Auflagerkräfte und Lasten                                                        
+      Lastfall           Σ(Reaktionen)             Bezeichnung                            
+                     X[kN]       Y[kN]       Z[kN]                                        
+                           Σ(Lasten)                                                      
+          2006         0.0         0.0     -3539.7 EGZ= 1.00 sum_PZ=3539.7 kN     .       
+                       0.0         0.0      3539.7                                        
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0         29.10.20         Seite:   512
+ 
+      
+ 
+ 
+      Lastfall   2007  
+      Faktor P und M Lasten                1.000
+      Faktor Eigengewicht        EG-ZZ     1.000
+ 
+      Lasten auf Stab-Elemente 
+       Nummer Typ        a[m]    l[m]    Lastwert    Lastwert Einheit     ya[m]   za[m]   ye[m]   ze[m] Mess 
+         1006 PZZ       1.120                86.7             [kN]       -1.000   0.000
+         1006 PZZ       1.120                86.7             [kN]        1.000   0.000
+         1015 PZZ       0.460                55.8             [kN]       -1.000   0.000
+         1015 PZZ       0.460                55.8             [kN]        1.000   0.000
+ 
+      Summe der Lasten                                                                           
+      Lastfall             Σ(Lasten)               Bezeichnung                            
+                     X[kN]       Y[kN]       Z[kN]                                        
+          2007         0.0         0.0      3707.1                                        
+ 
+      Stabschnittgrößen Lastfall   2007    
+       Grp  Nummer       x        N       Vy       Vz        Mt        My        Mz
+                       [m]     [kN]     [kN]     [kN]     [kNm]     [kNm]     [kNm]
+         1    1001   0.000      0.0     0.00     0.00      0.00      0.00      0.00
+                     0.120      0.0     0.00   -15.08      1.42     -0.90      0.00
+         1    1002   0.000      0.0    15.82   820.72   -125.04     -0.90    710.29
+                     1.380      0.0    15.82   647.36   -108.71   1012.07    688.46
+         1    1003   0.000      0.0    15.82   647.36   -108.71   1012.07    688.46
+                     1.380      0.0    15.82   473.99    -92.43   1785.80    666.63
+         1    1004   0.000      0.0    15.82   473.99    -92.43   1785.80    666.63
+                     1.380      0.0    15.82   300.62    -76.17   2320.29    644.80
+         1    1005   0.000      0.0    15.82   300.62    -76.17   2320.29    644.80
+                     1.380      0.0    15.82   127.26    -60.20   2615.52    622.98
+         1    1006   0.000      0.0    15.82   127.26    -60.20   2615.52    622.98
+                     1.120      0.0    15.82   -13.45    -46.92   2679.26    605.26
+                     1.120      0.0    15.82  -186.82     -0.41   2679.26    605.26
+                     1.380      0.0    15.82  -219.48      2.57   2626.44    601.15
+         1    1007   0.000      0.0    15.82  -219.48      2.57   2626.44    601.15
+                     1.380      0.0    15.82  -392.85     18.85   2203.93    579.32
+         1    1008   0.000      0.0    15.82  -392.85     18.85   2203.93    579.32
+                     1.380      0.0    15.82  -566.22     35.17   1542.17    557.49
+         1    1009   0.000      0.0    15.82  -566.22     35.17   1542.17    557.49
+                     1.380      0.0    15.82  -739.58     51.51    641.17    535.66
+         1    1010   0.000      0.0    15.82  -739.58     51.51    641.17    535.66
+                     1.380      0.0    15.82  -912.95     67.87   -499.08    513.84
+         1    1011   0.000      0.0    15.82  -912.95     67.87   -499.08    513.84
+                     1.380      0.0    15.82 -1086.32     84.16  -1878.58    492.01
+         1    1012   0.000      0.0    37.27  1045.62    -79.77  -1878.58    492.01
+                     1.320      0.0    37.27   879.79    -64.21   -607.81    442.81
+         1    1013   0.000      0.0    37.27   879.79    -64.21   -607.81    442.81
+                     1.320      0.0    37.27   713.96    -48.56    444.08    393.61
+         1    1014   0.000      0.0    37.27   713.96    -48.56    444.08    393.61
+                     1.320      0.0    37.27   548.14    -32.89   1277.06    344.41
+         1    1015   0.000      0.0    37.27   548.14    -32.89   1277.06    344.41
+                     0.460      0.0    37.27   490.35    -27.44   1515.91    327.26
+                     0.460      0.0    37.27   378.75      2.50   1515.91    327.26
+                     1.320      0.0    37.27   270.71     12.71   1795.18    295.20
+         1    1016   0.000      0.0    37.27   270.71     12.71   1795.18    295.20
+                     1.320      0.0    37.27   104.88     28.37   2043.07    246.00
+         1    1017   0.000      0.0    37.27   104.88     28.37   2043.07    246.00
+                     1.320      0.0    37.27   -60.95     44.03   2072.06    196.80
+         1    1018   0.000      0.0    37.27   -60.95     44.03   2072.06    196.80
+                     1.320      0.0    37.27  -226.78     59.69   1882.16    147.60
+         1    1019   0.000      0.0    37.27  -226.78     59.69   1882.16    147.60
+                     1.320      0.0    37.27  -392.61     75.35   1473.37     98.40
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0         29.10.20         Seite:   513
+ 
+      
+ 
+ 
+      Stabschnittgrößen Lastfall   2007    
+       Grp  Nummer       x        N       Vy       Vz        Mt        My        Mz
+                       [m]     [kN]     [kN]     [kN]     [kNm]     [kNm]     [kNm]
+         1    1020   0.000      0.0    37.27  -392.61     75.35   1473.37     98.40
+                     1.320      0.0    37.27  -558.44     91.01    845.68     49.20
+         1    1021   0.000      0.0    37.27  -558.44     91.01    845.68     49.20
+                     1.320      0.0    37.27  -724.27    106.66     -0.90      0.00
+         1    1032   0.000      0.0     0.00    15.08     -1.42     -0.90      0.00
+                     0.120      0.0     0.00     0.00      0.00      0.00      0.00
+ 
+      Federkräfte und -verschiebungen Lastfall   2007    
+       Grp  Nummer         P       P-t         M         u       u-t       phi
+                        [kN]      [kN]     [kNm]      [mm]      [mm]    [mrad]
+         2    2101     232.9       0.0      0.00     0.023     0.004     0.002
+         2    2102      15.8       0.0      0.00     0.002     0.024    -2.141
+         2    2103      37.8       0.0      0.00     0.004     0.023     0.015
+         2    2111       0.0       0.0      0.00     0.000     0.007     0.002
+         2    2112       0.0       0.0      0.00     0.002     0.007    -2.141
+         2    2113     696.5       0.0      0.00     0.007     0.642     0.015
+         2    2121    -232.9       0.0      0.00    -0.023     0.010     0.002
+         2    2122       0.0       0.0      0.00     0.002     0.025    -2.141
+         2    2123     101.5       0.0      0.00     0.010     0.023     0.015
+         2    2201       0.0       0.0      0.00     0.047     0.005     0.009
+         2    2202      21.5       0.0      0.00     0.002     0.047     0.415
+         2    2203      44.2       0.0      0.00     0.004     0.047    -0.004
+         2    2211       0.0       0.0      0.00     0.052     0.018     0.009
+         2    2212       0.0       0.0      0.00     0.002     0.055     0.415
+         2    2213    1776.6       0.0      0.00     0.018     0.072    -0.004
+         2    2221       0.0       0.0      0.00     0.058     0.031     0.009
+         2    2222       0.0       0.0      0.00     0.002     0.065     0.415
+         2    2223     311.1       0.0      0.00     0.031     0.058    -0.004
+         2    2301       0.0       0.0      0.00     0.048     0.005     0.002
+         2    2302     -37.3       0.0      0.00    -0.004     0.048     1.088
+         2    2303      31.5       0.0      0.00     0.003     0.048    -0.012
+         2    2311       0.0       0.0      0.00     0.065     0.007     0.002
+         2    2312       0.0       0.0      0.00    -0.004     0.066     1.088
+         2    2313     616.1       0.0      0.00     0.006     0.261    -0.012
+         2    2321       0.0       0.0      0.00     0.083     0.010     0.002
+         2    2322       0.0       0.0      0.00    -0.004     0.084     1.088
+         2    2323      91.8       0.0      0.00     0.009     0.083    -0.012
+ 
+      Knotenverschiebungen  Lastfall   2007    
+       Knoten       u-X       u-Y       u-Z     phi-X     phi-Y     phi-Z
+           Nr      [mm]      [mm]      [mm]    [mrad]    [mrad]    [mrad]
+          100     0.642     0.000    -0.250     0.002    -2.141     0.015 
+          110     0.642     0.002     0.007     0.002    -2.141     0.015 
+          111     0.614     0.015     3.040    -0.034    -2.041     0.015 
+          112     0.548     0.028     5.808    -0.065    -1.804     0.014 
+          113     0.451     0.039     8.139    -0.091    -1.456     0.011 
+          114     0.053     0.041     9.228    -0.112    -0.035     0.000 
+          115    -0.072     0.035     8.975    -0.126     0.413    -0.004 
+          116    -0.215     0.028     7.992    -0.122     0.924    -0.007 
+          117    -0.303     0.017     6.406    -0.114     1.239    -0.010 
+          118    -0.401     0.007     4.372    -0.095     1.591    -0.012 
+          119    -0.428     0.001     1.819    -0.049     1.688    -0.013 
+          120    -0.072     0.005     0.018     0.009     0.415    -0.004 
+          121     0.285    -0.005     0.622    -0.044    -0.862     0.006 
+          122     0.304    -0.006     2.061    -0.085    -0.930     0.006 
+          123     0.231    -0.002     3.202    -0.102    -0.669     0.004 
+          124     0.161     0.005     3.991    -0.104    -0.420     0.002 
+          125     0.074     0.010     4.372    -0.098    -0.110    -0.001 
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0         29.10.20         Seite:   514
+ 
+      
+ 
+ 
+      Knotenverschiebungen  Lastfall   2007    
+       Knoten       u-X       u-Y       u-Z     phi-X     phi-Y     phi-Z
+           Nr      [mm]      [mm]      [mm]    [mrad]    [mrad]    [mrad]
+          126    -0.019     0.012     4.298    -0.087     0.224    -0.004 
+          127    -0.109     0.012     3.762    -0.072     0.545    -0.006 
+          128    -0.185     0.009     2.803    -0.052     0.817    -0.009 
+          129    -0.238     0.003     1.509    -0.027     1.005    -0.011 
+          130    -0.261    -0.003     0.006     0.002     1.088    -0.012 
+          140    -0.261    -0.005    -0.124     0.002     1.088    -0.012 
+          210     0.000     0.000     0.000     0.000     0.000     0.000 
+          211     0.000     0.000     0.000     0.000     0.000     0.000 
+          212     0.000     0.000     0.000     0.000     0.000     0.000 
+          220     0.000     0.000     0.000     0.000     0.000     0.000 
+          221     0.000     0.000     0.000     0.000     0.000     0.000 
+          222     0.000     0.000     0.000     0.000     0.000     0.000 
+          230     0.000     0.000     0.000     0.000     0.000     0.000 
+          231     0.000     0.000     0.000     0.000     0.000     0.000 
+          232     0.000     0.000     0.000     0.000     0.000     0.000 
+ 
+      Auflagerkräfte  Lastfall   2007    
+       Knoten       P-X       P-Y       P-Z       M-X       M-Y       M-Z
+           Nr      [kN]      [kN]      [kN]     [kNm]     [kNm]     [kNm]
+          210    -232.9     -15.8     -37.8    -62.44     69.86    355.14 
+          211       0.0       0.0    -696.5      0.00      0.00           
+          212     232.9       0.0    -101.5    154.74    -69.86    355.14 
+          220       0.0     -21.5     -44.2    -73.86      0.00      0.00 
+          221       0.0       0.0   -1776.6      0.00      0.00           
+          222       0.0       0.0    -311.1    474.44      0.00      0.00 
+          230       0.0      37.3     -31.5    -36.81      0.00      0.00 
+          231       0.0       0.0    -616.1      0.00      0.00           
+          232       0.0       0.0     -91.8    139.92      0.00      0.00 
+ 
+      Summe der Auflagerkräfte und Lasten                                                        
+      Lastfall           Σ(Reaktionen)             Bezeichnung                            
+                     X[kN]       Y[kN]       Z[kN]                                        
+                           Σ(Lasten)                                                      
+          2007         0.0         0.0     -3707.1 EGZ= 1.00 sum_PZ=3707.1 kN     .       
+                       0.0         0.0      3707.1                                        
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0         29.10.20         Seite:   515
+ 
+      
+ 
+ 
+      Lastfall   2008  
+      Faktor P und M Lasten                1.000
+      Faktor Eigengewicht        EG-ZZ     1.000
+ 
+      Lasten auf Stab-Elemente 
+       Nummer Typ        a[m]    l[m]    Lastwert    Lastwert Einheit     ya[m]   za[m]   ye[m]   ze[m] Mess 
+         1006 PZZ       1.120                82.7             [kN]       -1.000   0.000
+         1006 PZZ       1.120                82.7             [kN]        1.000   0.000
+         1014 PZZ       1.280                50.8             [kN]       -1.000   0.000
+         1014 PZZ       1.280                50.8             [kN]        1.000   0.000
+ 
+      Summe der Lasten                                                                           
+      Lastfall             Σ(Lasten)               Bezeichnung                            
+                     X[kN]       Y[kN]       Z[kN]                                        
+          2008         0.0         0.0      3689.1                                        
+ 
+      Stabschnittgrößen Lastfall   2008    
+       Grp  Nummer       x        N       Vy       Vz        Mt        My        Mz
+                       [m]     [kN]     [kN]     [kN]     [kNm]     [kNm]     [kNm]
+         1    1001   0.000      0.0     0.00     0.00      0.00      0.00      0.00
+                     0.120      0.0     0.00   -15.08      1.42     -0.90      0.00
+         1    1002   0.000      0.0    15.56   817.43   -123.68     -0.90    706.72
+                     1.380      0.0    15.56   644.07   -107.35   1007.53    685.24
+         1    1003   0.000      0.0    15.56   644.07   -107.35   1007.53    685.24
+                     1.380      0.0    15.56   470.70    -91.07   1776.71    663.76
+         1    1004   0.000      0.0    15.56   470.70    -91.07   1776.71    663.76
+                     1.380      0.0    15.56   297.33    -74.81   2306.66    642.28
+         1    1005   0.000      0.0    15.56   297.33    -74.81   2306.66    642.28
+                     1.380      0.0    15.56   123.96    -58.84   2597.35    620.80
+         1    1006   0.000      0.0    15.56   123.96    -58.84   2597.35    620.80
+                     1.120      0.0    15.56   -16.74    -45.56   2657.40    603.37
+                     1.120      0.0    15.56  -182.14     -1.18   2657.40    603.37
+                     1.380      0.0    15.56  -214.80      1.80   2605.79    599.33
+         1    1007   0.000      0.0    15.56  -214.80      1.80   2605.79    599.33
+                     1.380      0.0    15.56  -388.17     18.07   2189.74    577.85
+         1    1008   0.000      0.0    15.56  -388.17     18.07   2189.74    577.85
+                     1.380      0.0    15.56  -561.54     34.40   1534.44    556.37
+         1    1009   0.000      0.0    15.56  -561.54     34.40   1534.44    556.37
+                     1.380      0.0    15.56  -734.91     50.74    639.89    534.89
+         1    1010   0.000      0.0    15.56  -734.91     50.74    639.89    534.89
+                     1.380      0.0    15.56  -908.27     67.09   -493.90    513.41
+         1    1011   0.000      0.0    15.56  -908.27     67.09   -493.90    513.41
+                     1.380      0.0    15.56 -1081.64     83.39  -1866.94    491.93
+         1    1012   0.000      0.0    37.27  1041.96    -79.23  -1866.94    491.93
+                     1.320      0.0    37.27   876.13    -63.67   -601.00    442.74
+         1    1013   0.000      0.0    37.27   876.13    -63.67   -601.00    442.74
+                     1.320      0.0    37.27   710.30    -48.02    446.05    393.55
+         1    1014   0.000      0.0    37.27   710.30    -48.02    446.05    393.55
+                     1.280      0.0    37.27   549.50    -32.84   1252.33    345.84
+                     1.280      0.0    37.27   447.87     -5.57   1252.33    345.84
+                     1.320      0.0    37.27   442.84     -5.09   1270.14    344.35
+         1    1015   0.000      0.0    37.27   442.84     -5.09   1270.14    344.35
+                     1.320      0.0    37.27   277.01     10.57   1745.25    295.16
+         1    1016   0.000      0.0    37.27   277.01     10.57   1745.25    295.16
+                     1.320      0.0    37.27   111.18     26.24   2001.46    245.97
+         1    1017   0.000      0.0    37.27   111.18     26.24   2001.46    245.97
+                     1.320      0.0    37.27   -54.64     41.90   2038.78    196.77
+         1    1018   0.000      0.0    37.27   -54.64     41.90   2038.78    196.77
+                     1.320      0.0    37.27  -220.47     57.56   1857.20    147.58
+         1    1019   0.000      0.0    37.27  -220.47     57.56   1857.20    147.58
+                     1.320      0.0    37.27  -386.30     73.21   1456.72     98.39
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0         29.10.20         Seite:   516
+ 
+      
+ 
+ 
+      Stabschnittgrößen Lastfall   2008    
+       Grp  Nummer       x        N       Vy       Vz        Mt        My        Mz
+                       [m]     [kN]     [kN]     [kN]     [kNm]     [kNm]     [kNm]
+         1    1020   0.000      0.0    37.27  -386.30     73.21   1456.72     98.39
+                     1.320      0.0    37.27  -552.13     88.87    837.36     49.19
+         1    1021   0.000      0.0    37.27  -552.13     88.87    837.36     49.19
+                     1.320      0.0    37.27  -717.96    104.53     -0.90      0.00
+         1    1032   0.000      0.0     0.00    15.08     -1.42     -0.90      0.00
+                     0.120      0.0     0.00     0.00      0.00      0.00      0.00
+ 
+      Federkräfte und -verschiebungen Lastfall   2008    
+       Grp  Nummer         P       P-t         M         u       u-t       phi
+                        [kN]      [kN]     [kNm]      [mm]      [mm]    [mrad]
+         2    2101     231.7       0.0      0.00     0.023     0.004     0.002
+         2    2102      15.6       0.0      0.00     0.002     0.023    -2.128
+         2    2103      37.4       0.0      0.00     0.004     0.023     0.015
+         2    2111       0.0       0.0      0.00     0.000     0.007     0.002
+         2    2112       0.0       0.0      0.00     0.002     0.007    -2.128
+         2    2113     693.8       0.0      0.00     0.007     0.639     0.015
+         2    2121    -231.7       0.0      0.00    -0.023     0.010     0.002
+         2    2122       0.0       0.0      0.00     0.002     0.025    -2.128
+         2    2123     101.4       0.0      0.00     0.010     0.023     0.015
+         2    2201       0.0       0.0      0.00     0.046     0.005     0.009
+         2    2202      21.7       0.0      0.00     0.002     0.047     0.416
+         2    2203      43.8       0.0      0.00     0.004     0.046    -0.004
+         2    2211       0.0       0.0      0.00     0.052     0.018     0.009
+         2    2212       0.0       0.0      0.00     0.002     0.055     0.416
+         2    2213    1769.7       0.0      0.00     0.018     0.073    -0.004
+         2    2221       0.0       0.0      0.00     0.057     0.031     0.009
+         2    2222       0.0       0.0      0.00     0.002     0.065     0.416
+         2    2223     310.1       0.0      0.00     0.031     0.057    -0.004
+         2    2301       0.0       0.0      0.00     0.047     0.005     0.002
+         2    2302     -37.3       0.0      0.00    -0.004     0.047     1.072
+         2    2303      30.8       0.0      0.00     0.003     0.047    -0.011
+         2    2311       0.0       0.0      0.00     0.065     0.007     0.002
+         2    2312       0.0       0.0      0.00    -0.004     0.065     1.072
+         2    2313     610.9       0.0      0.00     0.006     0.257    -0.011
+         2    2321       0.0       0.0      0.00     0.082     0.010     0.002
+         2    2322       0.0       0.0      0.00    -0.004     0.083     1.072
+         2    2323      91.4       0.0      0.00     0.009     0.082    -0.011
+ 
+      Knotenverschiebungen  Lastfall   2008    
+       Knoten       u-X       u-Y       u-Z     phi-X     phi-Y     phi-Z
+           Nr      [mm]      [mm]      [mm]    [mrad]    [mrad]    [mrad]
+          100     0.639     0.000    -0.248     0.002    -2.128     0.015 
+          110     0.639     0.002     0.007     0.002    -2.128     0.015 
+          111     0.611     0.015     3.023    -0.034    -2.029     0.015 
+          112     0.545     0.028     5.774    -0.064    -1.793     0.014 
+          113     0.448     0.039     8.090    -0.090    -1.447     0.011 
+          114     0.053     0.041     9.171    -0.111    -0.035     0.000 
+          115    -0.071     0.035     8.921    -0.124     0.409    -0.003 
+          116    -0.213     0.028     7.945    -0.121     0.917    -0.007 
+          117    -0.301     0.017     6.371    -0.113     1.230    -0.009 
+          118    -0.398     0.007     4.351    -0.094     1.581    -0.012 
+          119    -0.426     0.001     1.812    -0.048     1.680    -0.013 
+          120    -0.073     0.005     0.018     0.009     0.416    -0.004 
+          121     0.281    -0.005     0.613    -0.043    -0.851     0.006 
+          122     0.299    -0.006     2.034    -0.084    -0.915     0.006 
+          123     0.226    -0.002     3.154    -0.101    -0.654     0.004 
+          124     0.158     0.005     3.921    -0.100    -0.411     0.002 
+          125     0.074     0.010     4.298    -0.095    -0.109    -0.001 
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0         29.10.20         Seite:   517
+ 
+      
+ 
+ 
+      Knotenverschiebungen  Lastfall   2008    
+       Knoten       u-X       u-Y       u-Z     phi-X     phi-Y     phi-Z
+           Nr      [mm]      [mm]      [mm]    [mrad]    [mrad]    [mrad]
+          126    -0.018     0.013     4.229    -0.085     0.218    -0.003 
+          127    -0.106     0.012     3.703    -0.070     0.535    -0.006 
+          128    -0.182     0.009     2.761    -0.051     0.804    -0.009 
+          129    -0.234     0.003     1.487    -0.027     0.990    -0.011 
+          130    -0.257    -0.003     0.006     0.002     1.072    -0.011 
+          140    -0.257    -0.005    -0.122     0.002     1.072    -0.011 
+          210     0.000     0.000     0.000     0.000     0.000     0.000 
+          211     0.000     0.000     0.000     0.000     0.000     0.000 
+          212     0.000     0.000     0.000     0.000     0.000     0.000 
+          220     0.000     0.000     0.000     0.000     0.000     0.000 
+          221     0.000     0.000     0.000     0.000     0.000     0.000 
+          222     0.000     0.000     0.000     0.000     0.000     0.000 
+          230     0.000     0.000     0.000     0.000     0.000     0.000 
+          231     0.000     0.000     0.000     0.000     0.000     0.000 
+          232     0.000     0.000     0.000     0.000     0.000     0.000 
+ 
+      Auflagerkräfte  Lastfall   2008    
+       Knoten       P-X       P-Y       P-Z       M-X       M-Y       M-Z
+           Nr      [kN]      [kN]      [kN]     [kNm]     [kNm]     [kNm]
+          210    -231.7     -15.6     -37.4    -61.70     69.51    353.36 
+          211       0.0       0.0    -693.8      0.00      0.00           
+          212     231.7       0.0    -101.4    154.56    -69.51    353.36 
+          220       0.0     -21.7     -43.8    -73.34      0.00      0.00 
+          221       0.0       0.0   -1769.7      0.00      0.00           
+          222       0.0       0.0    -310.1    472.92      0.00      0.00 
+          230       0.0      37.3     -30.8    -35.79      0.00      0.00 
+          231       0.0       0.0    -610.9      0.00      0.00           
+          232       0.0       0.0     -91.4    139.34      0.00      0.00 
+ 
+      Summe der Auflagerkräfte und Lasten                                                        
+      Lastfall           Σ(Reaktionen)             Bezeichnung                            
+                     X[kN]       Y[kN]       Z[kN]                                        
+                           Σ(Lasten)                                                      
+          2008         0.0         0.0     -3689.1 EGZ= 1.00 sum_PZ=3689.1 kN     .       
+                       0.0         0.0      3689.1                                        
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0         29.10.20         Seite:   518
+ 
+      
+ 
+ 
+      Lastfall   2009  
+      Faktor P und M Lasten                1.000
+      Faktor Eigengewicht        EG-ZZ     1.000
+ 
+      Lasten auf Stab-Elemente 
+       Nummer Typ        a[m]    l[m]    Lastwert    Lastwert Einheit     ya[m]   za[m]   ye[m]   ze[m] Mess 
+         1006 PZZ       1.120                 3.0             [kN]       -1.000   0.000
+         1006 PZZ       1.120                 3.0             [kN]        1.000   0.000
+         1008 PZZ       0.130                84.7             [kN]       -1.000   0.000
+         1008 PZZ       0.130                84.7             [kN]        1.000   0.000
+ 
+      Summe der Lasten                                                                           
+      Lastfall             Σ(Lasten)               Bezeichnung                            
+                     X[kN]       Y[kN]       Z[kN]                                        
+          2009         0.0         0.0      3597.5                                        
+ 
+      Stabschnittgrößen Lastfall   2009    
+       Grp  Nummer       x        N       Vy       Vz        Mt        My        Mz
+                       [m]     [kN]     [kN]     [kN]     [kNm]     [kNm]     [kNm]
+         1    1001   0.000      0.0     0.00     0.00      0.00      0.00      0.00
+                     0.120      0.0     0.00   -15.08      1.42     -0.90      0.00
+         1    1002   0.000      0.0    15.58   804.55   -121.06     -0.90    707.79
+                     1.380      0.0    15.58   631.18   -104.73    989.75    686.30
+         1    1003   0.000      0.0    15.58   631.18   -104.73    989.75    686.30
+                     1.380      0.0    15.58   457.81    -88.45   1741.15    664.80
+         1    1004   0.000      0.0    15.58   457.81    -88.45   1741.15    664.80
+                     1.380      0.0    15.58   284.45    -72.19   2253.31    643.31
+         1    1005   0.000      0.0    15.58   284.45    -72.19   2253.31    643.31
+                     1.380      0.0    15.58   111.08    -56.21   2526.22    621.81
+         1    1006   0.000      0.0    15.58   111.08    -56.21   2526.22    621.81
+                     1.120      0.0    15.58   -29.62    -42.92   2571.84    604.37
+                     1.120      0.0    15.58   -35.60    -41.32   2571.84    604.37
+                     1.380      0.0    15.58   -68.27    -38.34   2558.34    600.32
+         1    1007   0.000      0.0    15.58   -68.27    -38.34   2558.34    600.32
+                     1.380      0.0    15.58  -241.63    -22.06   2344.51    578.82
+         1    1008   0.000      0.0    15.58  -241.63    -22.06   2344.51    578.82
+                     0.130      0.0    15.58  -257.96    -20.52   2312.03    576.80
+                     0.130      0.0    15.58  -427.35     24.92   2312.03    576.80
+                     1.380      0.0    15.58  -584.39     39.70   1679.70    557.33
+         1    1009   0.000      0.0    15.58  -584.39     39.70   1679.70    557.33
+                     1.380      0.0    15.58  -757.75     56.04    753.62    535.83
+         1    1010   0.000      0.0    15.58  -757.75     56.04    753.62    535.83
+                     1.380      0.0    15.58  -931.12     72.39   -411.71    514.34
+         1    1011   0.000      0.0    15.58  -931.12     72.39   -411.71    514.34
+                     1.380      0.0    15.58 -1104.49     88.69  -1816.28    492.85
+         1    1012   0.000      0.0    37.34   966.67    -64.81  -1816.28    492.85
+                     1.320      0.0    37.34   800.84    -49.25   -649.72    443.56
+         1    1013   0.000      0.0    37.34   800.84    -49.25   -649.72    443.56
+                     1.320      0.0    37.34   635.02    -33.60    297.95    394.28
+         1    1014   0.000      0.0    37.34   635.02    -33.60    297.95    394.28
+                     1.320      0.0    37.34   469.19    -17.94   1026.73    344.99
+         1    1015   0.000      0.0    37.34   469.19    -17.94   1026.73    344.99
+                     1.320      0.0    37.34   303.36     -2.28   1536.60    295.71
+         1    1016   0.000      0.0    37.34   303.36     -2.28   1536.60    295.71
+                     1.320      0.0    37.34   137.53     13.38   1827.59    246.42
+         1    1017   0.000      0.0    37.34   137.53     13.38   1827.59    246.42
+                     1.320      0.0    37.34   -28.30     29.04   1899.68    197.14
+         1    1018   0.000      0.0    37.34   -28.30     29.04   1899.68    197.14
+                     1.320      0.0    37.34  -194.13     44.70   1752.88    147.85
+         1    1019   0.000      0.0    37.34  -194.13     44.70   1752.88    147.85
+                     1.320      0.0    37.34  -359.96     60.36   1387.18     98.57
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0         29.10.20         Seite:   519
+ 
+      
+ 
+ 
+      Stabschnittgrößen Lastfall   2009    
+       Grp  Nummer       x        N       Vy       Vz        Mt        My        Mz
+                       [m]     [kN]     [kN]     [kN]     [kNm]     [kNm]     [kNm]
+         1    1020   0.000      0.0    37.34  -359.96     60.36   1387.18     98.57
+                     1.320      0.0    37.34  -525.79     76.02    802.58     49.28
+         1    1021   0.000      0.0    37.34  -525.79     76.02    802.58     49.28
+                     1.320      0.0    37.34  -691.62     91.68     -0.90      0.00
+         1    1032   0.000      0.0     0.00    15.08     -1.42     -0.90      0.00
+                     0.120      0.0     0.00     0.00      0.00      0.00      0.00
+ 
+      Federkräfte und -verschiebungen Lastfall   2009    
+       Grp  Nummer         P       P-t         M         u       u-t       phi
+                        [kN]      [kN]     [kNm]      [mm]      [mm]    [mrad]
+         2    2101     232.1       0.0      0.00     0.023     0.004     0.002
+         2    2102      15.6       0.0      0.00     0.002     0.023    -2.132
+         2    2103      36.6       0.0      0.00     0.004     0.023     0.015
+         2    2111       0.0       0.0      0.00     0.000     0.007     0.002
+         2    2112       0.0       0.0      0.00     0.002     0.007    -2.132
+         2    2113     683.0       0.0      0.00     0.007     0.640     0.015
+         2    2121    -232.1       0.0      0.00    -0.023     0.010     0.002
+         2    2122       0.0       0.0      0.00     0.002     0.025    -2.132
+         2    2123     100.0       0.0      0.00     0.010     0.023     0.015
+         2    2201       0.0       0.0      0.00     0.048     0.005     0.009
+         2    2202      21.8       0.0      0.00     0.002     0.048     0.612
+         2    2203      41.1       0.0      0.00     0.004     0.048    -0.005
+         2    2211       0.0       0.0      0.00     0.056     0.017     0.009
+         2    2212       0.0       0.0      0.00     0.002     0.059     0.612
+         2    2213    1726.0       0.0      0.00     0.017     0.128    -0.005
+         2    2221       0.0       0.0      0.00     0.064     0.030     0.009
+         2    2222       0.0       0.0      0.00     0.002     0.071     0.612
+         2    2223     304.1       0.0      0.00     0.030     0.064    -0.005
+         2    2301       0.0       0.0      0.00     0.046     0.005     0.002
+         2    2302     -37.3       0.0      0.00    -0.004     0.047     0.966
+         2    2303      26.7       0.0      0.00     0.003     0.047    -0.011
+         2    2311       0.0       0.0      0.00     0.063     0.007     0.002
+         2    2312       0.0       0.0      0.00    -0.004     0.063     0.966
+         2    2313     588.9       0.0      0.00     0.006     0.227    -0.011
+         2    2321       0.0       0.0      0.00     0.079     0.010     0.002
+         2    2322       0.0       0.0      0.00    -0.004     0.079     0.966
+         2    2323      91.1       0.0      0.00     0.009     0.079    -0.011
+ 
+      Knotenverschiebungen  Lastfall   2009    
+       Knoten       u-X       u-Y       u-Z     phi-X     phi-Y     phi-Z
+           Nr      [mm]      [mm]      [mm]    [mrad]    [mrad]    [mrad]
+          100     0.640     0.000    -0.249     0.002    -2.132     0.015 
+          110     0.640     0.002     0.007     0.002    -2.132     0.015 
+          111     0.612     0.015     3.026    -0.033    -2.034     0.015 
+          112     0.548     0.028     5.785    -0.063    -1.803     0.014 
+          113     0.453     0.040     8.118    -0.088    -1.465     0.011 
+          114     0.068     0.043     9.244    -0.107    -0.088     0.000 
+          115    -0.053     0.037     9.077    -0.122     0.344    -0.003 
+          116    -0.198     0.026     8.216    -0.132     0.862    -0.007 
+          117    -0.293     0.016     6.696    -0.123     1.202    -0.009 
+          118    -0.403     0.007     4.686    -0.102     1.597    -0.012 
+          119    -0.461     0.002     2.041    -0.053     1.804    -0.014 
+          120    -0.128     0.005     0.017     0.009     0.612    -0.005 
+          121     0.226    -0.004     0.327    -0.033    -0.654     0.004 
+          122     0.273    -0.004     1.530    -0.063    -0.821     0.005 
+          123     0.218     0.002     2.562    -0.074    -0.623     0.003 
+          124     0.160     0.008     3.319    -0.077    -0.417     0.002 
+          125     0.084     0.012     3.728    -0.076    -0.145    -0.000 
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0         29.10.20         Seite:   520
+ 
+      
+ 
+ 
+      Knotenverschiebungen  Lastfall   2009    
+       Knoten       u-X       u-Y       u-Z     phi-X     phi-Y     phi-Z
+           Nr      [mm]      [mm]      [mm]    [mrad]    [mrad]    [mrad]
+          126    -0.001     0.013     3.728    -0.069     0.158    -0.003 
+          127    -0.084     0.012     3.302    -0.058     0.454    -0.006 
+          128    -0.155     0.009     2.481    -0.043     0.709    -0.008 
+          129    -0.205     0.003     1.343    -0.023     0.887    -0.010 
+          130    -0.227    -0.003     0.006     0.002     0.966    -0.011 
+          140    -0.227    -0.004    -0.110     0.002     0.966    -0.011 
+          210     0.000     0.000     0.000     0.000     0.000     0.000 
+          211     0.000     0.000     0.000     0.000     0.000     0.000 
+          212     0.000     0.000     0.000     0.000     0.000     0.000 
+          220     0.000     0.000     0.000     0.000     0.000     0.000 
+          221     0.000     0.000     0.000     0.000     0.000     0.000 
+          222     0.000     0.000     0.000     0.000     0.000     0.000 
+          230     0.000     0.000     0.000     0.000     0.000     0.000 
+          231     0.000     0.000     0.000     0.000     0.000     0.000 
+          232     0.000     0.000     0.000     0.000     0.000     0.000 
+ 
+      Auflagerkräfte  Lastfall   2009    
+       Knoten       P-X       P-Y       P-Z       M-X       M-Y       M-Z
+           Nr      [kN]      [kN]      [kN]     [kNm]     [kNm]     [kNm]
+          210    -232.1     -15.6     -36.6    -60.49     69.62    353.90 
+          211       0.0       0.0    -683.0      0.00      0.00           
+          212     232.1       0.0    -100.0    152.50    -69.62    353.90 
+          220       0.0     -21.8     -41.1    -69.17      0.00      0.00 
+          221       0.0       0.0   -1726.0      0.00      0.00           
+          222       0.0       0.0    -304.1    463.78      0.00      0.00 
+          230       0.0      37.3     -26.7    -29.53      0.00      0.00 
+          231       0.0       0.0    -588.9      0.00      0.00           
+          232       0.0       0.0     -91.1    138.89      0.00      0.00 
+ 
+      Summe der Auflagerkräfte und Lasten                                                        
+      Lastfall           Σ(Reaktionen)             Bezeichnung                            
+                     X[kN]       Y[kN]       Z[kN]                                        
+                           Σ(Lasten)                                                      
+          2009         0.0         0.0     -3597.5 EGZ= 1.00 sum_PZ=3597.5 kN     .       
+                       0.0         0.0      3597.5                                        
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0         29.10.20         Seite:   521
+ 
+      
+ 
+ 
+      Lastfall   2010  
+      Faktor P und M Lasten                1.000
+      Faktor Eigengewicht        EG-ZZ     1.000
+ 
+      Lasten auf Stab-Elemente 
+       Nummer Typ        a[m]    l[m]    Lastwert    Lastwert Einheit     ya[m]   za[m]   ye[m]   ze[m] Mess 
+         1006 PZZ       1.120                18.9             [kN]       -1.000   0.000
+         1006 PZZ       1.120                18.9             [kN]        1.000   0.000
+         1008 PZZ       0.660                29.9             [kN]       -1.000   0.000
+         1008 PZZ       0.660                29.9             [kN]        1.000   0.000
+ 
+      Summe der Lasten                                                                           
+      Lastfall             Σ(Lasten)               Bezeichnung                            
+                     X[kN]       Y[kN]       Z[kN]                                        
+          2010         0.0         0.0      3519.8                                        
+ 
+      Stabschnittgrößen Lastfall   2010    
+       Grp  Nummer       x        N       Vy       Vz        Mt        My        Mz
+                       [m]     [kN]     [kN]     [kN]     [kNm]     [kNm]     [kNm]
+         1    1001   0.000      0.0     0.00     0.00      0.00      0.00      0.00
+                     0.120      0.0     0.00   -15.08      1.42     -0.90      0.00
+         1    1002   0.000      0.0    13.02   780.58   -110.17     -0.90    671.90
+                     1.380      0.0    13.02   607.21    -93.84    956.67    653.94
+         1    1003   0.000      0.0    13.02   607.21    -93.84    956.67    653.94
+                     1.380      0.0    13.02   433.84    -77.55   1674.99    635.97
+         1    1004   0.000      0.0    13.02   433.84    -77.55   1674.99    635.97
+                     1.380      0.0    13.02   260.47    -61.28   2154.07    618.00
+         1    1005   0.000      0.0    13.02   260.47    -61.28   2154.07    618.00
+                     1.380      0.0    13.02    87.11    -45.28   2393.90    600.03
+         1    1006   0.000      0.0    13.02    87.11    -45.28   2393.90    600.03
+                     1.120      0.0    13.02   -53.60    -32.00   2412.67    585.45
+                     1.120      0.0    13.02   -91.46    -21.84   2412.67    585.45
+                     1.380      0.0    13.02  -124.12    -18.85   2384.64    582.06
+         1    1007   0.000      0.0    13.02  -124.12    -18.85   2384.64    582.06
+                     1.380      0.0    13.02  -297.49     -2.57   2093.73    564.09
+         1    1008   0.000      0.0    13.02  -297.49     -2.57   2093.73    564.09
+                     0.660      0.0    13.02  -380.40      5.26   1870.02    555.50
+                     0.660      0.0    13.02  -440.19     21.30   1870.02    555.50
+                     1.380      0.0    13.02  -530.64     29.80   1520.53    546.12
+         1    1009   0.000      0.0    13.02  -530.64     29.80   1520.53    546.12
+                     1.380      0.0    13.02  -704.01     46.14    668.62    528.15
+         1    1010   0.000      0.0    13.02  -704.01     46.14    668.62    528.15
+                     1.380      0.0    13.02  -877.37     62.49   -422.53    510.19
+         1    1011   0.000      0.0    13.02  -877.37     62.49   -422.53    510.19
+                     1.380      0.0    13.02 -1050.74     78.79  -1752.93    492.22
+         1    1012   0.000      0.0    37.29   961.88    -64.78  -1752.93    492.22
+                     1.320      0.0    37.29   796.05    -49.21   -592.71    442.99
+         1    1013   0.000      0.0    37.29   796.05    -49.21   -592.71    442.99
+                     1.320      0.0    37.29   630.22    -33.56    348.63    393.77
+         1    1014   0.000      0.0    37.29   630.22    -33.56    348.63    393.77
+                     1.320      0.0    37.29   464.39    -17.90   1071.07    344.55
+         1    1015   0.000      0.0    37.29   464.39    -17.90   1071.07    344.55
+                     1.320      0.0    37.29   298.56     -2.24   1574.61    295.33
+         1    1016   0.000      0.0    37.29   298.56     -2.24   1574.61    295.33
+                     1.320      0.0    37.29   132.73     13.42   1859.26    246.11
+         1    1017   0.000      0.0    37.29   132.73     13.42   1859.26    246.11
+                     1.320      0.0    37.29   -33.10     29.09   1925.02    196.89
+         1    1018   0.000      0.0    37.29   -33.10     29.09   1925.02    196.89
+                     1.320      0.0    37.29  -198.93     44.74   1771.88    147.66
+         1    1019   0.000      0.0    37.29  -198.93     44.74   1771.88    147.66
+                     1.320      0.0    37.29  -364.76     60.40   1399.85     98.44
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0         29.10.20         Seite:   522
+ 
+      
+ 
+ 
+      Stabschnittgrößen Lastfall   2010    
+       Grp  Nummer       x        N       Vy       Vz        Mt        My        Mz
+                       [m]     [kN]     [kN]     [kN]     [kNm]     [kNm]     [kNm]
+         1    1020   0.000      0.0    37.29  -364.76     60.40   1399.85     98.44
+                     1.320      0.0    37.29  -530.59     76.06    808.92     49.22
+         1    1021   0.000      0.0    37.29  -530.59     76.06    808.92     49.22
+                     1.320      0.0    37.29  -696.42     91.72     -0.90      0.00
+         1    1032   0.000      0.0     0.00    15.08     -1.42     -0.90      0.00
+                     0.120      0.0     0.00     0.00      0.00      0.00      0.00
+ 
+      Federkräfte und -verschiebungen Lastfall   2010    
+       Grp  Nummer         P       P-t         M         u       u-t       phi
+                        [kN]      [kN]     [kNm]      [mm]      [mm]    [mrad]
+         2    2101     220.3       0.0      0.00     0.022     0.004     0.002
+         2    2102      13.0       0.0      0.00     0.001     0.022    -2.005
+         2    2103      33.1       0.0      0.00     0.003     0.022     0.014
+         2    2111       0.0       0.0      0.00     0.000     0.007     0.002
+         2    2112       0.0       0.0      0.00     0.001     0.007    -2.005
+         2    2113     663.0       0.0      0.00     0.007     0.602     0.014
+         2    2121    -220.3       0.0      0.00    -0.022     0.010     0.002
+         2    2122       0.0       0.0      0.00     0.001     0.024    -2.005
+         2    2123      99.5       0.0      0.00     0.010     0.022     0.014
+         2    2201       0.0       0.0      0.00     0.044     0.005     0.008
+         2    2202      24.3       0.0      0.00     0.002     0.045     0.479
+         2    2203      38.1       0.0      0.00     0.004     0.044    -0.004
+         2    2211       0.0       0.0      0.00     0.051     0.017     0.008
+         2    2212       0.0       0.0      0.00     0.002     0.053     0.479
+         2    2213    1677.2       0.0      0.00     0.017     0.093    -0.004
+         2    2221       0.0       0.0      0.00     0.057     0.030     0.008
+         2    2222       0.0       0.0      0.00     0.002     0.064     0.479
+         2    2223     297.3       0.0      0.00     0.030     0.057    -0.004
+         2    2301       0.0       0.0      0.00     0.044     0.005     0.002
+         2    2302     -37.3       0.0      0.00    -0.004     0.044     0.994
+         2    2303      26.7       0.0      0.00     0.003     0.044    -0.011
+         2    2311       0.0       0.0      0.00     0.061     0.007     0.002
+         2    2312       0.0       0.0      0.00    -0.004     0.061     0.994
+         2    2313     592.9       0.0      0.00     0.006     0.238    -0.011
+         2    2321       0.0       0.0      0.00     0.077     0.010     0.002
+         2    2322       0.0       0.0      0.00    -0.004     0.078     0.994
+         2    2323      91.9       0.0      0.00     0.009     0.077    -0.011
+ 
+      Knotenverschiebungen  Lastfall   2010    
+       Knoten       u-X       u-Y       u-Z     phi-X     phi-Y     phi-Z
+           Nr      [mm]      [mm]      [mm]    [mrad]    [mrad]    [mrad]
+          100     0.601     0.000    -0.234     0.002    -2.005     0.014 
+          110     0.601     0.002     0.007     0.002    -2.005     0.014 
+          111     0.575     0.015     2.847    -0.029    -1.910     0.015 
+          112     0.513     0.028     5.435    -0.056    -1.687     0.013 
+          113     0.422     0.039     7.612    -0.077    -1.363     0.011 
+          114     0.055     0.043     8.637    -0.094    -0.052     0.000 
+          115    -0.058     0.037     8.431    -0.105     0.354    -0.003 
+          116    -0.191     0.029     7.574    -0.108     0.828    -0.007 
+          117    -0.276     0.019     6.140    -0.104     1.134    -0.009 
+          118    -0.375     0.009     4.258    -0.087     1.489    -0.011 
+          119    -0.419     0.003     1.819    -0.045     1.643    -0.012 
+          120    -0.093     0.005     0.017     0.008     0.479    -0.004 
+          121     0.243    -0.003     0.459    -0.033    -0.724     0.004 
+          122     0.274    -0.002     1.715    -0.063    -0.834     0.005 
+          123     0.214     0.004     2.750    -0.074    -0.620     0.003 
+          124     0.155     0.009     3.497    -0.077    -0.407     0.002 
+          125     0.077     0.013     3.889    -0.076    -0.129    -0.000 
+ 
+      SOFiSTiK AG - Educational-Version -
+      ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0         29.10.20         Seite:   523
+ 
+      
+ 
+ 
+      Knotenverschiebungen  Lastfall   2010    
+       Knoten       u-X       u-Y       u-Z     phi-X     phi-Y     phi-Z
+           Nr      [mm]      [mm]      [mm]    [mrad]    [mrad]    [mrad]
+          126    -0.009     0.015     3.865    -0.069     0.177    -0.003 
+          127    -0.093     0.013     3.409    -0.058     0.478    -0.006 
+          128    -0.165     0.009     2.554    -0.043     0.735    -0.008 
+          129    -0.215     0.004     1.381    -0.023     0.914    -0.010 
+          130    -0.238    -0.003     0.006     0.002     0.994    -0.011 
+          140    -0.238    -0.004    -0.113     0.002     0.994    -0.011 
+          210     0.000     0.000     0.000     0.000     0.000     0.000 
+          211     0.000     0.000     0.000     0.000     0.000     0.000 
+          212     0.000     0.000     0.000     0.000     0.000     0.000 
+          220     0.000     0.000     0.000     0.000     0.000     0.000 
+          221     0.000     0.000     0.000     0.000     0.000     0.000 
+          222     0.000     0.000     0.000     0.000     0.000     0.000 
+          230     0.000     0.000     0.000     0.000     0.000     0.000 
+          231     0.000     0.000     0.000     0.000     0.000     0.000 
+          232     0.000     0.000     0.000     0.000     0.000     0.000 
+ 
+      Auflagerkräfte  Lastfall   2010    
+       Knoten       P-X       P-Y       P-Z       M-X       M-Y       M-Z
+           Nr      [kN]      [kN]      [kN]     [kNm]     [kNm]     [kNm]
+          210    -220.3     -13.0     -33.1    -54.39     66.09    335.95 
+          211       0.0       0.0    -663.0      0.00      0.00           
+          212     220.3       0.0     -99.5    151.75    -66.09    335.95 
+          220       0.0     -24.3     -38.1    -65.43      0.00      0.00 
+          221       0.0       0.0   -1677.2      0.00      0.00           
+          222       0.0       0.0    -297.3    453.39      0.00      0.00 
+          230       0.0      37.3     -26.7    -29.53      0.00      0.00 
+          231       0.0       0.0    -592.9      0.00      0.00           
+          232       0.0       0.0     -91.9    140.12      0.00      0.00 
+ 
+      Summe der Auflagerkräfte und Lasten                                                        
+      Lastfall           Σ(Reaktionen)             Bezeichnung                            
+                     X[kN]       Y[kN]       Z[kN]                                        
+                           Σ(Lasten)                                                      
+          2010         0.0         0.0     -3519.8 EGZ= 1.00 sum_PZ=3519.8 kN     .       
+                       0.0         0.0      3519.8                                        
+ 
+ SOFiSTiK AG - Educational-Version -
+ ASE    - ADVANCED SOLUTION ENGINE V 2018-8.0         29.10.20         Seite:      
+ 
+ 
+ 
+   10 ENDE
+ 

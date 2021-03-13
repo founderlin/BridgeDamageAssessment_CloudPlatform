@@ -1,0 +1,663 @@
+
+!#!CHAPTER Create a Database, Record 0/99,1/*,9/*
+-PROG AQUA urs:1
+HEAD Material and Cross Section
+NORM EN 1992-2004
+ECHO FULL ; PAGE 1
+CONC  1 C 20
+STEE  2 S 235
+STEE 10 B 500
+SREC 1 MNO 1 H 0.4[m] B 0.4[m] mrf 10
+PROF 2 heb 300 mno 2
+END
+
+!#!CHAPTER System Geometry, Record 10/0,11/0,20/0,100/0
+-PROG SOFIMSHA urs:2
+HEAD Frame Structure
+SYST 2D
+NODE 1 0 3 FIX PY
+NODE 2 0 0
+NODE 3 5 0
+NODE 4 5 3 FIX F
+BEAM 1 1 2 NCS 1
+BEAM 2 2 3 NCS 2 DIV 5
+BEAM 3 3 4 NCS 1
+END
+
+!#!CHAPTER Loads, Record 12/*,101/*
+-PROG SOFILOAD urs:3
+HEAD Loads
+LC 1 type none FACD 1.5 TITL 'self weight with factor 1.5'
+LC 2 type none          TITL 'additional load'
+ BEAM 3 TYPE PXX PA -5.432
+ BEAM 2 TYPE PYY PA 10
+END
+
+!#!CHAPTER Linear Analysis, Record 102/*,103/*,109/*
+-PROG ASE urs:4
+HEAD Linear Analysis
+LC 1,2
+END
+
+!#!CHAPTER Superpositioning, Record 12/*,102/*
+-PROG MAXIMA urs:5
+HEAD Superpositioning
+COMB 1 STAN  $ standard combination
+ LC 1 G
+ LC 2 Q
+SUPP 1 EXTR MAMI ETYP BEAM TYPE MY LC 111
+END
+
+!#!CHAPTER ULS Design, Record 105/*,106/*,107/*
+-prog aqb urs:6
+head ULS Design
+lc 112
+desi ulti
+end
+
+!#!CHAPTER List Output with WING
+-prog wing urs:9
+head List Output with WING
+stru repr dlst
+end
+
+!#!CHAPTER List Output with RESULTS
+-prog results urs:8
+head List Output with RESULTS
+lc 1
+node U repr DLST
+end
+
+!#!CHAPTER TEMPLATE-Principle
++prog template urs:14
+head TEMPLATE-Principle
+
+@key mat_stee 2  $ Steel Material Nr. 2
+let#fy @fy       $ define variable #fy and plot variable value
+txb fy = #(#fy,7.2) kN/m**2
+
+let#cdb_len 0    $ actual length of record
+let#cdb_ier 0    $ error flag
+@key N_Disp 1    $ record with KWH/KWL
+loop             $ loop
+let#py @PY       $ read value PY and save it to variable #py
+if #cdb_ier<1    $ check
+txb PY = #(#py,7.3) kN  $ text at the beginning of the output with formated printout
+endif
+endloop #cdb_ier<2  $ Ende-Bedingung
+end
+
+!#!CHAPTER Error: unknown KEY
+-prog template urs:16
+head unknown KEY
+@key ???
+<TEXT> Error Message
++++++ error no. 10143 in program SOF_VAR
+   CDBASE.CDB does not contain a suitable structure for @KEY
+</TEXT>
+
+end
+
+!#!CHAPTER Error: Missing  Selector
+-prog template urs:7
+head Missing  Selector
+@key N_Disp
+<TEXT> Error Message
++++++ error no. 10144 in program SOF_VAR
+   This index @KEY requires an explicit definition of a number at KWL
+</TEXT>
+end
+
+!#!CHAPTER Usage of Selector
+-prog template urs:18
+head Internal Normal Force
+@key sect_pla kwl 2 sel3 101 $ Steel Profile No. 2
+let#N @wpn $ print normal forces
+txb Charakteristic plastic Normal Force = #(#N,7.2) kN/m**2   Steel Profile No 2
+end
+
+!#!CHAPTER Error: Unknown value
+-prog template urs:19
+head Unknown value
+@key N_Disp 1
+let#val @???
+<TEXT> Error Message
++++++ error no. 10132 in program SOF_VAR
+   Improper number/expression type 502 (illegal operator/CDB-Item-Name) :@???
+</TEXT>
+end
+
+!#!CHAPTER Error: wrong input sequence
+-prog template urs:20
+head wrong input sequence
+@key N_Disp 1
+let#ux @UX
+let#nr @NR
+txb No #(#nr,7.0) and #(#ux*1000,7.4) mm  do not match, because of wrong input sequence
+
+end
+
+!#!CHAPTER correct input sequence
+-prog template urs:21
+head correct input sequence
+@key N_Disp 1
+let#nr @NR
+let#ux @UX
+txb No #(#nr,7.0) and #(#ux*1000,7.4) mm match together.
+end
+
+!#!CHAPTER Offset for arrays
+-prog template urs:22
+head Offset for arrays
+@key NODE
+let#nr @NR
+let#x @XYZ
+let#y @(XYZ+1)
+let#z @(XYZ+2)
+txb No #(#nr,5.0) (#(#x,7.2),#(#y,7.2),#(#z,7.2))
+end
+
+!#!CHAPTER Selector
+-prog template urs:23
+head Selector Node 3
+@key NODE
+let#nr @(3,NR)
+let#x @XYZ
+let#y @(XYZ+1)
+let#z @(XYZ+2)
+txb No #(#nr,5.0) (#(#x,7.2),#(#y,7.2),#(#z,7.2))
+end
+
+!#!CHAPTER Error: wrong selector sequence
+-prog template urs:24
+head wrong selector sequence  (not ascending)
+@key NODE
+let#nr3 @(3,NR)
+let#nr2 @(2,NR)
+let#nr1 @(1,NR)
+txb No1:#(#nr1,5.0) , No2:#(#nr2,5.0) , No3:#(#nr3,5.0)
+<TEXT> Error Message
++++++ error no. 10126 in program SOF_VAR
+CDB-Record does not exist or end reached 20/ 0: 1
++++++ error no. 12101 ; input line:    8
+Improper assignment to variable NR1 ( -1)
+</TEXT>
+end
+
+!#!CHAPTER correct selector sequence
+-prog template urs:25
+head correct selector sequence  (ascending)
+@key NODE
+let#nr1 @(1,NR)
+let#nr2 @(2,NR)
+let#nr3 @(3,NR)
+txb No1:#(#nr1,5.0) , No2:#(#nr2,5.0) , No3:#(#nr3,5.0)
+end
+
+!#!CHAPTER @NAME ; selector KWL not necessary
+-prog template urs:26
+head @NAME ; selector KWL not necessary
+@key BEAM
+let#nr @NR
+txb selection ok with BEAM and without KWL , 1.Beam: #(#nr,5.0)
+end
+
+!#!CHAPTER @NR ; selector KWL always necessary
+-prog template urs:27
+head @NR ; selector KWL always necessary
+@key kwh 100 kwl 0 sel4 -1
+let#nr @-3
+txb selection ok with KWH 100 KWL 0 SEL4 -1 , 1.Beam: #(#nr,5.0)
+end
+
+!#!CHAPTER Error: @NR ohne KWL
+-prog template urs:28
+head @NR ; selector KWL always necessary
+@key kwh 100 sel1 -1 -1 -1 -1
+let#nr @-3
+txb selection not ok with KWH 100 SEL1 -1 -1 -1 -1, 1.Beam: #(#nr,5.0)
+<TEXT> Error Message
+   +++++ error no. 10126 in program SOF_VAR
+   CDB-Record does not exist or end reached 100/ -99999:
+   +++++ error no. 12101 ; input line:    6
+   Improper assignment to variable NR ( -1)
+
+</TEXT>
+end
+
+!#!CHAPTER Error: Wrong Sequence of Values
+-prog template urs:29
+head Wrong Sequence of Values
+@key 24 1 -1
+let#ux @1;prt#ux   $ maximum value
+let#ux @1;prt#ux   $ minimum value
+let#ux @1;prt#ux
+let#nr @0;prt#nr
+
+txb Reference Solution
+txb Table: Nodal Displacements in global direction
+txb        LC  Node  u-X   u-Y
+txb              No  [mm]  [mm]
+txb         1     1 -0.575 0.000
+txb               2 -0.154 0.008
+txb               3 -0.154 0.009
+txb               4  0.000 0.000
+txb
+txb No #(#nr,5.0) and #(#ux*1000,7.4) mm  do not match, because of wrong input sequence
+end
+
+!#!CHAPTER correct sequence  of selected values
+-prog template urs:30
+head correct sequence  of selected values
+@key 24 1 -1
+let#ux @1;prt#ux   $ maximum value
+let#ux @1;prt#ux   $ minimum value
+let#nr @0;prt#nr
+let#ux @1;prt#ux
+txb Reference Solution
+txb Table: Nodal Displacements in global direction
+txb        LC  Node  u-X   u-Y
+txb              No  [mm]  [mm]
+txb         1     1 -0.575 0.000
+txb               2 -0.154 0.008
+txb               3 -0.154 0.009
+txb               4  0.000 0.000
+txb
+txb No #(#nr,5.0) and #(#ux*1000,7.4) mm match together
+end
+
+!#!CHAPTER Position of values
+-prog template urs:31
+head Position of values , same results with different commands
+@key 20 0
+let#y @6
+txb Y-coordinate of Node 1 via @6: #(#y,5.2)
+@key 20 0 -1
+let#y @5
+txb Y-coordinate of Node 1 via @5: #(#y,5.2)
+@key 20 0 -1 -1 -1 -1
+let#y @2
+txb Y-coordinate of Node 1 via @2: #(#y,5.2)
+@key 20 0 sel4 -1
+let#y @2
+txb Y-coordinate of Node 1 via @2: #(#y,5.2)
+end
+
+!#!CHAPTER Position of Selectors
+-prog template urs:32
+head Position of Selectors , same results with different commands
+@key 20 0 -1
+let#nr @0
+txb Node number via @0 : #(#nr,5.0)
+@key 20 0 -1 -1
+let#nr @-1
+txb Node number via @-1: #(#nr,5.0)
+@key 20 0 -1 -1 -1 -1
+let#y @-3
+txb Node number via @-3: #(#nr,5.0)
+@key 20 0 sel4 -1
+let#y @-3
+txb Node number via @-3: #(#nr,5.0)
+end
+
+!#!CHAPTER Usefull Options with changing structures
+-prog template urs:11
+head Usefull Options with changing structures , Record BEAM
+let#cdb_ier 0
+@key 100 0 -1 -1 -1 -1
+loop
+  let#n @-3
+  if #cdb_ier<2
+    if #n>0
+      let#nr #n
+      let#k @-2,@-1
+      let#len @1
+      txb BEAM #(#nr,5.0) , Start Node #(#k(0),5.0) , End Node #(#k(1),5.0) , Length #(#len,5.1) m
+    else
+      let#quer @-2
+      let#x @1
+      txb BEAM #(#nr,5.0) , Beam Section at #(#x,5.1) m , Cross Section No. #(#quer,5.0)
+    endif
+  endif
+endloop #cdb_ier<2
+end
+
+!#!CHAPTER #CDB_IER - Usage for List of Load Cases
+-prog template urs:12
+head # CDB_IER - Usage for List of Load Cases
+txb Load Case   Name
+let#CDB_IER 0
+let#lf 0
+loop 999
+  let#lf #lf+1
+  @key LC_CTRL  #lf
+  if #CDB_IER<2
+    let#rtex LIT(@rtex)
+    txb   #(#lf,7.0)   #rtex
+  endif
+endloop
+end
+
+!#!CHAPTER #CDB_LEN - Usage for Support Forces
+-prog template urs:17
+head # CDB_LEN - Usage for Support Forces
+let#cdb_ier 0
+let#cdb_len 0
+@key N_Disp 1
+loop
+  let#nr @NR
+  if #cdb_len>10
+    let#py @PY
+    txb Node #(#nr,5.0) PY = #(#py,7.3) kN
+  endif
+endloop #cdb_len>1
+end
+
+!#!CHAPTER #CDB_IER=1 - Usage for Support Forces
+-prog template urs:13
+head # CDB_IER=1 - Usage for Support Forces
+let#cdb_len 0
+let#cdb_ier 0
+@key N_Disp 1
+loop
+  let#nr @NR    $ CDB_IER=0 , because NR is within the read length
+  if #cdb_ier<2
+    let#py @PY  $ CDB_IER=1 , because PY is outside the read length
+    if #cdb_ier<1
+      txb Node #(#nr,5.0) PY = #(#py,7.3) kN
+    endif
+  endif
+endloop #cdb_ier<2
+end
+
+!#!CHAPTER Function LIT()
+-prog template urs:33
+head Function LIT()
+@key LC_CTRL 1
+let#rtex LIT(@rtex)
+txb Laod Case 1: #rtex
+
+@key SECT_TXT 2
+let#txt LIT(@txt)
+txb Cross Section 2: #txt
+
+end
+
+!#!CHAPTER Variables LET and STO
+-prog template urs:34
+head Variables LET and STO
+let#gross(1000) 0  $ initialize a large array
+
+let#literal 'Literal0','Literal1'
+txb literal(0)=#literal(0) , literal(1)=#literal(1)
+
+let#feld 1,2,3       $ alternative 1 = alternative 2
+txb feld(0)=#(#feld(0),2.0) , feld(1)=#(#feld(1),2.0) , feld(2)=#(#feld(2),2.0)
+
+let#feld(0) 1        $ alternative 2 = alternative 1
+let#feld(1) 2
+let#feld(2) 3
+txb feld(0)=#(#feld(0),2.0) , feld(1)=#(#feld(1),2.0) , feld(2)=#(#feld(2),2.0)
+
+end
+
+!#!CHAPTER Function PRT#
+-prog template urs:35
+head  Function PRT
+let#cdb_len 0
+let#cdb_ier 0
+@key N_Disp 1
+loop 2
+let#nr @NR
+prt#nr
+prt#cdb_len
+prt#cdb_ier
+let#py @PY
+prt#py
+prt#cdb_ier
+endloop
+end
+
+$$$$$$$$$$ Example 1: LIST OF LOAD CASES $$$$$$$$$$$$$$$$$$$$$$
+
+!#!CHAPTER Exp 1: LOOPs - nested
+-prog template urs:36
+head LOOPs nested: in case of a very long list of load cases
+txb Loadcase   Name
+let#CDB_IER 0
+let#lf 0
+loop 20
+  loop 999
+    let#lf #lf+1
+    @key LC_CTRL  #lf
+    if #CDB_IER<2
+      let#rtex LIT(@rtex)
+      txb   #(#lf,6.0)   #rtex
+    endif
+  endloop
+endloop
+end
+
+!#!CHAPTER LOOPs and ARRAYs
+-prog template urs:37
+head LOOPs and ARRAYs: unsorted list of load cases
+let#lf 112,1,2,111
+txb Loadcase   Name
+let#CDB_IER 0
+loop#i lf
+  @key LC_CTRL #lf(#i)
+  if #CDB_IER<2
+    let#rtex LIT(@rtex)
+    txb   #(#lf(#i),6.0)   #rtex
+  endif
+endloop
+end
+
+!#!CHAPTER FunCtion IF
+-prog template urs:15
+head Function IF: Search for support forces
+let#cdb_len 0
+let#cdb_ier 0
+loop#lf 999
+  @key N_Disp #lf+1
+  if #cdb_ier<2
+    loop 999
+      let#nr @NR
+      if #cdb_len>10
+        let#px @PX
+        let#py @PY
+        if (abs(#px)>25)&(abs(#py)>25)
+          txb LC #(#lf+1,3.0) Node #(#nr,5.0) PX = #(#px,7.3) > 25 kN UND PY = #(#py,7.3) > 25 kN
+        endif
+        if (abs(#px)>25)|(abs(#py)>25)
+          txb LC #(#lf+1,3.0) Node #(#nr,5.0) PX = #(#px,7.3) > 25 kN ODER PY = #(#py,7.3) > 25 kN
+        endif
+      endif
+    endloop #cdb_ier<2
+  endif
+endloop
+end
+
+!#!CHAPTER Tolerance
+-prog template urs:39
+head Tolerance
+let#val1 -26.184
+let#val2 -26.184
+let#erg1 (#val1==#val2)         $ true = 1, because values are exactly the same
+prt#erg1
+
+@key N_Disp 2
+let#val2 @(4,py)
+let#erg2 (#val1==#val2)         $ false = 0, because values are not exactly the same
+prt#erg2
+prt#val1
+prt#val2
+
+let#val1 -26.184
+let#val2 -26.179
+let#erg3 abs(#val1-#val2)<0.01  $ true = 1, because of tolerance
+prt#erg3
+
+end
+
+!#!CHAPTER Function AND/OR
+-prog template urs:38
+head Function AND/OR
+let#erg1 (1>0)&(2>0)  $ true = 1
+prt#erg1
+let#erg2 (1>0)&(2<0)  $ false = 0
+prt#erg2
+let#erg3 (1>0)|(2<0)  $ true = 1
+prt#erg3
+let#erg3 (1<0)|(2<0)  $ false = 0
+prt#erg3
+end
+
+!#!CHAPTER Formated Output
+-prog template urs:40
+head Formated Output
+let#text 'a simple text'  $ no format necesssary
+txb The text will be plotted without any format: #text
+
+let#lf 2             $ an integer value
+txb Integer value without format: #lf
+txb Integer value with    format: #(#lf,5.0)
+
+let#erg -16.789      $ a real value
+txb Real value without format: #erg
+txb Real value with    format: #(#erg,7.3)
+end
+
+
+$$$$$$$$$$ Example 2: SEARCH FOR NODES VIA COORDINAT VALUES $$$$$$$$$$$$$$$$$$$$$$
+
+!#!CHAPTER Exp 2: Search for nodes
+
+#define search_node
+let#cdb_ier 0
+let#node 0
+@key node
+loop 999
+ loop 999
+  let#next @nr
+  prt#next
+  prt#cdb_ier
+  if #cdb_ier<2
+   let#xyz @xyz,@(xyz+1),@(xyz+2)
+   prt#xyz
+   if (abs(#xyz(0)-#findXYZ(0))<0.01)&(abs(#xyz(1)-#findXYZ(1))<0.01)&(abs(#xyz(2)-#findXYZ(2))<0.01)
+    let#cdb_ier 5
+    let#node #next
+   endif
+  endif
+ endloop #cdb_ier<2
+endloop #cdb_ier<2
+
+if #node>0
+txb Node #(#node,5.0) found at x=#(#findXYZ(0),6.2) m  y=#(#findXYZ(1),6.2) m  z=#(#findXYZ(2),6.2) m
+else
+txb Sorry, no node foud at x=#(#findXYZ(0),6.2) m  y=#(#findXYZ(1),6.2) m  z=#(#findXYZ(2),6.2) m
+endif
+
+#enddef
+
+-prog template urs:10
+head Search for nodes
+let#findXYZ 0,0,0
+#include search_node
+let#findXYZ 1,2,3
+#include search_node
+let#findXYZ 5,3,0
+#include search_node
+end
+
+$$$$$$$$$$ EXAMPLE 3: READ INTERNAL BEAM FORCES AUSLESEN VON STABSCHNITKRAEFTEN ALONG SLN $$$$$$$$$$$$$$$$$$$$$$
+
+!#!CHAPTER Exp 3: Read beam forces at the end of structure lines SLN
+-Prog template urs:41
+head Read beam forces at the end of structure lines SLN
+let#lc 1  $ aktueller Lastfall
+txb    SLN                    Beam  X-section[m]      N[kN]     Vz[kN]    My[kNm]
+let#CDB_IER 0
+$ read list of al beam elements
+let#curSLN -1
+loop 999
+loop 999
+$ jump to next SLN
+@key BEAM
+  let#break 0
+  let#length 0
+  loop 999
+  loop 999
+    let#startBeam @NR
+    if #CDB_IER<2
+      let#length @DL
+      let#sln @NREF  $ number SLN
+      if #sln>#curSLN  $ next SLN number
+        let#curSLN #sln
+        let#endBeam #startBeam
+        loop 999
+          let#beam @NR     $ beam number at end of SLN
+          if #CDB_IER<2
+            let#dl @DL
+            let#sln @NREF
+            if #sln<>#curSLN  $ found differend SLN
+              let#break 1
+            else
+              let#endBeam #beam
+              let#length #length+#DL
+            endif
+          else
+            let#CDB_IER 0
+            let#break 1
+          endif
+        endloop #break==0
+      endif
+    endif
+  endloop (#CDB_IER<2)&(#break==0)
+  endloop (#CDB_IER<2)&(#break==0)
+$ now start reading the beam forces
+if #CDB_IER<2
+  @key BEAM_FOR #lc
+$ start
+prt#lc
+prt#startBeam
+  let#X  @(#startBeam,X)
+  let#N @N
+  let#Vy @Vy
+  let#Vz @Vz
+  let#Mt @Mt
+  let#My @My
+  let#Mz @Mz
+  if #CDB_IER<2
+    txb #(#curSLN,6.0) (Start, S=  0.0 m) #(#startBeam,6.0) #(#X,9.1) #(#N,10.2) #(#Vz,10.2) #(#My,10.2)
+$ end
+    let#X  @(#endBeam,X)
+    let#N  @N
+    let#Vy @Vy
+    let#Vz @Vz
+    let#Mt @Mt
+    let#My @My
+    let#Mz @Mz
+$ jump to the last beam section
+    let#nr #endBeam
+    loop 999
+      let#nr @NR
+      if (#CDB_IER<2)&(#nr==#endBeam)
+        let#X  @X
+        let#N  @N
+        let#Vy @Vy
+        let#Vz @Vz
+        let#Mt @Mt
+        let#My @My
+        let#Mz @Mz
+      endif
+    endloop (#CDB_IER<2)&(#nr==#endBeam)
+    let#CDB_IER 0
+    txb #(#curSLN,6.0) (End  , S=#(#length,5.1) m) #(#endBeam,6.0) #(#X,9.1) #(#N,10.2) #(#Vz,10.2) #(#My,10.2)
+  endif
+endif
+endloop #CDB_IER<2
+endloop #CDB_IER<2
+end
+

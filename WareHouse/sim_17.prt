@@ -1,0 +1,132 @@
+   *** Start: Program WPS - Version 2018-8.0
+   *** Start: Program SOFILOAD : Traffic-Load   
+   SOFiSTiK 2018-8.0.14    SOFILOAD - LOAD GENERATOR
+   Output on file sim_17.plb
+   Project data base var_17.cdb           -    30. access
+   +++++ warning no. 10270 in program SL_IA
+   There are actions defined, but the load case 1001 has not been assigned to
+   an action, if that is intended, please spcify TYPE "NONE".
+   +++++ warning no. 10270 in program SL_IA
+   There are actions defined, but the load case 1002 has not been assigned to
+   an action, if that is intended, please spcify TYPE "NONE".
+   +++++ warning no. 10270 in program SL_IA
+   There are actions defined, but the load case 1003 has not been assigned to
+   an action, if that is intended, please spcify TYPE "NONE".
+   +++++ warning no. 10270 in program SL_IA
+   There are actions defined, but the load case 1004 has not been assigned to
+   an action, if that is intended, please spcify TYPE "NONE".
+   +++++ warning no. 10270 in program SL_IA
+   There are actions defined, but the load case 1005 has not been assigned to
+   an action, if that is intended, please spcify TYPE "NONE".
+   +++++ warning no. 10270 in program SL_IA
+   There are actions defined, but the load case 1006 has not been assigned to
+   an action, if that is intended, please spcify TYPE "NONE".
+   +++++ warning no. 10270 in program SL_IA
+   There are actions defined, but the load case 1007 has not been assigned to
+   an action, if that is intended, please spcify TYPE "NONE".
+   +++++ warning no. 10270 in program SL_IA
+   There are actions defined, but the load case 1008 has not been assigned to
+   an action, if that is intended, please spcify TYPE "NONE".
+   +++++ warning no. 10270 in program SL_IA
+   There are actions defined, but the load case 1009 has not been assigned to
+   an action, if that is intended, please spcify TYPE "NONE".
+   +++++ warning no. 10270 in program SL_IA
+   There are actions defined, but the load case 1010 has not been assigned to
+   an action, if that is intended, please spcify TYPE "NONE".
+   TIME NEEDED         2, TOTAL         2
+   TIME NEEDED         0, TOTAL         2
+   DATE       2020-10-29, 15:12:01
+   
+   
+   
+    +++++    0 errors and   10 warnings +++++
+   *** Stop : Program SOFILOAD : Traffic-Load
+
+   *** Start: Program ASE : LF 2001+#1 fakg 1   
+   SOFiSTiK 2018-8.0.14    ASE   - ADVANCED SOLUTION ENGINE
+   Output on file sim_17.plb
+   Project data base var_17.cdb           -    31. access
+   Lastfall  2001
+   
+   Parameter des Gleichungssystems   3
+   (Sparse Direct Solver)
+   Anzahl Gleichungen              138
+   Profil                         1074
+   Profil nach fill in            1587
+   TIME NEEDED         1, TOTAL         1
+   Lastfall  2002
+   
+   Parameter des Gleichungssystems   3
+   (Sparse Direct Solver)
+   Anzahl Gleichungen              138
+   Profil                         1074
+   Profil nach fill in            1587
+   TIME NEEDED         0, TOTAL         1
+   Lastfall  2003
+   
+   Parameter des Gleichungssystems   3
+   (Sparse Direct Solver)
+   Anzahl Gleichungen              138
+   Profil                         1074
+   Profil nach fill in            1587
+   TIME NEEDED         0, TOTAL         1
+   Lastfall  2004
+   
+   Parameter des Gleichungssystems   3
+   (Sparse Direct Solver)
+   Anzahl Gleichungen              138
+   Profil                         1074
+   Profil nach fill in            1587
+   TIME NEEDED         0, TOTAL         1
+   Lastfall  2005
+   
+   Parameter des Gleichungssystems   3
+   (Sparse Direct Solver)
+   Anzahl Gleichungen              138
+   Profil                         1074
+   Profil nach fill in            1587
+   TIME NEEDED         1, TOTAL         2
+   Lastfall  2006
+   
+   Parameter des Gleichungssystems   3
+   (Sparse Direct Solver)
+   Anzahl Gleichungen              138
+   Profil                         1074
+   Profil nach fill in            1587
+   TIME NEEDED         0, TOTAL         2
+   Lastfall  2007
+   
+   Parameter des Gleichungssystems   3
+   (Sparse Direct Solver)
+   Anzahl Gleichungen              138
+   Profil                         1074
+   Profil nach fill in            1587
+   TIME NEEDED         0, TOTAL         2
+   Lastfall  2008
+   
+   Parameter des Gleichungssystems   3
+   (Sparse Direct Solver)
+   Anzahl Gleichungen              138
+   Profil                         1074
+   Profil nach fill in            1587
+   TIME NEEDED         0, TOTAL         2
+   Lastfall  2009
+   
+   Parameter des Gleichungssystems   3
+   (Sparse Direct Solver)
+   Anzahl Gleichungen              138
+   Profil                         1074
+   Profil nach fill in            1587
+   TIME NEEDED         0, TOTAL         2
+   Lastfall  2010
+   
+   Parameter des Gleichungssystems   3
+   (Sparse Direct Solver)
+   Anzahl Gleichungen              138
+   Profil                         1074
+   Profil nach fill in            1587
+   TIME NEEDED         0, TOTAL         2
+   TIME NEEDED         0, TOTAL         2
+   DATE       2020-10-29, 15:12:03
+   *** Stop : Program ASE : LF 2001+#1 fakg 1
+   *** End of Calculation!

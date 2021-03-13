@@ -1,0 +1,161 @@
+!#!Kapitel Material- und Querschnittsdefinition
++prog aqua urs:1 $ Material- und Querschnittsdefinition
+kopf Vogelsangbrücke Esslingen
+norm din 1045
+beto 35 c 35
+stah 420 bst 420
+
+
+$  Querschnittspunkte:
+$
+$  1______________________________________9________8
+$  |                                               |
+$  2____3                                   6______7
+$       |                                   |
+$       |                                   |
+$       |                                   |
+$       4___________________________________5
+$
+
+qnr 100 mnr 35 mbw 420
+  $ Querschnittseingabe über Umfangspolygon
+  qpol u
+  qp nr   y=[mm]      z=[mm]
+     0001 -4455      0
+     0002 -4455    167
+     0003 -3825    218
+     0004 -3825    600
+     0005  3825    600
+     0006  3825    233
+     0007  5075     67
+     0008  5075   -133
+     0009  3175      0
+  $ Bewehrungseingabe unten als Linienbewehrung
+   lbew nr unte ya -3775[mm] za 550[mm] ye 3775[mm] ze 550[mm] as 24.7*20 d 25[mm] rang m0
+  $ Bewehrungeingabe oben als Linienbewehrung
+   lbew nr oben ya -4405[mm] za  50[mm] ye 3175[mm] ze  50[mm] as 24.7 d 25[mm] rang m1
+   lbew nr oben ya  3175[mm] za  50[mm] ye 5025[mm] ze -83[mm] as 24.7 d 25[mm] rang m1
+ende
+
+!#!Kapitel Systemeingabe
++prog sofimsha urs:2
+syst 3d gdiv 1000 gdir posz
+
+grup 1 bez 'Ueberbau'
+knot 100 x -0.120 y  0.000 z  0.000
+knot (110 119 1)  x ( 0.000 1.380) y  0.000 z  0.000
+knot (120 129 1)  x (13.800 1.320) y  0.000 z  0.000
+knot 130 x 27.000 y  0.000 z  0.000
+knot 140 x 27.120 y  0.000 z  0.000
+
+stab  1001    ka 100            ke 110          qnr 100.100 teil 1 np -1
+stab (1002 1) ka (110 119 1)    ke (111 1)      qnr 100.100 teil 1 np -1
+stab (1012 1) ka (120 129 1)    ke (121 1)      qnr 100.100 teil 1 np -1
+stab  1032    ka 130            ke 140          qnr 100.100 teil 1  np -1
+
+grup 2 bez 'Lager'
+$ Nord Ost
+knot 210 x 0.000 y -3.050 z 0.600 fix f
+ fede 2101 ka 210 ke 110 dx 1 0 0 cp 1e7 0 0
+ fede 2102 ka 210 ke 110 dx 0 1 0 cp 1e7 0 0
+ fede 2103 ka 210 ke 110 dx 0 0 1 cp 1e7 0 0
+$ Nord mitte
+knot 211 x 0.000 y  0.000 z 0.600 fix f
+ fede 2111 ka 211 ke 110 dx 1 0 0 cp 1   0 0
+ fede 2112 ka 211 ke 110 dx 0 1 0 cp 1   0 0
+ fede 2113 ka 211 ke 110 dx 0 0 1 cp 1e8 0 0
+$ Nord West
+knot 212 x 0.000 y  3.050 z 0.600 fix f
+ fede 2121 ka 212 ke 110 dx 1 0 0 cp 1e7 0 0
+ fede 2122 ka 212 ke 110 dx 0 1 0 cp 1   0 0
+ fede 2123 ka 212 ke 110 dx 0 0 1 cp 1e7 0 0
+
+$ Mitte Ost
+knot 220 x 13.80 y -3.050 z 0.600 fix f
+ fede 2201 ka 220 ke 120 dx 1 0 0 cp 1   0 0
+ fede 2202 ka 220 ke 120 dx 0 1 0 cp 1e7 0 0
+ fede 2203 ka 220 ke 120 dx 0 0 1 cp 1e7 0 0
+$ Mitte mitte
+knot 221 x 13.80 y  0.000 z 0.600 fix f
+ fede 2211 ka 221 ke 120 dx 1 0 0 cp 1   0 0
+ fede 2212 ka 221 ke 120 dx 0 1 0 cp 1   0 0
+ fede 2213 ka 221 ke 120 dx 0 0 1 cp 1e8 0 0
+$ Mitte West
+knot 222 x 13.80 y  3.050 z 0.600 fix f
+ fede 2221 ka 222 ke 120 dx 1 0 0 cp 1   0 0
+ fede 2222 ka 222 ke 120 dx 0 1 0 cp 1   0 0
+ fede 2223 ka 222 ke 120 dx 0 0 1 cp 1e7 0 0
+
+$ Sued Ost
+knot 230 x 27.00 y -3.050 z 0.600 fix f
+ fede 2301 ka 230 ke 130 dx 1 0 0 cp 1   0 0
+ fede 2302 ka 230 ke 130 dx 0 1 0 cp 1e7 0 0
+ fede 2303 ka 230 ke 130 dx 0 0 1 cp 1e7 0 0
+$ Sued mitte
+knot 231 x 27.00 y  0.000 z 0.600 fix f
+ fede 2311 ka 231 ke 130 dx 1 0 0 cp 1   0 0
+ fede 2312 ka 231 ke 130 dx 0 1 0 cp 1   0 0
+ fede 2313 ka 231 ke 130 dx 0 0 1 cp 1e8 0 0
+$ Sued West
+knot 232 x 27.00 y  3.050 z 0.600 fix f
+ fede 2321 ka 232 ke 130 dx 1 0 0 cp 1   0 0
+ fede 2322 ka 232 ke 130 dx 0 1 0 cp 1   0 0
+ fede 2323 ka 232 ke 130 dx 0 0 1 cp 1e7 0 0
+
+
+ende
+
+!#!Kapitel Vorspannung
++prog tendon urs:3
+ende
+
+!#!Kapitel Teilsicherheits- und Kombinationsbeiwerte
++prog sofiload urs:23
+kopf Teilsicherheits- u. Kombinationsbeiwerte
+act G   gamU 1.35 gamF 1.00  psi0 1.00 psi1 1.00 psi2 1.00 ps1S 1.00                    bez 'Staendige Lasten'
+act G_1 gamU 1.35 gamF 1.00  psi0 1.00 psi1 1.00 psi2 1.00 ps1S 1.00                    bez 'Staendige Lasten'
+act G_2 gamU 1.35 gamF 1.00  psi0 1.00 psi1 1.00 psi2 1.00 ps1S 1.00                    bez 'Staendige Lasten'
+act P   gamU 1.00 gamF 1.00  psi0 1.00 psi1 1.00 psi2 1.00 ps1S 1.00                    bez 'Vorspannung'
+act ZS  gamU 1.00 gamF 1.00  psi0 1.00 psi1 1.00 psi2 1.00 ps1S 1.00 part P sup perm    bez 'Stat.unbest.Vorspannung'   $ derzeit noch ZS, da ZP noch nicht möglich (AQB)
+act K   gamU 1.00 gamF 1.00  psi0 1.00 psi1 1.00 psi2 1.00 ps1S 1.00 sup perm           bez 'Kriechen+Schwinden'
+act L_T gamU 1.50 gamF 0.00  psi0 0.75 psi1 0.75 psi2 0.20 ps1S 0.80 sup excl           bez 'TS'
+act L_U gamU 1.50 gamF 0.00  psi0 0.40 psi1 0.40 psi2 0.20 ps1S 0.80 sup excl           bez 'UDL-0'
+act ZF  gamU 1.00 gamF 0.00  psi0 1.00 psi1 1.00 psi2 1.00 ps1S 1.00 sup excl           bez 'wahr.Setzung'
+act SF  gamU 1.35*0.6 gamF 0.00  psi0 1.00 psi1 1.00 psi2 1.00 ps1S 1.00 sup excl       bez 'mögl.Setzung' $ 0.6-fach gem. ARS 11/2003
+act W   gamU 1.50 gamF 0.00  psi0 0.50 psi1 0.50 psi2 0.00 ps1S 0.60 sup excl           bez 'Wind quer'
+act T   gamU 1.35 gamF 0.00  psi0 0.80 psi1 0.60 psi2 0.50 PS1S 0.80 sup excl           bez 'Temperatur'
+act T_1 gamU 1.35 gamF 0.00  psi0 0.80 psi1 0.60 psi2 0.50 PS1S 0.80 sup excl           bez 'Temp konster Anteil'
+act T_2 gamU 1.35 gamF 0.00  psi0 0.80 psi1 0.60 psi2 0.50 PS1S 0.80 sup excl           bez 'Temp veraenderl Anteil'
+act H_B gamU 1.50 gamF 0.00  psi0 0.00 psi1 0.00 psi2 0.00 PS1S 0.00 sup exex           bez 'Horizontale Kraefte'
+act H_L gamU 1.35 gamF 0.00  psi0 1.00 psi1 1.00 psi2 1.00 ps1S 1.00 sup exex           bez 'Lagerreibung'
+act H_Q gamU 1.35 gamF 0.00  psi0 1.00 psi1 1.00 psi2 1.00 ps1S 1.00 sup excl           bez 'Zentrifugal'
+act B   gamU 1.50 gamF 1.00  psi0 1.00 psi1 1.00 psi2 1.00 ps1S 1.00 part G sup perm    bez 'Schalung'
+act X   gamU 1.50 gamF 0.00  psi0 1.00 psi1 1.00 psi2 1.00 ps1S 1.00                    bez 'Einzellastfaelle'
+act Z   gamU 1.00 gamF 1.00  psi0 1.00 psi1 1.00 psi2 1.00                              bez 'Einzellastfaelle'
+act Z_1 gamU 1.00 gamF 1.00  psi0 1.00 psi1 1.00 psi2 1.00                              bez 'Einzellastfaelle'
+act Z_2 gamU 1.00 gamF 1.00  psi0 1.00 psi1 1.00 psi2 1.00                              bez 'Einzellastfaelle'
+act Z_3 gamU 1.00 gamF 1.00  psi0 1.00 psi1 1.00 psi2 1.00                              bez 'Einzellastfaelle'
+act Z_4 gamU 1.00 gamF 1.00  psi0 1.00 psi1 1.00 psi2 1.00                              bez 'Einzellastfaelle'
+act A   gamU 1.00 gamF 1.00  psi0 1.00 psi1 1.00 psi2 1.00                              bez 'Außergewöhnliche Lasten'
+ende
+
+!#!Kapitel Lasteingabe
++PROG ASE urs:4
+KOPF Eigengewicht zum Test
+ECHO VOLL EXTR
+LF 1 FAKT 1.0 egx 1 0 0  BEZ 'Eigengewicht G0 -x' TYP G
+LF 2 FAKT 1.0 egx 0 1 0  BEZ 'Eigengewicht G0 -y' TYP G
+LF 3 FAKT 1.0 egx 0 0 1  BEZ 'Eigengewicht G0 -z' TYP G
+ende
+
++prog ase urs:7
+lf alle
+ende
+
++prog aqb urs:6
+kopf Dehnungen ermitteln
+echo quer,dehn voll
+lf 3
+dehn s1 ksv cal ksb cal
+ende
+

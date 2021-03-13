@@ -1,0 +1,122 @@
+!#!Info Example:    Test Routine for USERMAT Interface
+!#!Info Program:    TALPA
+!#!Info Keywords:   User-defined Constitutive Model
+
+// --------------------------------------------------------------
+//
+// ATTENTION:
+//
+//      TWO PREREQUISITES ARE REQUIRED IN ORDER TO MAKE
+//      THIS FILE RUN PROPERLY, NAMELY
+//
+//      - the environment variable SOFISTIK_USERMATDLL must be set
+//        to "sof_usermat<VERSION>", e.g., by copying the SOFISTIK.DEF file
+//        from the example directory to the current working directory
+//
+//      - a copy of "sof_usermat<VERSION>.dll" must be present in the SOFISTIK installation directory
+//
+// --------------------------------------------------------------
+
+#define lt=0.1         // lt < 1.0 m
+#define ltot=2.0
+#define umax=0.10
+
++PROG AQUA urs:1
+HEAD materials
+MAT 1 E 10000 MUE 0.0 TITL 'stiff'
+$ imperfection:
+MAT 2 E 10000 MUE 0.0 TITL 'ft_x=10'
+NMAT 2 USP1  P1 10000 P2 0
+MAT 3 E 10000 MUE 0.0 TITL 'elast'
+END
+
++PROG SOFIMSHA urs:2
+HEAD  'bar modelled by 3 quads'
+SYST 2DSN GDIR POSY GDIV 1000
+let#lt $(lt)
+let#ltot $(ltot)
+let#x2 (#ltot/2-#lt)
+let#x3 (#ltot/2)
+let#x4 #ltot
+NODE NO    X      Y     FIX
+      1   0.0    0.0     px
+     11   #x2    0.0     -
+     21   #x3    0.0     -
+     31   #x4    0.0     -
+    101   0.0    0.2     pxpy
+    111   #x2    0.2     py
+    121   #x3    0.2     py
+    131   #x4    0.2     py
+
+QUAD    NO   N1   N2   N3   N4   M   N   MNO
+        FIT   1  101  111   11   1   1    3
+        FIT  11  111  121   21   1   1    2
+        FIT  21  121  131   31   1   1    1
+
+EDGE 1 TYPE FIT   31  131
+
+SPRI   NO   NA  DX=1.0  CP=1.e5
+        1   31
+      101  131
+
+END
+
++PROG SOFILOAD urs:4
+HEAD Load on edge
+LC 1
+LINE REF EDG 1 TYPE PZ -1.0
+END
+
++PROG TALPA urs:3
+HEAD 'loading of bar, disp. controlled'
+let#umax $(umax)
+SYST PROB NONL
+ECHO STRE,DEFO,REAC YES
+CTRL ITER 20 FMAX -0.001
+LC 11 DT 25
+LCC 1 FACT  1.e5*#umax/4
+END
+
+$
+$ now reduce stiffness of user-defined material...
+$
++PROG AQUA urs:8
+HEAD materials
+MAT 1 E 10000 MUE 0.0 TITL 'stiff'
+$ imperfection:
+MAT 2 E 10000 MUE 0.0 TITL 'ft_x=10'
+NMAT 2 USP1  P1 500 P2 0.4
+MAT 3 E 10000 MUE 0.0 TITL 'elast'
+END
+
++PROG TALPA urs:5
+HEAD 'loading of bar, disp. controlled'
+let#umax $(umax)
+SYST PROB NONL
+ECHO STRE,DEFO,REAC YES
+CTRL ITER 20 FMAX -0.001
+LC 21 DT 25
+LCC 1 FACT  1.e5*#umax/4
+END
+
+$
+$ same without using user-defined material...
+$
++PROG AQUA urs:6
+HEAD materials
+MAT 1 E 10000 MUE 0.0 TITL 'stiff'
+$ imperfection:
+MAT 2 E 500 MUE 0.4 TITL 'ft_x=10'
+MAT 3 E 10000 MUE 0.0 TITL 'elast'
+END
+
++PROG TALPA urs:7
+HEAD 'loading of bar, disp. controlled'
+let#umax $(umax)
+SYST PROB NONL
+ECHO STRE,DEFO,REAC YES
+CTRL ITER 20 FMAX -0.001
+LC 31 DT 25
+LCC 1 FACT  1.e5*#umax/4
+END
+

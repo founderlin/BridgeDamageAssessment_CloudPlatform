@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="release|x64">
+      <Configuration>release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="debug|x64">
+      <Configuration>debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C884020D-3410-70D1-3D21-F3C5A92BCCD1}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>sof_usermat_dll</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>release\x64\bin\</OutDir>
+    <IntDir>release\x64\obj\x64\release\sof_usermat_dll\</IntDir>
+    <TargetName>sof_usermat33</TargetName>
+    <TargetExt>.dll</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>debug\x64\bin\</OutDir>
+    <IntDir>debug\x64\obj\x64\debug\sof_usermat_dll\</IntDir>
+    <TargetName>sof_usermat33</TargetName>
+    <TargetExt>.dll</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <PreprocessorDefinitions>SOFISTIK_ALL;SOF_PLATFORM_POSTFIX=_x64;_UNICODE;UNICODE;SOF_LIB_TYPE_STATIC=1;SOF_LIB_TYPE_DLL=2;SOF_LIB_TYPE_DBX=3;SOF_LIB_TYPE_CRX=4;SOF_LIB_TYPE_ARX=5;SOF_TARGET_BASENAME=release;SOF_USERMAT_DLL_EXPORTS;SOF_OWN_PROJECT_NAME="sof_usermat_dll";SOF_BRANCH="dev";WINVER=0x0601;_WIN32_WINNT=WINVER;_WIN32_WINDOWS=WINVER;NTDDI_VERSION=0x06010000;IE_VERSION=WINVER;_WIN32_IE=WINVER;__VERS=33;__VERS_STR="33";__VERSBASE=2016;__VERSBASE_STR="2016";NDEBUG;_WIN32;_WIN64;__X64;__NAMENAMVERS="2016";WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\lib\inc;C:\Program Files (x86)\Intel\Composer XE 2015\mkl\include;C:\Program Files (x86)\Intel\Composer XE 2015\compiler\include\intel64;release\x64\obj\x64\release\csolv_lib\lib\csolv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <AdditionalOptions>/d2Zi+ /we4172 /wd4251 /wd4275 /wd4100 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>mkl_intel_thread_dll.lib;mkl_core_dll.lib;mkl_intel_lp64_dll.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>release\x64\lib;..\lib;C:\Program Files (x86)\Intel\Composer XE 2015\Compiler\lib\intel64;C:\Program Files (x86)\Intel\Composer XE 2015\mkl\lib\intel64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ImportLibrary>release\x64\lib\sof_usermat33.lib</ImportLibrary>
+      <ModuleDefinitionFile>./usermat.def</ModuleDefinitionFile>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <PreprocessorDefinitions>SOFISTIK_ALL;SOF_PLATFORM_POSTFIX=_x64;_UNICODE;UNICODE;SOF_LIB_TYPE_STATIC=1;SOF_LIB_TYPE_DLL=2;SOF_LIB_TYPE_DBX=3;SOF_LIB_TYPE_CRX=4;SOF_LIB_TYPE_ARX=5;SOF_TARGET_BASENAME=debug;SOF_USERMAT_DLL_EXPORTS;SOF_OWN_PROJECT_NAME="sof_usermat_dll";SOF_BRANCH="dev";WINVER=0x0601;_WIN32_WINNT=WINVER;_WIN32_WINDOWS=WINVER;NTDDI_VERSION=0x06010000;IE_VERSION=WINVER;_WIN32_IE=WINVER;__VERS=33;__VERS_STR="33";__VERSBASE=2016;__VERSBASE_STR="2016";_WIN32;_WIN64;DEBUG;_DEBUG;SOF_DEBUG;__X64;__NAMENAMVERS="2016";WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\lib\inc;C:\Program Files (x86)\Intel\Composer XE 2015\mkl\include;C:\Program Files (x86)\Intel\Composer XE 2015\compiler\include\intel64;debug\x64\obj\x64\debug\csolv_lib\lib\csolv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <AdditionalOptions>/we4172 /wd4251 /wd4275 /wd4100 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>mkl_intel_thread_dll.lib;mkl_core_dll.lib;mkl_intel_lp64_dll.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>debug\x64\lib;..\lib;C:\Program Files (x86)\Intel\Composer XE 2015\Compiler\lib\intel64;C:\Program Files (x86)\Intel\Composer XE 2015\mkl\lib\intel64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ImportLibrary>debug\x64\lib\sof_usermat33.lib</ImportLibrary>
+      <ModuleDefinitionFile>./usermat.def</ModuleDefinitionFile>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include=".\usermat.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include=".\usermat.f90">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='release|x64'">"C:/Program Files (x86)/Intel/Composer XE 2015/bin/intel64/ifort.exe" /module:"release\\x64\\obj\\x64\\release\\sof_usermat_dll\lib\\mlib\\usermat\\project" /Fo"release\\x64\\obj\\x64\\release\\sof_usermat_dll\lib\\mlib\\usermat\\project\usermat.obj"  /fpp /fp:source /nologo /Qdiag-disable:8290 /Qdiag-disable:8291 /Qopt-report:0 /Qopt-report-phase:vec /c /MD /Qftz /heap-arrays /traceback  /DSOFISTIK_ALL /DSOF_PLATFORM_POSTFIX=_x64 /D_UNICODE /DUNICODE /DSOF_LIB_TYPE_STATIC=1 /DSOF_LIB_TYPE_DLL=2 /DSOF_LIB_TYPE_DBX=3 /DSOF_LIB_TYPE_CRX=4 /DSOF_LIB_TYPE_ARX=5 /DSOF_TARGET_BASENAME=release /DSOF_USERMAT_DLL_EXPORTS /DSOF_OWN_PROJECT_NAME="sof_usermat_dll" /DSOF_BRANCH="dev" /DWINVER=0x0601 /D_WIN32_WINNT=WINVER /D_WIN32_WINDOWS=WINVER /DNTDDI_VERSION=0x06010000 /DIE_VERSION=WINVER /D_WIN32_IE=WINVER /D__VERS=33 /D__VERS_STR="33" /D__VERSBASE=2016 /D__VERSBASE_STR="2016" /DNDEBUG /D_WIN32 /D_WIN64 /D__X64 /D__NAMENAMVERS="2016" /DWIN32  /I"C:\Program Files (x86)\Intel\Composer XE 2015\/mkl/include" /I"C:\Program Files (x86)\Intel\Composer XE 2015\/compiler/include/intel64"  .\\usermat.f90</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='release|x64'">release/x64/obj/x64/release/sof_usermat_dll/lib/mlib/usermat/project/usermat.obj</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='release|x64'">usermat.f90</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='debug|x64'">"C:/Program Files (x86)/Intel/Composer XE 2015/bin/intel64/ifort.exe" /module:"debug\\x64\\obj\\x64\\debug\\sof_usermat_dll\lib\\mlib\\usermat\\project" /Fo"debug\\x64\\obj\\x64\\debug\\sof_usermat_dll\lib\\mlib\\usermat\\project\usermat.obj"  /fpp /fp:source /nologo /Qdiag-disable:8290 /Qdiag-disable:8291 /Qopt-report:0 /Qopt-report-phase:vec /c /MDd /Z7 /fpe:0 /Qfp-stack-check  /DSOFISTIK_ALL /DSOF_PLATFORM_POSTFIX=_x64 /D_UNICODE /DUNICODE /DSOF_LIB_TYPE_STATIC=1 /DSOF_LIB_TYPE_DLL=2 /DSOF_LIB_TYPE_DBX=3 /DSOF_LIB_TYPE_CRX=4 /DSOF_LIB_TYPE_ARX=5 /DSOF_TARGET_BASENAME=debug /DSOF_USERMAT_DLL_EXPORTS /DSOF_OWN_PROJECT_NAME="sof_usermat_dll" /DSOF_BRANCH="dev" /DWINVER=0x0601 /D_WIN32_WINNT=WINVER /D_WIN32_WINDOWS=WINVER /DNTDDI_VERSION=0x06010000 /DIE_VERSION=WINVER /D_WIN32_IE=WINVER /D__VERS=33 /D__VERS_STR="33" /D__VERSBASE=2016 /D__VERSBASE_STR="2016" /D_WIN32 /D_WIN64 /DDEBUG /D_DEBUG /DSOF_DEBUG /D__X64 /D__NAMENAMVERS="2016" /DWIN32  /I"C:\Program Files (x86)\Intel\Composer XE 2015\/mkl/include" /I"C:\Program Files (x86)\Intel\Composer XE 2015\/compiler/include/intel64"  .\\usermat.f90</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='debug|x64'">debug/x64/obj/x64/debug/sof_usermat_dll/lib/mlib/usermat/project/usermat.obj</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='debug|x64'">usermat.f90</Message>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

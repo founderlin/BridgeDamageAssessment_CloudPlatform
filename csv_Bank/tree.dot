@@ -1,0 +1,1 @@
+digraph Tree {node [shape=box, style="filled", color="black", fontname=helvetica] ;edge [fontname=helvetica] ;1[label=<entropy = 0.946<br/>samples =11<br/>value = [4,7]>, fillcolor="#399de5"];11[label=<entropy = N/A<br/>samples =4<br/>value = [0,4]>, fillcolor="#399de5"];12[label=<samples =7>, fillcolor="#e58139"];1->11 ;1->12 ;}
