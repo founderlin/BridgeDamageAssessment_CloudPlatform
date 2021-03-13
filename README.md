@@ -6,9 +6,9 @@ This prototype is related to an academic article in peer review, and automates t
 
 [Figure 1: Architecture]
 
-<img width="500" alt="appimage" src=https://user-images.githubusercontent.com/33033138/111036954-25087d80-8422-11eb-96eb-b971ae63d5cd.png>
+<img width="200" alt="appimage" src=https://user-images.githubusercontent.com/33033138/111036954-25087d80-8422-11eb-96eb-b971ae63d5cd.png>
 
 
 [Figure 2: Screenshots of GUI]
 
-<img width="500" alt="appimage" src=https://user-images.githubusercontent.com/33033138/111036956-289c0480-8422-11eb-9894-e0e464b25605.png>
+<img width="700" alt="appimage" src=https://user-images.githubusercontent.com/33033138/111036956-289c0480-8422-11eb-9894-e0e464b25605.png>
