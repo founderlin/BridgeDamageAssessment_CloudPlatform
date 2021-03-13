@@ -6,7 +6,7 @@ This prototype is related to an academic article in peer review, and automates t
 
 [Figure 1: Architecture]
 
-<img width="200" alt="appimage" src=https://user-images.githubusercontent.com/33033138/111036954-25087d80-8422-11eb-96eb-b971ae63d5cd.png>
+<img width="250" alt="appimage" src=https://user-images.githubusercontent.com/33033138/111036954-25087d80-8422-11eb-96eb-b971ae63d5cd.png>
 
 
 [Figure 2: Screenshots of GUI]
