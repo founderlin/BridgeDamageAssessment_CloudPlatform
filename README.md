@@ -1,4 +1,4 @@
-# BridgeDamageAssessment_CouldPlatform
+# BridgeDamageAssessment_CloudPlatform
 
 ## Introduction
 This prototype is related to an academic article in peer review, and automates the proposed workflow. The cloud simulation platform of structural analysis software SOFiSTiK delivers APIs, which were adopted to implement the methodology. Figure 1 demonstrates the architecture of this software prototype; Figure 2 shows the screenshots of the graphic user interface (GUI).
